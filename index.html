@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rhode Inspired</title>
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f7c6d9;<!DOCTYPE html>
+     
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -19,7 +10,7 @@
 <style>
     body {
         margin: 0;
-        font-family: 'Arial', sans-serif;
+        font-family: Arial, sans-serif;
         background-color: #f6c1d6;
         color: #222;
     }
@@ -33,10 +24,11 @@
         background: #f2a7c6;
     }
 
+    /* HERO */
     .hero {
         display: flex;
         justify-content: center;
-        padding: 30px 20px;
+        padding: 30px;
     }
 
     .hero img {
@@ -46,13 +38,26 @@
         box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .overlay-text {
-        text-align: center;
-        margin-top: -40px;
-        font-size: 1.5rem;
-        font-style: italic;
+    /* GALLERY */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 30px;
     }
 
+    .gallery img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    /* PRODUCTS */
     .section {
         padding: 40px 20px;
         text-align: center;
@@ -71,15 +76,6 @@
         border-radius: 12px;
         width: 220px;
         box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-
-    .product h3 {
-        margin: 10px 0;
-    }
-
-    .product p {
-        font-size: 0.9rem;
-        color: #555;
     }
 
     footer {
@@ -102,23 +98,25 @@
 
 <header>RHODE</header>
 
+<!-- HERO IMAGE -->
 <div class="hero">
-    <!-- YOUR UPLOADED IMAGE -->
-    <img src="rhode-collage.png" alt="Rhode collage">
+    <img src="collage.png" alt="Rhode collage">
 </div>
 
-<div class="overlay-text">
-    minimal. glowy. skin first.
+<!-- IMAGE GALLERY -->
+<div class="gallery">
+    <img src="products1.png" alt="Rhode products flatlay">
+    <img src="products2.png" alt="Rhode model and products">
 </div>
 
+<!-- PRODUCTS SECTION -->
 <div class="section">
     <h2>Featured Products</h2>
 
     <div class="products">
-
         <div class="product">
             <h3>Peptide Lip Tint</h3>
-            <p>Hydrating glossy lip color</p>
+            <p>Glossy hydration + color</p>
         </div>
 
         <div class="product">
@@ -128,136 +126,18 @@
 
         <div class="product">
             <h3>Glazing Milk</h3>
-            <p>Ceramide facial essence</p>
+            <p>Barrier boosting essence</p>
         </div>
 
         <div class="product">
-            <h3>Peptide Eye Prep</h3>
-            <p>Depuffing eye patches</p>
+            <h3>Eye Prep</h3>
+            <p>Depuff + smooth</p>
         </div>
-
     </div>
 </div>
 
 <footer>
     © 2026 Rhode Inspired
-</footer>
-
-</body>
-</html>
-        color: #333;
-    }
-
-    header {
-        text-align: center;
-        padding: 20px;
-        background-color: #f4a8c4;
-        font-size: 2rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-    }
-
-    .hero {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .hero img {
-        width: 90%;
-        max-width: 900px;
-        border-radius: 12px;
-    }
-
-    .section {
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .products {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .product {
-        background: white;
-        padding: 15px;
-        border-radius: 10px;
-        width: 200px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .product img {
-        width: 100%;
-        border-radius: 8px;
-    }
-
-    .product h3 {
-        margin: 10px 0 5px;
-    }
-
-    .product p {
-        font-size: 0.9rem;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #f4a8c4;
-        margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-        .products {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-</style>
-</head>
-
-<body>
-
-<header>RHODE</header>
-
-<div class="hero">
-    <img src="RHODE.png" alt="Rhode Collage">
-</div>
-
-<div class="section">
-    <h2>Our Products</h2>
-    <div class="products">
-        
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="">
-            <h3>Lip Tint</h3>
-            <p>Hydrating glossy colors</p>
-        </div>
-
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="">
-            <h3>Blush</h3>
-            <p>Buildable cream blush</p>
-        </div>
-
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="">
-            <h3>Glazing Milk</h3>
-            <p>Ceramide facial essence</p>
-        </div>
-
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="">
-            <h3>Eye Prep</h3>
-            <p>Depuffing eye patches</p>
-        </div>
-
-    </div>
-</div>
-
-<footer>
-    © 2026 Rhode Inspired Site
 </footer>
 
 </body>
