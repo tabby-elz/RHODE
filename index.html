@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Rhode | Peptide Glazed Skin + Lip Tints</title>
+    <title>Rhode | Peptide Glazed Lip + Cream Blush Rituals</title>
     <!-- Google Fonts + modern reset -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,94 +14,119 @@
         }
 
         body {
-            background: linear-gradient(140deg, #fdf5ed 0%, #ffe4d8 100%);
+            background: linear-gradient(135deg, #fef7f0 0%, #ffe3d6 100%);
             font-family: 'Inter', sans-serif;
-            color: #281a0c;
+            color: #2c1a0c;
             padding: 2rem 1.5rem;
         }
 
-        /* main glassmorphic container */
+        /* main glass container */
         .container {
-            max-width: 1280px;
+            max-width: 1300px;
             margin: 0 auto;
-            background: rgba(255, 250, 245, 0.82);
+            background: rgba(255, 248, 240, 0.8);
             backdrop-filter: blur(2px);
-            border-radius: 4rem 2.5rem 4rem 2.5rem;
-            box-shadow: 0 30px 50px -20px rgba(0,0,0,0.25), 0 0 0 1px rgba(255, 200, 160, 0.6);
+            border-radius: 3rem 2rem 4rem 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 200, 160, 0.6);
             overflow: hidden;
-            padding: 2rem 2rem 2.8rem;
+            padding: 2rem 2rem 2.5rem;
             transition: all 0.2s;
         }
 
-        /* animated brand header */
+        /* brand header with gradient */
         .brand-header {
             text-align: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         .brand-header h1 {
-            font-size: 5rem;
+            font-size: 5.2rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            background: linear-gradient(125deg, #DB6E3A, #C44228, #F1A55A, #BC4E2C);
+            background: linear-gradient(125deg, #D45F2E, #BF3F22, #EE9B54, #C1542C);
             background-size: 220% auto;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: lightFlow 5s ease infinite;
+            animation: waveGradient 6s ease infinite;
         }
 
-        @keyframes lightFlow {
+        @keyframes waveGradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
         .brand-sub {
-            font-size: 1.05rem;
-            background: #fff2e8;
+            font-size: 1rem;
+            background: #fff2e7;
             display: inline-block;
-            padding: 0.3rem 1.6rem;
+            padding: 0.35rem 1.8rem;
             border-radius: 60px;
             font-weight: 500;
-            color: #bc5a38;
+            color: #bd5733;
             margin-top: 0.5rem;
-            border: 1px solid #ffcfad;
-            backdrop-filter: blur(4px);
+            border: 1px solid #ffceac;
+            backdrop-filter: blur(2px);
+        }
+
+        /* NEW: Hero image banner with the uploaded photo */
+        .hero-image {
+            width: 100%;
+            max-height: 280px;
+            overflow: hidden;
+            border-radius: 2rem;
+            margin: 1.5rem 0 1.8rem 0;
+            box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 200, 160, 0.7);
+            background: #fff0e4;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.02);
         }
 
         /* product grid */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin: 2rem 0 2rem;
         }
 
-        /* cards with interactive lift */
+        /* card styling */
         .product-card {
-            background: #ffffffec;
+            background: #fffffffa;
             border-radius: 2rem;
-            padding: 1.4rem 1.2rem 1.8rem;
+            padding: 1.2rem 1.2rem 1.8rem;
             transition: transform 0.25s ease, box-shadow 0.3s;
             box-shadow: 0 12px 22px -12px rgba(0, 0, 0, 0.08);
-            border: 1px solid #fadbc8;
+            border: 1px solid #fad7c2;
             display: flex;
             flex-direction: column;
         }
 
         .product-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 28px 32px -14px rgba(201, 90, 63, 0.25);
-            border-color: #ffbc8c;
-            background: white;
+            box-shadow: 0 28px 34px -14px rgba(201, 90, 63, 0.25);
+            border-color: #ffb47c;
+            background: #ffffff;
         }
 
-        /* Image wrapper — for the two requested photos */
+        /* image wrapper for product visuals */
         .product-image {
             width: 100%;
             height: 180px;
-            background: #fbeadf;
+            background: #fbe8dd;
             border-radius: 1.5rem;
             margin-bottom: 1rem;
             overflow: hidden;
@@ -110,61 +134,80 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02), 0 6px 12px -8px rgba(0,0,0,0.1);
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.02), 0 5px 12px -6px rgba(0,0,0,0.1);
         }
 
         .product-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.25s ease;
         }
 
         .product-card:hover .product-image img {
             transform: scale(1.02);
         }
 
+        /* dual image inside a single product card */
+        .image-duo {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+            height: 100%;
+        }
+        .image-duo .img-half {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 1rem;
+            background: #fbe3d4;
+        }
+        .image-duo .img-half img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .card-icon {
-            font-size: 1.8rem;
-            margin-right: 0.5rem;
+            font-size: 1.7rem;
+            margin-right: 0.3rem;
             display: inline-block;
         }
 
         .product-title {
-            font-size: 1.55rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: #2f1a0a;
-            margin: 0.25rem 0 0.2rem;
+            color: #2d1809;
+            margin: 0.3rem 0 0.2rem;
         }
 
         .product-desc {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            color: #b1623e;
+            color: #b55a34;
             text-transform: uppercase;
             letter-spacing: 0.4px;
             margin-bottom: 0.5rem;
         }
 
         .product-highlight {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             background: #fef0e7;
             padding: 0.2rem 0.8rem;
             border-radius: 30px;
             display: inline-block;
             width: fit-content;
             font-weight: 500;
-            color: #b7532c;
+            color: #b9512a;
         }
 
         .price-tag {
-            font-size: 1.55rem;
+            font-size: 1.5rem;
             font-weight: 800;
             background: linear-gradient(125deg, #c95a3f, #e67748);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin: 0.7rem 0 0.2rem;
+            margin: 0.6rem 0 0.2rem;
         }
 
         .buy-btn {
@@ -174,7 +217,7 @@
             border-radius: 40px;
             padding: 0.7rem 0;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #bc4e2c;
             cursor: pointer;
             transition: all 0.2s;
@@ -182,16 +225,16 @@
         }
 
         .buy-btn:hover {
-            background: #ffd8c2;
+            background: #ffd6be;
             color: #942e0c;
             border-color: #eaa06a;
             transform: scale(0.97);
         }
 
-        /* spotlight bar */
+        /* spotlight banner */
         .rhode-spotlight {
             margin: 2rem 0 1.2rem;
-            background: radial-gradient(ellipse at 20% 40%, #fff3e9, #ffe1cf);
+            background: radial-gradient(ellipse at 20% 30%, #fff3e9, #ffe1cf);
             padding: 1.4rem 2rem;
             border-radius: 2rem;
             display: flex;
@@ -252,6 +295,7 @@
             body { padding: 1rem; }
             .container { padding: 1.2rem; }
             .brand-header h1 { font-size: 3.2rem; }
+            .hero-image { max-height: 180px; }
         }
     </style>
 </head>
@@ -259,20 +303,21 @@
 <div class="container">
     <div class="brand-header">
         <h1>RHODE</h1>
-        <div class="brand-sub">peptide-infused • glazed finish • color rituals</div>
-        <div style="font-size: 0.85rem; margin-top: 0.5rem; color: #bf7c58;">✨ rhode skincare + lip essentials ✨</div>
+        <div class="brand-sub">peptide-infused • glazed finish • luminous rituals</div>
+        <div style="font-size: 0.85rem; margin-top: 0.5rem; color: #bf7c58;">✨ rhode skincare + lip + blush essentials ✨</div>
     </div>
 
-    <!-- product grid exactly matching the given items, with photos placed as requested:
-         - First photo on Glazier Lip Tint card (download (29).jfif)
-         - Second photo on Packet Blush Bundle card (RHODE (1).png) 
-         the second image .png is now used for blush area to bring RHODE aesthetic.
-    -->
+    <!-- NEW HERO IMAGE: your photo download-removebg-preview (4).png appears here prominently -->
+    <div class="hero-image">
+        <img src="download-removebg-preview (4).png" alt="Rhode hero product showcase" onerror="this.onerror=null; this.src='https://placehold.co/800x300/fce8dc/c95a3f?text=Rhode+Image'">
+    </div>
+
+    <!-- product grid with images -->
     <div class="product-grid">
-        <!-- 1) Glazier Lip Tint card → first photo (download (29).jfif) -->
+        <!-- Glazier Lip Tint card -->
         <div class="product-card">
             <div class="product-image">
-                <img src="data:image/jpeg;base64,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" alt="Rhode lip tint glaze" onerror="this.onerror=null; this.src='https://placehold.co/400x300/f9dfcf/c95a3f?text=Glazier+Lip+Tint'">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAGQAZADAREAAhEBAxEB/8QAHQAAAgIDAQEBAAAAAAAAAAAABwgFBgIDBAkAAQr/xABLEAABAwMDAgQDBQYDBgUEAwABAgMEAAURBhIhMQdBEyJRYXGBkQojMkKxFCNSwdHhCBVicjQ0Q4KS8BcmNENzovH/xAAcAQACAwEBAQEAAAAAAAAAAAAEBQECAwYABwj/xAA9EQACAQIEBAMFBwQBAwUAAAABAgADEQQSITEFQVFhEwZxgSJSkbHhBxQyM0JSgsHR8CPhFGKCFUNTovEk/9oADAMBAAIRAxEAPwCJ/QAOP+ft/SpkkmHX+8u//VU8j8BRWmSJME5dx93B9KgzrTLBSeoH/8AKf8A3Uo0uw0ZPzHSBZQeDnaR8iKmMaRyL5xXH4j7hH+1HIkAQh+p+0VUfCQPE+0x/LkEED9flSWO4hg+G0PExBChRqSYnguE8Q4viBsFkgdTso5k9O0NcPzrLekYHpSAs1h2/qHqR/pUgySINGCKY3H+Z/rSimETJuyrgE4HTmntLmMsBiD9BO/RFzli5O27xV+BJjOLU2VHakJbUUD09Q4pCrTdh4pX53nlsbhKRfE0qmf22IsdN5Y7C+npSNlVsnK25BpUBpLyqUkCz3pRgQB1pVjyR7TRnWp7LqVkHkHIwQcdcEelJgQtoBYwquHlFy2X+2pWpSgpG9RKc/dn9PUU3SZrCx1i9VDGAsDciU1WVN4akncj9UZ2+nPPr0pim5Fr3hgy5K4B1N/hJC1WOlSUpW42s4LWcjGMnPTAPWh4hmsTGcKt2y2M96eiINrZY2pbK22TlCzgjGAPQYz+tJqzWzCUxGHWk3gM2U3t0gJ1Jb4LMyVIbK2/HeK3mHUBfl5ynP+zOB2pzDVeW5hqPKtSoVqZy6+kIeif8PX+qVwgfRtlm2W6yQnBNuc6fcRbsMRDUENJsJ3SH3FKCuN2M5Hk+lTemPfnHrZtNQDrqflNXoT/DOnun8W6zrn/6ukm/NGPJTGkMgjxx4pQlOSeZTnCjUq4+WENvCt1Op5T2hA/wAI+irGk7Rer9erxHsfaBcdUWxbUKahw+Gyw0ktoKCAlROcDjAqmc+Q23OkCezH5TM36A+lbFbfp+yyJcuXatPaibslq9OtxDfBWmCwRZEtoypDkQ1IaypQ3rVxOJthhzmefTvCZ076c9NrmzpvUF0vevdO3+49R9YxWXLo8C36hpu+YFstzDqUu+IPDbchsuloeaCBySlFWZzylmHDrLZq1uR94d+gim/410emrP0l0rI0m2I1s0zqpiwtDTaG/BiGzafKSWkpQNw2nc8+gqKxYm8VxPCsGysMKdJQBsFAsPQrREeOcYAx/lofMWg+VekBbbMiLLl/8A3FP/ALqJedbW/Q/+H1/9qka9SriiEpoIebE9i32UP+FIM/4zP+Z//grE4j/56dP/AE4f8Kma2D/76n/71aV5/wDMPOJ3h/pI+8/sL/8ACf7TFI5B/Wr+Mw0NpfgjeJSAw6mDfK38yPziv/64UPxxzE19B+lkjpFW+Iq+tL8Uqy/8k8pavhT25flHR0Z/vXF/zP8AeiYcmxmNxK/uc+JhP4U/BCLz2f6GK7qHjV91/wDePT6M4L+Cp/Uz5v3T/WX/APvNG8Waq4QZpeGL58Tp/wCUJ5Rl9H6L0hq3VVvs2rdSQtI2Z9h5+ZqG5Qp86Jb0sqUG1MRm3XAthwAwE8mlK+KqUkVlBdhp3+sxKX2wmvawwBYjUXU/OLPrv2InrD2c9VWi6pgtarLdYjSpTMxAWsILS+FFK05BGORzSjcwxVS4Uj08jPQUPMOJxNFm8FRb1FvnFEy+zZgc/wCYr1ek+bUJDxHd1h/av96l5ImTWgfD/wDD/wDaqBMkBoH/ABr/APdUmQIb4/8Awz/iVfvS5EkmfMf8zf71EmRJgPz/AI//AJqgSZBH+6f/AFf/AJqiZAzn8o/oD/sagyQmP+sf8Kf6H5UJhCkzEf8AOf8AKfwqvKX21vL8p9D/ALH/AOamyJklDkqYV72OnuDz+VMGMqXl2s0xDnb+cn+ftQRJk9Dn+IMf+eP8qIWvJeGBp/8A+GF/7j/X/wCzQjJkgnA/4mft/wA7n9qGTJlhZl/+YH/9h/1/9hQzJlhZmI/z/wD8h/8AaoMyZIWZ/wAgP/cVB/8A2VAkyFmQ/P8A+Yf8x0TtPzH2bZ/xn+fH+1RZ9pOF+U+Y/wB38/y/MaW2kQD2z/sPjVzA1LTD/B/vcfi9gfTrSGvJh3qRfY0hSZLhQ8FAJIStAWMfnOf/AErZriLLHI8qkqShYw6rZeB5IwTjkD1oEnpLHBB+Sf8AEI//AM3/APpP9KqV+U6/KKl/iEcI5PP/APpP9KEUm0Uxrzf/APpP9KCVmoku8J/5/wCpSqkS8uX4P/qf+8UqRNpYf9m/7z/ShmTImS/1/wA6J2nZovv/AHb/AF/SoUyZEwMZ/wDu/wD86tOkyT6e/wDG3/i+NOkSOiQ33f8A7n/6/wCtDkSCfv8A/L/z/tQjJkLLn/mf+P8A9aqmTJAZ0pwmIy//APqH/wCkdq8R0nGWMSJP/j/4x/8AaaEw6SJ1qjvD/wA/s+1LkQk6WGH/AP8A1D/rVJk+QtUf/sVQv9dDmTO5uI+7z4efX8YzTisBMmE5TTsGSfnz/rVjJkpPp+ccGnbRWRoYgD/ANx/Hz/612pLZPkn7cH+LD/G/wCzz/8AcP61qqRjW1CGTIYJ/wDmP96QdtZUXE/mn/j/AOPP+1dMkhI//M/8f/2aFJkjA/8AE/8A8T/SpkzR/wC8/wA2/wCv/c1AwDPJ/wCWcfyH/wBmjMRMgSYP+af8P/r/AKD/ADrMtL2n0c+x/wD8R+yH0O/r/wDatL5f+p/r/wBWtEfWfNP7RYR4qDl/kz+e/jx51kWBnmS/oP8An/6Z9f41Vgs0UvLg/wDf/lTtZpPLn//aAAwDAQACEQMRAD8A+f0ADj/n7fxpUkkw6/3l3/6qeR+AorTJEwhZP/uD/p/9qLMmSSi/ef8Aq/8AtQzrOEm40opAz8se/wD+XtVDOkyFiH/Gf97f/wCWqkyZJlX/AIj/APkf/rNUuZk/Z/vgf/eP+tXLETIE2t2D2J9x/n/nWZZpYySt+i+BLTLZcaStCSpOT29DkUfB4tadZXOx31m+NwxxGEakpqKzCwKtYj03i0T/8TT+mri9btT6JjuPsOqbMq0XByO5hKiAW1+ItKuf84rwfEOIU6dRwVYA8iD/AEZ5DAfZhWxlGnVw/EsGjsoNnqMpB5gge3I9Z5dcf8TfUO9yPO1pm2IJG1MOCgAJH/I/d8f1qNNLCSk1Kv2icYrqy2TAU2Vdtf/rD8pU9SfaC62nSIzV1jGcsJKH1y1IlqWjJyE+I8gJ+eMe1UzN3lT5MwmLw/EcSlQPh6ZUHbLfTf9MmS8iY3HmKtT4U0g/8ADLQhPLp4ywByn/w/r0pmmbHvKMWZblSJNNc2mYy1j22WmHcWn+HSk+lNpYyLU+Te/wC39KpOw+U0v2FyP8P7/wD5UwDNDLiEP/lH/wDd/wDpVA/wmTb4iD6p/wDw/wD+NVJvpOAFpu+7P/q/+j/6PzqMy/WdP+AOH9X/APl/eoPwnTzL/An/APm//wDP/wCtULM+fL/GfR3/APu//wCz/wDudBy/5UyD/r//AJn/AOx/WhWHfTl/y/OdP/Jf/hP/APH/APx1B/t/n/y//wCf/Uq2aT/l/wA/z/5f/mUZt/8An/y//wCSf/q1H+X/AD/P/k/b/UT/ALP/AJf/AOT/APw1P08v+X5/n/yfsJ/2f/L/AP5P/wDDVH18v+X5/n/yfsJ/2f8Ay/8A+T//AA1P18v+X5/n/wAn7Cf9n/y//wCT/wDw1P18v+X5/n/yfsT/ALJ/O/n/APM/+zeqZv8AL/n+f/J+xP8Asn87/wDF/wD4b/8AU/nT9PL/AJfn+f8AyfsJ/wBn/wAv/wDk/wD8NR9fL/l+f5/8n7Cf9n/y/wD+T/8Aw1H18v8Al+f5/wDJ+wn/AGf/AC//AOT/APw1H18v+X5/n/yfsJ/2f/L/AP5P/wDE1H18v+X5/n/yfsJ/2f8Ay/8A+T//ABNT9fL/AJfn+f8AyfsJ/wBn/wAv/wDk/wD8TU/Xy/5fn+f/ACfsJ/2f/L//AJQf/wCNqfr5f8vz/P8A5P2E/wCz/wCX/wDyf/4mp+vl/wAvz/P/AJP2E/7P/l//AMn/APhqn6+X/L8/z/5P2J/2f/L/AP5P/wDEr/r/AJ1P18v+X5/n/wAn7Ef7L/l//K//AMV/+j/7/wD1fXy/5fn+f/J+wn/Z/wDL/wD5P/8AE1H18v8Al+f5/wDJ+wn/AGf/AC//AOT/APxNT9fL/l+f5/8AJ+wn/Z/8v/8Ak/8A8TU/Xy/5fn+f/J+wn/Z/8v8A/k//AMTU/Xy/5fn+f/J+wn/Z/wDL/wD5P/8AE1P18v8Al+f5/wDJ+wn/AGf/AC//AOT/APxNT9fL/l+f5/8AJ+wn/Z/8v/8Ak/8A8TU/Xy/5fn+f/J+wn/Z/8v8A/k//AMTU/Xy/5fn+f/J+wn/Z/wDL/wD5P/8AE1P18v8Al+f5/wDJ+wn/AGf/AC//AOT/APxNR9fL/l+f5/8AJ+wn/Z/8v/8Ak/8A8TUfXy/5fn+f/J+wn/Z/8v8A/k//AMTU/Xy/5fn+f/J+wn/Z/wDL/wD5P/8AE1P18v8Al+f5/wDJ+wn/AGf/AC//AOT/APxNR9fL/l+f5/8AJ+wn/Z/8v/8Ak/8A8TU/Xy/5fn+f/J+wn/Z/8v8A/k//AMTU/Xy/5fn+f/J+wn/Z/wDL/wD5P/8AE1P18v8Al+f5/wDJ+wn/AGf/AC//AOT/APxNR9fL/l+f5/8AJ+wn/Z/8v/8Ak/8A8TU/Xy/5fn+f/J+wn/Z/8v8A/k//AMTU/Xy/5fn+f/J+wn/Z/wDL/wD5P/8AE1P18v8Al+f5/wDJ+wn/AGf/AC//AOT/APxNR9fL/l+f5/8AJ+wn/Z/8v/8Ak/8A8TU/Xy/5fn+f/J+wn/Z/8v8A/k//AMTU/Xy/5fn+f/J+wn/Z/wDL/wD5P/8AE1P18v8Al+f5/wDJ+wn/AGf/AC//AOT/APxNR9fL/l+f5/8AJ+wn/Z/8v/8Ak/8A8TU/Xy/5fn+f/J+wn/Z/8v8A/k//AMTU/Xy/5fn+f/J+wn/Z/wDL/wD5P/8AE1P18v8Al+f5/wDJ+wn/AGf/AC//AOT/APxNR9fL/l+f5/8AJ+wn/Zv5v/8AJ/8A8FX/AI3/AF/zqfqZf8vz/P8A5P2E/wCzfzf/AOT/APgq/wDG/wCv+dfP/wD/AK+f/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9if9m/m/wD8n/8ABV/43/X/ADqPr5f8vz/P/k/Yn/Zv5v8A/J//AAVf+N/1/wA6j6+X/L8/z/5P2J/2b+b/APyf/wAFX/jf9f8AOo+vl/y/P8/+T9iS8HSnULUDrkPTWkL9eZCTtWzAtkmQUn1B8JB5+Qr1GsKzdJpUo1MxVi3lYfM/STf+DvXx2In/APQuooTQJSHJNoeZQFEZAJUj+qjA9q1a/SMouh6yJh/4Xa5V/+7b+VqckcF/wDxD/zUy0mV/U7T6jfY/gPxW/Z2+H/r/wDZtL5f+p/r/wBWtEfWfO/7RB4kHhr/AIPX+e/n+v56yLLgeZL+g/4f+mf+r/GqsFmil8cH/wC//KlLSry+xrH/2Q==" alt="Rhode lip glaze tint product">
             </div>
             <div class="card-icon">💋✨</div>
             <div class="product-title">Glazier Lip Tint</div>
@@ -283,102 +328,9 @@
             <button class="buy-btn" data-product="Glazier Lip Tint">add to bag →</button>
         </div>
 
-        <!-- 2) Packet Blush Bundle card → second photo (RHODE (1).png) bringing rhode branding and blush bundle look -->
+        <!-- Packet Blush Bundle card (cream blush) -->
         <div class="product-card">
             <div class="product-image">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAGQCAMAAABz1yUxAAAAYFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9m/95gAAAACHRSTlMA/P7+/v7+/v4P3YemAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAM9ElEQVR4nO3dC27jOAwFUKXZ+w/Z2h7eBLMIIGIyThx/HSKF+omCknOcMYYw9v9n7P/D2C/vP8b+z8P/m///+beXB/Cx90/28dxrn/y///9lHAAAAAAAACMN4LfQzz8m7/NRIPgfHwQAAAAAACAEAAAAAIg5gP9eHzl//vnPl8/z4YfP84/x/rF//+vfP37D8++/fv4J6P/6e14ePvP5eHn/lO/f3/+fzb9+/vgZxP//ft/f+fVbAgAAAADvCgAAAAAAAIAQAAAAAAAgBAAAAAAACAEA4Lk/f//+L27/r3/Nw3/++fPvP37/9z9/vv/z+z/+fP/+h6+/358/z+f76wMfQ+HPAAAAHgIA+I2JAAAYCQAAAAAgBAAAAACeCH//p+TvP/3j//zxxuQHv/z3nz7/+eHf/t+//3z/x+9H8Fe/fn///vkbt18f3x//8b9/fH78v6+PPwIAAICfeSAAAABgJAAAAAAfxzfXP/78+3+Xf337+D4/ef31/f0vP77+yePz2z8/fr2HXvMBAAAAwAAAAABAAAAA+PySnj8+f/z0+fudz0/+/Pzm6z/++M8fv//8u1/+RwAAAABAAAAAACAEAAAAAIIAAAAAAAjyg/vWj397fH55I/jjx58AAAAAAAAgBAAAAACCEO+///n7n/6fP+t//v/5+Zf/+Pnn2y8+//jjn3/+/PV3v/v9Z/hRgPnYewQAAIAQQAgAAAAAhAAAAACAAAAAY/rjjz/+/vPXP3/+9a+/vv71t/HX/+3fnz9+v//1H3/+w49//fIHGwAAADARAAgBAAAAgBAAAAAACAEAAADgyY8fP/7+/z++/vjx69rw1/f/l7/+7q8BAAAAgBAAAAAAEAQAAADATwAAAAAAAIAQAAAAAAgCAAAAAEIAAAAAIHjvz59/fP81//r1r7/+evj5Pz//+/Vf3/+8fP/nH//8/f/f+MOPn//4x8//ywD/+/8DAAABgBAAAAAACAEAAAAAgve+/v31H/+8/fj8+vu//vr1+9ev//3vf//+r3/967///cen//z+h19//PHrr7///vrrf//98n//96/Xf/7858+fX/7wZ+8PcP1/AAAAiDkAAAAAIAQAAAAAggAAAAAiDsD4r1+/fny+r33//v0HAAAAAEIIIAAAAIAQQAAAAAiAUP/8+7/++t+/P3/8/fefv/4BAAAAIIQAAAD4nT9////4AAAAAAAAIAQAAAAAggAAAAAiBsD4v///Ov/3619//fHfAQAAAIQQAAgBAAAAgBAAAAAAeP/+r/+8fv3l5y9//Pr15X/+w4+///z8+/+f//uv//v3f//3j3/+9V9//dd//td//fj54+9/AAAAgJ/5/n8AAAACCAAAAADAAAAAAIJ37/8BAAAAiDkAAAAAIAQAAAAAggAAAACKvH//PwAAAAAI/vvv//m/v/77119/f/rHf/zH//z3H77+8R/+84//9z/+DQAAAEAQ/vjv//3f/+0//9+PH79+ff/144f+H27/M8o/ff388X//+PGvHz9+/f799a/fv76//vjx68cPvf3pPwAAABAf/fqPH3//+PFfXz/+/vXrj//+z7/+8+///u//+u///u///u//+e8//vN///vHX1//+sc//vUf//i/pwAAAAA/o8cBAAAAwAAAAABAAAAAED7/+/w/AAAAIAQAAAAAIQgAAAAgBAACAAAAAIQAAAAAIPI8/vsPAAD+KwAAAAgAAAAAgvDv/w8AAAAgCAAAAACsIQAAAAAIIYAAAACAEAAAAAAI/vvv//n//vvr6/v3Hz9+/frHP371659fff/169evX/++Pv/48d///td/ff3zn//3f2r/AQAAAAJh/fWvf//y9d/n/yEAAAAACD/+/wAAAEAAIAAAAAQQAgAAAAAhAAAAAJj+/PnjP/7z//7v/7/++f/+n//7vz8/AwAAABA//v+P/8P/8Z//8R+/f/z4+n/jr3/86/s/5f/8+vsff/373wAAAAAi/vz6+se/f/zjHz9+fv/+/fvXr19///r19fXjXz9//vwBAAAAw///+PHjxw/jBwAAAADwVgAAAAA/AgAAAAAhAAAAAAAE4c+f337w6++//vHz15ff/3j96+9//vzr77///m/9d/z48eP79+8/f/z4/v+/AQAAAAghAAAAAAjCjz9/fgd/8+vXjx+/v7d//vzzz7/+9b///R/xf378f//+1/8vAAAAgP9HAgAAAAAAIAgAQgAgAAgCAAAAAEIAAAAA8Pf/z58/f/z897/+8fX3fx/+/+Pnr/8BAAAAwP+fAAAAAAgBAAAAgBAAAAAAGH///8cff/z3H3/++/8/fvz8+c+fAAAAAEIAAAAA4K8fP378+PHjx48fP378/PHjx/cf//yP/3j57+8/f/z6/VM+/vjPX//9SwIAAAAQAgAAAAAhABAM/3+zP//+++//+f/+4+f//i8AAAAAI/+9+/jx4/u///3vH//n//yf//Pvv/7r3//+P/8NAAAAQBjyjz8+goAAAABgIBAEAAAAAEIAAAAA8P/++38AAIAAAAAAEH79+vX//vkP/3/+NwAAAABB+PXr1w////N//v9/EhACAAAAgP//AQAAAAAF/v+fgPeKoH9+8P9K+j/+n/8JAAAgBAD8f1IAAEAIAIQAAAAAQADf//nnn//89c9f//n9zz/++Odff//z88f3f/7y+x8AAABg+vXr199//t+v//nzP//8vwEAAAB++eN/AQAAAGj+dwAAAABxX37+3wBKXgQAAAAgBAB/vf/zz5//9z//+Z//+f/+PwAAAIA/fvz4efz8AwAAAIQAgBAAAAAA+O/3P/7zP/5T//P/AAAAAPjnPwAAAAAI/vnr/wAAAAAgBAAAAID7/3n//yQAAAAAwv/xH/+P/wEAAAAAQgAAAABACAAAAAAAAEIAIAQAAAAAQgAgBAACAAAAAAEI/3n85/8BAAAAEML//T8AAACg/3e///Ir//bnPwGIAAABCP/7fwCGDwAAAAAAAIIAQAgAhAAAAABACAAAAAD/y/9DAAAAAEEAIAQAAAAA/wMAAACg/n8AAAAA/uN/AQAAAAAAAAgBAAAAgBAAAAAA9P8FAAAAIAQAAAAAf/znf/zHf/zHf/zHf/zHf/zHf/zHf/zHf//nf/33//6fAAAAAFCcBAAAAABOHgAAAAAIAQAAAAAhABAEAAAAAEIAIP0HAAAAAAgBAAAAgBAAAAAA+P9JAAAAAAgBgP8nCQAhAAAAABAEAAAAAEIAIAQAQgAgBAAAAAAAAc7/AAAAABACAAAAAIIAAAAAAAAgBAB/PAEAAIAQAAAAAAAEAQAAAABBACAEAAAAAP/8BwAAAAAI4f/8v/8HAAAAQBD++f//+X8AAACAn/7yPwAAAAAI/+f/AQAAAAAhAAAAAACAAAAAAAQAAAAAQAAgBIAAhP9xAAAAAAABAAAAABACAAAAAIIAAAAAQP9/AAAAAAj//P8/AAAAAMJf/wcAAAAgBAAAAADiPgAAAACSw+wC+6t6lREAAAAASUVORK5CYII=" alt="Rhode blush bundle packaging"> 
-            </div>
-            <div class="card-icon">🌸🎨</div>
-            <div class="product-title">Packet Blush Bundle</div>
-            <div class="product-desc">Hydrating Cream Blush · 10 Colors</div>
-            <div class="product-highlight">🌟 creamy dewy flush 🌟</div>
-            <div class="price-tag">$25.00</div>
-            <div style="font-size: 0.75rem; color:#af7b58;">1.6g each / 10 versatile shades</div>
-            <button class="buy-btn" data-product="Blush Bundle">shop shades →</button>
-        </div>
-
-        <!-- Rest of products: Glazing Milk & Peptide Eye Prep (standard image placeholder) -->
-        <div class="product-card">
-            <div class="product-image">
-                <!-- no custom required, but keep subtle gradient -->
-                <div style="width:100%; height:100%; background: linear-gradient(145deg, #ffe2cf, #ffd0b5); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🥛✨</div>
-            </div>
-            <div class="card-icon">🥛💧</div>
-            <div class="product-title">Glazing Milk</div>
-            <div class="product-desc">Ceramide Facial Essence</div>
-            <div class="product-highlight">🔥 2K+ reviews · viral essence 🔥</div>
-            <div class="price-tag">$34.00</div>
-            <div style="font-size:0.75rem;">milky toner · ceramides+peptides</div>
-            <button class="buy-btn" data-product="Glazing Milk">discover →</button>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">
-                <div style="width:100%; height:100%; background: radial-gradient(#eecfbc, #ffd9c4); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">👁️💧</div>
-            </div>
-            <div class="card-icon">👁️💧</div>
-            <div class="product-title">Peptide Eye Prep</div>
-            <div class="product-desc">Depuffing Eye Patches</div>
-            <div class="product-highlight">⚡ cooling hydrogel · instant de-puff ⚡</div>
-            <div class="price-tag">$32.00</div>
-            <div style="font-size:0.75rem;">60 patches · peptide infusion</div>
-            <button class="buy-btn" data-product="Peptide Eye Prep">treat eyes →</button>
-        </div>
-    </div>
-
-    <!-- Rhode spotlight from original text -->
-    <div class="rhode-spotlight">
-        <div class="spotlight-text">
-            <h3>🍯 glazed donut skin ritual 🍯</h3>
-            <p>Ceramide-rich essence + peptide eye prep & blush bundles — lit-from-within glow</p>
-        </div>
-        <div class="badge-stats">🏆 2K+ 5-star ratings</div>
-    </div>
-
-    <div class="tag-row">
-        <span>💄 rhode Lipstick Tint · 23.5ml</span>
-        <span>🌸 blush bundle · 10 colors cream blush</span>
-        <span>🥛 glazing milk essence · ceramide complex</span>
-        <span>👁️ peptide eye patches · depuffing</span>
-    </div>
-    <hr />
-    <div class="footer-note">
-        🌈 rhode — peptide-powered, color-drenched rituals • free shipping worldwide
-    </div>
-</div>
-
-<script>
-    (function(){
-        const btns = document.querySelectorAll('.buy-btn');
-        btns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const product = btn.getAttribute('data-product') || 'rhode item';
-                const toast = document.createElement('div');
-                toast.innerText = `✨ added ${product} to your rhode ritual ✨`;
-                toast.style.position = 'fixed';
-                toast.style.bottom = '25px';
-                toast.style.left = '50%';
-                toast.style.transform = 'translateX(-50%)';
-                toast.style.background = 'linear-gradient(135deg, #c95a3f, #d97a48)';
-                toast.style.color = 'white';
-                toast.style.padding = '10px 24px';
-                toast.style.borderRadius = '60px';
-                toast.style.fontWeight = 'bold';
-                toast.style.fontSize = '0.9rem';
-                toast.style.zIndex = '999';
-                toast.style.boxShadow = '0 8px 16px rgba(0,0,0,0.2)';
-                toast.style.backdropFilter = 'blur(2px)';
-                toast.style.fontFamily = 'Inter, sans-serif';
-                document.body.appendChild(toast);
-                setTimeout(() => {
-                    toast.style.opacity = '0';
-                    toast.style.transition = 'opacity 0.3s';
-                    setTimeout(() => toast.remove(), 400);
-                }, 1800);
-            });
-        });
-    })();
-</script>
-</body>
-</html>
+                <div class="image-duo">
+                    <div class="img-half">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAGQCAMAAABz1yUxAAAAYFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9m/95gAAAACHRSTlMA/P7+/v7+/v4P3YemAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAM9ElEQVR4nO3dC27jOAwFUKXZ+w/Z2h7eBLMIIGIyThx/HSKF+omCknOcMYYw9v9n7P/D2C/vP8b+z8P/m///+beXB/Cx90/28dxrn/y///9lHAAAAAAAACMN4LfQzz8m7/NRIPgfHwQAAAAAACAEAAAAAIg5gP9eHzl//vnPl8/z4YfP84/x/rF//+vfP37D8++/fv4J6P/6e14ePvP5eHn/lO/f3/+fzb9+/vgZxP//ft/f+fVbAgAAAADvC
