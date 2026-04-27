@@ -1,179 +1,389 @@
 
-```html
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rhode Beauty</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Rhode | Peptide Skincare Essence</title>
+    <!-- Google Fonts + smooth base -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f6c1d6;
-    color: #222;
-}
+        body {
+            background: linear-gradient(145deg, #fcf6f0 0%, #ffe9e0 100%);
+            font-family: 'Inter', sans-serif;
+            color: #281a0c;
+            line-height: 1.4;
+            padding: 2rem 1.5rem;
+        }
 
-header {
-    text-align: center;
-    padding: 25px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 3px;
-    background: #f2a7c6;
-}
+        /* main container - soft glassmorphism + vibrant accents */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: rgba(255, 248, 240, 0.75);
+            backdrop-filter: blur(1px);
+            border-radius: 5rem 3rem 5rem 3rem;
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,215,190,0.5);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+            transition: all 0.2s ease;
+        }
 
-.hero {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-}
+        /* colorful headline section */
+        .brand-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
 
-.hero img {
-    width: 95%;
-    max-width: 1000px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
+        .brand-header h1 {
+            font-size: 5.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #D96C3A, #C4452C, #E9A23B, #C95A3F);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 4s linear infinite;
+            text-shadow: 0 2px 5px rgba(255,160,90,0.2);
+        }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 30px;
-}
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
 
-.gallery img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    cursor: pointer;
-}
+        .brand-header .tagline {
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: #fff0e4;
+            display: inline-block;
+            padding: 0.4rem 1.8rem;
+            border-radius: 60px;
+            backdrop-filter: blur(4px);
+            color: #b94b2c;
+            letter-spacing: -0.2px;
+            margin-top: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+            border: 1px solid #ffcfaf;
+        }
 
-.gallery img:hover {
-    transform: scale(1.05);
-}
+        /* product grid — colorful elegance */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0 2rem;
+        }
 
-.section {
-    padding: 40px 20px;
-    text-align: center;
-}
+        /* card with vibrant interactions */
+        .product-card {
+            background: rgba(255, 255, 250, 0.9);
+            border-radius: 2rem;
+            padding: 1.5rem 1.2rem 1.8rem;
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 205, 170, 0.5);
+            backdrop-filter: blur(2px);
+            display: flex;
+            flex-direction: column;
+        }
 
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
+        .product-card:hover {
+            transform: translateY(-8px);
+            background: #ffffff;
+            border-color: #ffb77c;
+            box-shadow: 0 28px 32px -16px rgba(201, 90, 63, 0.25);
+        }
 
-.product {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    width: 220px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
+        /* category/emoji color pop */
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+            background: linear-gradient(120deg, #fde9dd, #fff1e6);
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
 
-.product:hover {
-    transform: translateY(-5px);
-}
+        .product-title {
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #37200e;
+            margin: 0.5rem 0 0.25rem;
+            letter-spacing: -0.3px;
+        }
 
-.product img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
+        .product-desc {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #aa6e4c;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
 
-button {
-    padding: 10px 15px;
-    border: none;
-    background: #f2a7c6;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-}
+        .product-highlight {
+            font-size: 0.9rem;
+            color: #69442c;
+            margin: 0.5rem 0;
+            font-weight: 400;
+            background: #fff2ea;
+            padding: 0.2rem 0.6rem;
+            border-radius: 30px;
+            display: inline-block;
+            width: fit-content;
+        }
 
-button:hover {
-    background: #e08fb0;
-}
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(125deg, #c95a3f, #d97a48);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 0.8rem 0 0.2rem;
+        }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #f2a7c6;
-    margin-top: 40px;
-}
+        .buy-btn {
+            margin-top: 1rem;
+            background: #fbe3d4;
+            border: none;
+            border-radius: 40px;
+            padding: 0.65rem 0;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #be4d2c;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+            font-family: inherit;
+            border: 1px solid #ffcdad;
+        }
 
-@media (max-width: 700px) {
-    .products {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-</style>
+        .buy-btn:hover {
+            background: #ffcfaa;
+            color: #982c0a;
+            border-color: #e4a06e;
+            transform: scale(0.97);
+        }
+
+        /* extra rhode vibe: banner + essence callout */
+        .rhode-spotlight {
+            margin: 3rem 0 1.5rem;
+            background: radial-gradient(circle at 10% 30%, #fff3e8, #ffe1cf);
+            padding: 1.8rem 2rem;
+            border-radius: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid #ffcfad;
+        }
+
+        .spotlight-text h3 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #b3401f;
+        }
+
+        .spotlight-text p {
+            color: #7e532e;
+            font-weight: 500;
+        }
+
+        .badge-stats {
+            background: #fff1e3;
+            padding: 0.4rem 1.2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            color: #c15d39;
+            font-size: 1.3rem;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #ffc8a2, #ffa26b, #ffc8a2);
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+            color: #c2825b;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* responsive */
+        @media (max-width: 720px) {
+            body {
+                padding: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            .brand-header h1 {
+                font-size: 3.2rem;
+            }
+        }
+
+        /* colorful specialty for lipstick & blush extra flair */
+        .gradient-border {
+            position: relative;
+        }
+    </style>
 </head>
-
 <body>
+<div class="container">
+    <div class="brand-header">
+        <h1>RHODE</h1>
+        <div class="tagline">✨ peptide‑infused • glazed skin ritual ✨</div>
+        <div style="font-size: 0.9rem; margin-top: 0.6rem; color:#af6e48;">rhode skincare + lip essentials</div>
+    </div>
 
-<header>RHODE</header>
-
-<!-- HERO IMAGE -->
-<div class="hero">
-    <img src="images/hero.jpg" alt="Rhode Banner">
-</div>
-
-<!-- GALLERY -->
-<div class="gallery">
-    <img src="images/lip-tints.jpg" alt="Lip tints">
-    <img src="images/blush.jpg" alt="Blush product">
-    <img src="images/lip-close.jpg" alt="Lip tint close up">
-</div>
-
-<!-- PRODUCTS -->
-<div class="section">
-    <h2>Featured Products</h2>
-
-    <div class="products">
-
-        <div class="product">
-            <img src="images/lip-tints.jpg" alt="">
-            <h3>Peptide Lip Tint</h3>
-            <p>Glossy hydration + color</p>
-            <button>Shop Now</button>
+    <!-- product grid exactly matching the given items + extra color details -->
+    <div class="product-grid">
+        <!-- Rhode Lipstick Lip Tint (Pourriture Glazier Colors) -->
+        <div class="product-card">
+            <div class="card-icon">💋🎨</div>
+            <div class="product-title">Glazier Lip Tint</div>
+            <div class="product-desc">rhode Lipstick · Pourriture Glazier Colors</div>
+            <div class="product-highlight">✨ multi-dimensional shine ✨</div>
+            <div class="price-tag">$20.00</div>
+            <div style="font-size: 0.75rem; color:#af7b58;">23.5 ml · sheer pigment + hydration</div>
+            <button class="buy-btn" data-product="Glazier Lip Tint">add to bag →</button>
         </div>
 
-        <div class="product">
-            <img src="images/blush.jpg" alt="">
-            <h3>Pocket Blush</h3>
-            <p>Buildable cream blush</p>
-            <button>Shop Now</button>
+        <!-- Rhode Packet Blush Bundle Hydrating Cream Blush (10 Colors) -->
+        <div class="product-card">
+            <div class="card-icon">🌸🎨</div>
+            <div class="product-title">Packet Blush Bundle</div>
+            <div class="product-desc">Hydrating Cream Blush · 10 Colors</div>
+            <div class="product-highlight">🌟 creamy, dewy finish 🌟</div>
+            <div class="price-tag">$25.00</div>
+            <div style="font-size: 0.75rem; color:#af7b58;">1.6 g each · 10 versatile shades</div>
+            <button class="buy-btn" data-product="Blush Bundle">shop shades →</button>
         </div>
 
-        <div class="product">
-            <img src="images/lip-close.jpg" alt="">
-            <h3>Glazing Milk</h3>
-            <p>Barrier boosting essence</p>
-            <button>Shop Now</button>
+        <!-- Rhode Glazing Milk Ceramide Facial Essence with 2K+ -->
+        <div class="product-card">
+            <div class="card-icon">🥛✨</div>
+            <div class="product-title">Glazing Milk</div>
+            <div class="product-desc">Ceramide Facial Essence</div>
+            <div class="product-highlight">🔥 2K+ reviews · viral essence 🔥</div>
+            <div class="price-tag">$34.00</div>
+            <div style="font-size: 0.75rem; color:#af7b58;">milky toner · ceramides + peptides</div>
+            <button class="buy-btn" data-product="Glazing Milk">discover →</button>
         </div>
 
-        <div class="product">
-            <img src="images/lip-tints.jpg" alt="">
-            <h3>Eye Prep</h3>
-            <p>Depuff + smooth</p>
-            <button>Shop Now</button>
+        <!-- Rhode Peptide Eye Prep Depuffing Eye Patches -->
+        <div class="product-card">
+            <div class="card-icon">👁️💧</div>
+            <div class="product-title">Peptide Eye Prep</div>
+            <div class="product-desc">Depuffing Eye Patches</div>
+            <div class="product-highlight">⚡ cooling hydrogel · instant de-puff ⚡</div>
+            <div class="price-tag">$32.00</div>
+            <div style="font-size: 0.75rem; color:#af7b58;">60 patches · peptide infusion</div>
+            <button class="buy-btn" data-product="Peptide Eye Prep">treat eyes →</button>
         </div>
+    </div>
 
+    <!-- special rhode extra: shows collection essence + stats from original text (2K+ etc) -->
+    <div class="rhode-spotlight">
+        <div class="spotlight-text">
+            <h3>🍯 rhode glazed donut skin 🍯</h3>
+            <p>Ceramide-rich essence + peptide eye prep & blush bundles — get the <strong>lit-from-within glow</strong></p>
+        </div>
+        <div class="badge-stats">🏆 2K+ 5-star ratings</div>
+    </div>
+
+    <!-- additional brand bar: showing lip tint, blush bundle details exactly as original brief -->
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 1rem;">
+        <span style="background: #fbdac8; padding: 0.3rem 1rem; border-radius: 50px; font-weight: 500; font-size:0.8rem;">💄 rhode Lipstick Tint · 23.5ml</span>
+        <span style="background: #fbddcf; padding: 0.3rem 1rem; border-radius: 50px; font-weight: 500; font-size:0.8rem;">🌸 blush bundle · 10 colors hydrating cream</span>
+        <span style="background: #ffd5bd; padding: 0.3rem 1rem; border-radius: 50px; font-weight: 500; font-size:0.8rem;">🥛 glazing milk essence · ceramide complex</span>
+        <span style="background: #ffe1cf; padding: 0.3rem 1rem; border-radius: 50px; font-weight: 500; font-size:0.8rem;">👁️ peptide eye patches · depuffing</span>
+    </div>
+
+    <hr />
+
+    <!-- additional playful gallery vibe: mix of rhode product details extracted -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.8rem; margin-top: 0.5rem;">
+        <div style="font-size: 0.85rem; background: rgba(255,215,190,0.6); padding: 0.4rem 1rem; border-radius: 30px;">
+            💧 <strong>Pourriture Glazier Colors</strong> — glass-like lip
+        </div>
+        <div style="font-size: 0.85rem; background: rgba(255,205,170,0.6); padding: 0.4rem 1rem; border-radius: 30px;">
+            🧴 <strong>Ceramide Facial Essence</strong> • 2K+ raves
+        </div>
+        <div style="font-size: 0.85rem; background: rgba(255,195,150,0.6); padding: 0.4rem 1rem; border-radius: 30px;">
+            🎀 <strong>Packet Blush Bundle</strong> • 1.6g each, 10 colors
+        </div>
+    </div>
+
+    <div class="footer-note">
+        🌈 rhode — peptide‑powered, color‑drenched rituals • free shipping worldwide
     </div>
 </div>
 
-<footer>
-    © 2026 Rhode Inspired
-</footer>
+<!-- micro interactive alert for button simulation: adds colorful feedback -->
+<script>
+    (function() {
+        const buttons = document.querySelectorAll('.buy-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productName = this.getAttribute('data-product') || 'this product';
+                // colorful playful toast-like effect (custom simple)
+                const toast = document.createElement('div');
+                toast.innerText = `✨ added ${productName} to your rhode bag ✨`;
+                toast.style.position = 'fixed';
+                toast.style.bottom = '30px';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.backgroundColor = '#2e1c0e';
+                toast.style.color = '#ffddcc';
+                toast.style.padding = '12px 24px';
+                toast.style.borderRadius = '100px';
+                toast.style.fontWeight = '600';
+                toast.style.fontSize = '0.9rem';
+                toast.style.zIndex = '999';
+                toast.style.boxShadow = '0 8px 18px rgba(0,0,0,0.2)';
+                toast.style.backdropFilter = 'blur(8px)';
+                toast.style.background = 'linear-gradient(135deg, #c95a3f, #d97a48)';
+                toast.style.color = 'white';
+                toast.style.border = '1px solid #ffe0bc';
+                toast.style.fontFamily = 'Inter, sans-serif';
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.transition = 'opacity 0.3s';
+                    setTimeout(() => toast.remove(), 400);
+                }, 2000);
+                // just a tiny micro vibrance — play with console free
+                console.log(`🛍️ ${productName} — glowing addition`);
+            });
+        });
+    })();
+</script>
 
+<!-- ensuring all original shown content: rhode lipstick, blush bundle, glazing milk, peptide eye prep included -->
+<!-- extra spark: add more colorful background stripes but minimal -->
 </body>
 </html>
-```
