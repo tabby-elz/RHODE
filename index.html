@@ -37,7 +37,7 @@
         /* brand header with gradient */
         .brand-header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .brand-header h1 {
@@ -71,51 +71,65 @@
             backdrop-filter: blur(2px);
         }
 
-        /* Hero image banner */
-        .hero-image {
+        /* NEW PHOTO SECTION - RIGHT BELOW HEADER, ROTATED, CLEAR, NICE */
+        .rotated-photo-section {
             width: 100%;
-            max-height: 260px;
-            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1.2rem 0 1.8rem 0;
+            perspective: 800px;
+        }
+
+        .rotated-photo {
+            width: 75%;
+            max-width: 550px;
+            background: #fff5f0;
             border-radius: 2rem;
-            margin: 1.5rem 0 1.8rem 0;
-            box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.15);
-            border: 2px solid rgba(255, 180, 180, 0.6);
-            background: #fff0f0;
+            padding: 0.8rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            border: 3px solid rgba(255, 200, 180, 0.8);
+            transition: all 0.3s ease;
+            /* ROTATION EFFECT */
+            transform: rotate(2deg) scale(1);
         }
 
-        .hero-image img {
+        .rotated-photo:hover {
+            transform: rotate(0deg) scale(1.01);
+            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.25);
+            border-color: #ffb08e;
+        }
+
+        .rotated-photo img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 30%;
-            transition: transform 0.3s ease;
+            height: auto;
             display: block;
+            border-radius: 1.2rem;
+            object-fit: cover;
+            transition: all 0.3s ease;
         }
 
-        .hero-image:hover img {
-            transform: scale(1.02);
-        }
-
-        /* product grid - SQUARE BOXES */
+        /* product grid - MORE RECTANGLE (less square, more rectangular) */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.8rem;
             margin: 2rem 0 2rem;
         }
 
-        /* card styling - PERFECT SQUARE SHAPE */
+        /* card styling - RECTANGLE SHAPE (height less than width ratio) */
         .product-card {
             background: #fffffffa;
-            border-radius: 2rem;
+            border-radius: 1.8rem;
             padding: 1.2rem 1.2rem 1.5rem;
             transition: transform 0.25s ease, box-shadow 0.3s;
             box-shadow: 0 12px 22px -12px rgba(0, 0, 0, 0.08);
             border: 1px solid #fdd0da;
             display: flex;
             flex-direction: column;
-            aspect-ratio: 1 / 1;
-            /* THIS MAKES THE BOX PERFECT SQUARE */
+            /* RECTANGLE SHAPE - width ~1.3x height */
+            min-height: 420px;
+            height: auto;
         }
 
         .product-card:hover {
@@ -125,11 +139,10 @@
             background: #ffffff;
         }
 
-        /* IMAGE CONTAINER - LARGER AND MORE VISIBLE */
+        /* IMAGE CONTAINER - CLEAR AND VISIBLE */
         .product-image {
             width: 100%;
-            height: 200px;
-            /* FIXED HEIGHT FOR BETTER VISIBILITY */
+            height: 210px;
             background: #fbe8e8;
             border-radius: 1.5rem;
             margin-bottom: 0.8rem;
@@ -145,7 +158,6 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            /* CHANGED TO 'contain' SO FULL IMAGE SHOWS WITHOUT CROPPING */
             transition: transform 0.25s ease;
             background-color: #fbe8e8;
             object-position: center;
@@ -177,7 +189,6 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            /* FULL IMAGE VISIBLE */
             background-color: #fbe3e0;
         }
 
@@ -318,14 +329,12 @@
                 font-size: 3.2rem;
             }
 
-            .hero-image {
-                max-height: 180px;
+            .rotated-photo {
+                width: 90%;
             }
 
             .product-card {
-                aspect-ratio: auto;
-                /* On mobile, allow natural height */
-                min-height: 380px;
+                min-height: 400px;
             }
 
             .product-image {
@@ -342,17 +351,19 @@
         <div style="font-size: 0.85rem; margin-top: 0.5rem; color: #bf7c58;">✨ rhode skincare + lip + blush essentials ✨</div>
     </div>
 
-    <!-- Hero image banner -->
-    <div class="hero-image">
-        <img src="download-removebg-preview (4).png" alt="Rhode hero product showcase" onerror="this.onerror=null; this.src='https://placehold.co/800x300/fce0e0/c95a3f?text=Rhode'">
+    <!-- NEW PHOTO SECTION - RIGHT BELOW HEADER, ROTATED, CLEAR, NICE -->
+    <div class="rotated-photo-section">
+        <div class="rotated-photo">
+            <img src="download (31).jfif" alt="Rhode beautiful product display" onerror="this.onerror=null; this.src='https://placehold.co/600x400/fce0e0/c95a3f?text=Rhode+Image'">
+        </div>
     </div>
 
-    <!-- ALL 4 PRODUCTS - SQUARE BOXES WITH FULLY VISIBLE IMAGES -->
+    <!-- ALL 4 PRODUCTS - RECTANGLE SHAPED CARDS -->
     <div class="product-grid">
-        <!-- 1. Glazier Lip Tint - PHOTO FULLY VISIBLE (object-fit: contain) -->
+        <!-- 1. Glazier Lip Tint -->
         <div class="product-card">
             <div class="product-image">
-                <img src="anna (@annaivanus) on Ideogram.jpeg" alt="Rhode Glazier Lip Tint - Anna Ivanus Ideogram" onerror="this.onerror=null; this.src='https://placehold.co/400x400/fce0e0/c95a3f?text=Glazier+Lip+Tint'">
+                <img src="anna (@annaivanus) on Ideogram.jpeg" alt="Rhode Glazier Lip Tint" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fce0e0/c95a3f?text=Glazier+Lip+Tint'">
             </div>
             <div class="card-icon">💋✨</div>
             <div class="product-title">Glazier Lip Tint</div>
@@ -368,10 +379,10 @@
             <div class="product-image">
                 <div class="image-duo">
                     <div class="img-half">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAGQCAMAAABz1yUxAAAAYFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9m/95gAAAACHRSTlMA/P7+/v7+/v4P3YemAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAM9ElEQVR4nO3dC27jOAwFUKXZ+w/Z2h7eBLMIIGIyThx/HSKF+omCknOcMYYw9v9n7P/D2C/vP8b+z8P/m///+beXB/Cx90/28dxrn/y///9lHAAAAAAAACMN4LfQzz8m7/NRIPgfHwQAAAAAACAEAAAAAIg5gP9eHzl//vnPl8/z4YfP84/x/rF//+vfP37D8++/fv4J6P/6e14ePvP5eHn/lO/f3/+fzb9+/vgZxP//ft/f+fVbAgAAAADvCgAAAAB4A8D/HwAAAAgBAAAAgBAAAAAACAEAAAAAIQAAAAAgBAAAAANAQkR3RNla5M/c0XfOOQYjEwEAAAAASUVORK5CYII=" alt="Rhode blush packaging">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAGQCAMAAABz1yUxAAAAYFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9m/95gAAAACHRSTlMA/P7+/v7+/v4P3YemAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAM9ElEQVR4nO3dC27jOAwFUKXZ+w/Z2h7eBLMIIGIyThx/HSKF+omCknOcMYYw9v9n7P/D2C/vP8b+z8P/m///+beXB/Cx90/28dxrn/y///9lHAAAAAAAACMN4LfQzz8m7/NRIPgfHwQAAAAAACAEAAAAAIg5gP9eHzl//vnPl8/z4YfP84/x/rF//+vfP37D8++/fv4J6P/6e14ePvP5eHn/lO/f3/+fzb9+/vgZxP//ft/f+fVbAgAAAADvCgAAAAB4A8D/HwAAAAgBAAAAgBAAAAAACAEAAAAhAAAAAAACAEAAAAAIAAQBgBAAAAAAEAAIAYAQAAgBgBAACAEAAAAAIQAQAgAhABACAAAAAEIAIAQAAAAAQgAgBAAAAAAEAUAQAAgCgCAAEAIAAQAAgAAAAAAAEAAAAAAQggAAAABA+P/P6v7/9ddf//33Xz/jzwAAAAAE4O+///77779//vnnn3/+AQAAAEAQ/ucfAAAAAEIAIAAAAAAQAgAAAAAhABAEAAAAAEIAIAQAggAgAAAEAYAgABACAAAAAAEAAIAQAAgCAAEAAAAAIAgABAEAAIAAQAAAAAAACEAAAAAAAIAQAAAAAAhCAAAAAAAAAAIQAAAAAAhCAAAAAAAA8P///x8Q4wJgOzrcFwAAAABJRU5ErkJggg==" alt="Rhode blush packaging">
                     </div>
                     <div class="img-half">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAGQCAMAAABz1yUxAAAAYFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9m/95gAAAACHRSTlMA/P7+/v7+/v4P3YemAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAM9ElEQVR4nO3dC27jOAwFUKXZ+w/Z2h7eBLMIIGIyThx/HSKF+omCknOcMYYw9v9n7P/D2C/vP8b+z8P/m///+beXB/Cx90/28dxrn/y///9lHAAAAAAAACMN4LfQzz8m7/NRIPgfHwQAAAAAACAEAAAAAIg5gP9eHzl//vnPl8/z4YfP84/x/rF//+vfP37D8++/fv4J6P/6e14ePvP5eHn/lO/f3/+fzb9+/vgZxP//ft/f+fVbAgAAAADvCgAAAAB4A8D/HwAAAAgBAAAAgBAAAAAACAEAAAAhAAAAAAACAEAAAAAIAAQBgBAAAAAAEAAIAYAQAAAAAAgBgBAACAEAAAAAIQAQAgAhABACAAAAAEIAIAQAAAAAQgAgBAAAAAAEAUAQAAgCgCAAEAIAAQAAgAAAAAAAEAAAAAAQggAAAABA+P/PKv7/9ddf//33Xz/jzwAAAAAE4O+///77779//vnnn3/+AQAAAEAQ/ucfAAAAAEIAIAAAAAAQAgAAAAAhABAEAAAAAEIAIAQAggAgAAAEAYAgABAAAAACAAEAAIAQAAgCAAEAAAAAIAgABAEAAIAAQAAAAAAACEAAAAAAAIAQAAAAAAhCAAAAAAAAAAIQAAAAAAhCAAAAAAAA8P///x8Q4wJgOzrcFwAAAABJRU5ErkJggg==" alt="Rhode brand second">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAGQCAMAAABz1yUxAAAAYFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9m/95gAAAACHRSTlMA/P7+/v7+/v4P3YemAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAM9ElEQVR4nO3dC27jOAwFUKXZ+w/Z2h7eBLMIIGIyThx/HSKF+omCknOcMYYw9v9n7P/D2C/vP8b+z8P/m///+beXB/Cx90/28dxrn/y///9lHAAAAAAAACMN4LfQzz8m7/NRIPgfHwQAAAAAACAEAAAAAIg5gP9eHzl//vnPl8/z4YfP84/x/rF//+vfP37D8++/fv4J6P/6e14ePvP5eHn/lO/f3/+fzb9+/vgZxP//ft/f+fVbAgAAAADvCgAAAAB4A8D/HwAAAAgBAAAAgBAAAAAACAEAAAAhAAAAAAACAEAAAAAIAAQBgBAAAAAAEAAIAYAQAAgBgBAACAEAAAAAIQAQAgAhABACAAAAAEIAIAQAAAAAQgAgBAAAAAAEAUAQAAgCgCAAEAIAAQAAgAAAAAAAEAAAAAAQggAAAABA+P/P6v7/9ddf//33Xz/jzwAAAAAE4O+///77779//vnnn3/+AQAAAEAQ/ucfAAAAAEIAIAAAAAAQAgAAAAAhABAEAAAAAEIAIAQAggAgAAAEAYAgABACAAAAAAEAAIAQAAgCAAEAAAAAIAgABAEAAIAAQAAAAAAACEAAAAAAAIAQAAAAAAhCAAAAAAAAAAIQAAAAAAhCAAAAAAAA8P///x8Q4wJgOzrcFwAAAABJRU5ErkJggg==" alt="Rhode brand second">
                     </div>
                 </div>
             </div>
