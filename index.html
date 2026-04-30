@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Rhode | Peptide Skincare + Lip Essentials</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Added Great Vibes for Cursive Handwriting -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,14 +14,14 @@
         }
 
         body {
-            /* BABY BLUE / LIGHT BLUE BACKGROUND - Soft, calming, fresh */
+            /* BABY BLUE / LIGHT BLUE BACKGROUND */
             background: linear-gradient(135deg, #d4eef7 0%, #b8e1f0 50%, #cce8f5 100%);
             font-family: 'Inter', sans-serif;
             color: #1a2c3e;
             padding: 2rem 1.5rem;
         }
 
-        /* main glass container - slightly adjusted for blue theme */
+        /* main glass container */
         .container {
             max-width: 1300px;
             margin: 0 auto;
@@ -34,7 +34,7 @@
             transition: all 0.2s;
         }
 
-        /* brand header with gradient - kept warm to contrast with blue */
+        /* brand header with CURSIVE HANDWRITING for RHODE */
         .brand-header {
             text-align: center;
             margin-bottom: 1.5rem;
@@ -45,9 +45,10 @@
         }
 
         .brand-header h1 {
-            font-size: 5.2rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
+            font-size: 5.8rem;
+            font-weight: 700;
+            font-family: 'Great Vibes', 'Dancing Script', cursive;
+            letter-spacing: 0.02em;
             background: linear-gradient(125deg, #D45F2E, #BF3F22, #EE9B54, #C1542C);
             background-size: 220% auto;
             -webkit-background-clip: text;
@@ -55,6 +56,7 @@
             color: transparent;
             animation: waveGradient 6s ease infinite;
             margin-bottom: 0.25rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.05);
         }
 
         @keyframes waveGradient {
@@ -76,7 +78,7 @@
             backdrop-filter: blur(2px);
         }
 
-        /* RECTANGULAR PHOTO IN LOGO/HEADER AREA - STRAIGHT */
+        /* RECTANGULAR PHOTO IN LOGO/HEADER AREA */
         .logo-photo-section {
             width: 100%;
             display: flex;
@@ -113,7 +115,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Separator decorative line - blue tint */
+        /* Separator */
         .photo-separator {
             width: 80px;
             height: 3px;
@@ -179,25 +181,15 @@
             transform: scale(1.02);
         }
 
-        /* For dual image layout inside blush card */
-        .image-duo {
-            display: flex;
-            gap: 8px;
+        /* For dual image layout inside blush card - updated for single clear photo */
+        .single-image-full {
             width: 100%;
             height: 100%;
-        }
-
-        .image-duo .img-half {
-            flex: 1;
-            overflow: hidden;
-            border-radius: 1rem;
-            background: #f0f8fc;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-
-        .image-duo .img-half img {
+        .single-image-full img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -268,7 +260,7 @@
             transform: scale(0.97);
         }
 
-        /* spotlight banner - adjusted for blue theme */
+        /* spotlight banner */
         .rhode-spotlight {
             margin: 2rem 0 1.2rem;
             background: radial-gradient(ellipse at 20% 30%, #e5f2f7, #d4eaf2);
@@ -338,7 +330,7 @@
             }
 
             .brand-header h1 {
-                font-size: 3.2rem;
+                font-size: 3.5rem;
             }
 
             .logo-rectangle-photo {
@@ -358,13 +350,13 @@
 <body>
 <div class="container">
     <div class="brand-header">
+        <!-- CURSIVE HANDWRITING STYLE FOR RHODE -->
         <h1>RHODE</h1>
         <div class="brand-sub">peptide-infused • glazed finish • luminous rituals</div>
         <div style="font-size: 0.85rem; margin-top: 0.3rem; color: #2c6e8f;">✨ rhode skincare + lip + blush essentials ✨</div>
     </div>
 
-    <!-- RECTANGULAR PHOTO IN LOGO/HEADER AREA - STRAIGHT -->
-    <!-- Photo: rhode world at coachella 2026 | rhode x the biebers -->
+    <!-- RECTANGULAR PHOTO IN LOGO/HEADER AREA -->
     <div class="logo-photo-section">
         <div class="logo-rectangle-photo">
             <img src="rhode world at coachella 2026 _ rhode x the biebers.jpg" alt="Rhode World at Coachella 2026 - Rhode x The Biebers" onerror="this.onerror=null; this.src='https://placehold.co/800x450/e0f0f8/2c6e8f?text=Rhode+x+The+Biebers+%7C+Coachella+2026'">
@@ -388,22 +380,17 @@
             <button class="buy-btn" data-product="Glazier Lip Tint">add to bag →</button>
         </div>
 
-        <!-- 2. Packet Blush Bundle (Cream Blush) -->
+        <!-- 2. Packet Blush Bundle - NEW PHOTO "Blush Rhode.jpg" ADDED CLEARLY -->
         <div class="product-card">
             <div class="product-image">
-                <div class="image-duo">
-                    <div class="img-half">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAGQCAMAAABz1yUxAAAAYFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9m/95gAAAACHRSTlMA/P7+/v7+/v4P3YemAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAM9ElEQVR4nO3dC27jOAwFUKXZ+w/Z2h7eBLMIIGIyThx/HSKF+omCknOcMYYw9v9n7P/D2C/vP8b+z8P/m///+beXB/Cx90/28dxrn/y///9lHAAAAAAAACMN4LfQzz8m7/NRIPgfHwQAAAAAACAEAAAAAIg5gP9eHzl//vnPl8/z4YfP84/x/rF//+vfP37D8++/fv4J6P/6e14ePvP5eHn/lO/f3/+fzb9+/vgZxP//ft/f+fVbAgAAAADvCgAAAAB4A8D/HwAAAAgBAAAAgBAAAAAACAEAAAAhAAAAAAACAEAAAAAIAAQBgBAAAAAAEAAIAYAQAAgBgBAACAEAAAAAIQAQAgAhABACAAAAAEIAIAQAAAAAQgAgBAAAAAAEAUAQAAgCgCAAEAIAAQAAgAAAAAAAEAAAAAAQggAAAABA+P/P6v7/9ddf//33Xz/jzwAAAAAE4O+///77779//vnnn3/+AQAAAEAQ/ucfAAAAAEIAIAAAAAAQAgAAAAAhABAEAAAAAEIAIAQAggAgAAAEAYAgABACAAAAAAEAAIAQAAgCAAEAAAAAIAgABAEAAIAAQAAAAAAACEAAAAAAAIAQAAAAAAhCAAAAAAAAAAIQAAAAAAhCAAAAAAAA8P///x8Q4wJgOzrcFwAAAABJRU5ErkJggg==" alt="Rhode blush packaging">
-                    </div>
-                    <div class="img-half">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAGQCAMAAABz1yUxAAAAYFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9m/95gAAAACHRSTlMA/P7+/v7+/v4P3YemAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAM9ElEQVR4nO3dC27jOAwFUKXZ+w/Z2h7eBLMIIGIyThx/HSKF+omCknOcMYYw9v9n7P/D2C/vP8b+z8P/m///+beXB/Cx90/28dxrn/y///9lHAAAAAAAACMN4LfQzz8m7/NRIPgfHwQAAAAAACAEAAAAAIg5gP9eHzl//vnPl8/z4YfP84/x/rF//+vfP37D8++/fv4J6P/6e14ePvP5eHn/lO/f3/+fzb9+/vgZxP//ft/f+fVbAgAAAADvCgAAAAB4A8D/HwAAAAgBAAAAgBAAAAAACAEAAAAhAAAAAAACAEAAAAAIAAQBgBAAAAAAEAAIAYAQAAgBgBAACAEAAAAAIQAQAgAhABACAAAAAEIAIAQAAAAAQgAgBAAAAAAEAUAQAAgCgCAAEAIAAQAAgAAAAAAAEAAAAAAQggAAAABA+P/P6v7/9ddf//33Xz/jzwAAAAAE4O+///77779//vnnn3/+AQAAAEAQ/ucfAAAAAEIAIAAAAAAQAgAAAAAhABAEAAAAAEIAIAQAggAgAAAEAYAgABACAAAAAAEAAIAQAAgCAAEAAAAAIAgABAEAAIAAQAAAAAAACEAAAAAAAIAQAAAAAAhCAAAAAAAAAAIQAAAAAAhCAAAAAAAA8P///x8Q4wJgOzrcFwAAAABJRU5ErkJggg==" alt="Rhode brand second">
-                    </div>
+                <div class="single-image-full">
+                    <img src="Blush Rhode.jpg" alt="Rhode Blush Bundle - Cream Blush Collection" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e0f0f8/2c6e8f?text=Blush+Rhode+Bundle'">
                 </div>
             </div>
             <div class="card-icon">🌸🎨</div>
             <div class="product-title">Packet Blush Bundle</div>
             <div class="product-desc">Hydrating Cream Blush · 10 Colors</div>
-            <div class="product-highlight">🌟 creamy dewy flush 🌟</div>
+            <div class="product-highlight">🌟 creamy dewy flush · clean formula 🌟</div>
             <div class="price-tag">$25.00</div>
             <div style="font-size: 0.7rem; color:#af7b58;">1.6g each / 10 versatile shades</div>
             <button class="buy-btn" data-product="Blush Bundle">shop shades →</button>
