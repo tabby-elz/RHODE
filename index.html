@@ -14,27 +14,27 @@
         }
 
         body {
-            /* BABY PINK BACKGROUND */
-            background: linear-gradient(135deg, #ffe4ec 0%, #ffd5e2 50%, #ffe0ea 100%);
+            /* BABY BLUE / LIGHT BLUE BACKGROUND - Soft, calming, fresh */
+            background: linear-gradient(135deg, #d4eef7 0%, #b8e1f0 50%, #cce8f5 100%);
             font-family: 'Inter', sans-serif;
-            color: #2c1a0c;
+            color: #1a2c3e;
             padding: 2rem 1.5rem;
         }
 
-        /* main glass container */
+        /* main glass container - slightly adjusted for blue theme */
         .container {
             max-width: 1300px;
             margin: 0 auto;
-            background: rgba(255, 248, 245, 0.85);
+            background: rgba(255, 250, 248, 0.92);
             backdrop-filter: blur(2px);
             border-radius: 3rem 2rem 4rem 2rem;
-            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 180, 180, 0.5);
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(100, 180, 210, 0.4);
             overflow: hidden;
             padding: 2rem 2rem 2.5rem;
             transition: all 0.2s;
         }
 
-        /* brand header with gradient and new rectangular photo integration */
+        /* brand header with gradient - kept warm to contrast with blue */
         .brand-header {
             text-align: center;
             margin-bottom: 1.5rem;
@@ -65,18 +65,18 @@
 
         .brand-sub {
             font-size: 1rem;
-            background: #fff2f0;
+            background: #eef7fc;
             display: inline-block;
             padding: 0.35rem 1.8rem;
             border-radius: 60px;
             font-weight: 500;
-            color: #bd5733;
+            color: #2c6e8f;
             margin-top: 0.25rem;
-            border: 1px solid #ffc0cb;
+            border: 1px solid #b8d9e8;
             backdrop-filter: blur(2px);
         }
 
-        /* NEW RECTANGULAR PHOTO IN LOGO/HEADER AREA - STRAIGHT (NO ROTATION) */
+        /* RECTANGULAR PHOTO IN LOGO/HEADER AREA - STRAIGHT */
         .logo-photo-section {
             width: 100%;
             display: flex;
@@ -88,20 +88,19 @@
         .logo-rectangle-photo {
             width: 70%;
             max-width: 600px;
-            background: #fff5f0;
+            background: #ffffff;
             border-radius: 1.5rem;
             padding: 0.6rem;
-            box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.2);
-            border: 2px solid rgba(255, 200, 180, 0.8);
+            box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(100, 180, 210, 0.6);
             transition: all 0.3s ease;
-            /* STRAIGHT - NO ROTATION */
             transform: rotate(0deg);
         }
 
         .logo-rectangle-photo:hover {
             transform: scale(1.01);
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.25);
-            border-color: #ffa06e;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            border-color: #4aa3c9;
         }
 
         .logo-rectangle-photo img {
@@ -111,20 +110,19 @@
             border-radius: 1rem;
             object-fit: cover;
             aspect-ratio: 16 / 9;
-            /* RECTANGLE SHAPE - wider than tall */
             transition: all 0.3s ease;
         }
 
-        /* Separator decorative line */
+        /* Separator decorative line - blue tint */
         .photo-separator {
             width: 80px;
             height: 3px;
-            background: linear-gradient(90deg, #ffcdbb, #ffab88, #ffcdbb);
+            background: linear-gradient(90deg, #a8d1e6, #6bb5d9, #a8d1e6);
             border-radius: 3px;
             margin: 0.5rem auto 1rem auto;
         }
 
-        /* product grid - RECTANGLE CARDS */
+        /* product grid */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -132,14 +130,14 @@
             margin: 2rem 0 2rem;
         }
 
-        /* card styling - RECTANGLE SHAPE */
+        /* card styling */
         .product-card {
             background: #fffffffa;
             border-radius: 1.8rem;
             padding: 1.2rem 1.2rem 1.5rem;
             transition: transform 0.25s ease, box-shadow 0.3s;
             box-shadow: 0 12px 22px -12px rgba(0, 0, 0, 0.08);
-            border: 1px solid #fdd0da;
+            border: 1px solid #cce3ed;
             display: flex;
             flex-direction: column;
             min-height: 420px;
@@ -148,8 +146,8 @@
 
         .product-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 28px 34px -14px rgba(201, 90, 63, 0.2);
-            border-color: #ffb0c0;
+            box-shadow: 0 28px 34px -14px rgba(44, 110, 143, 0.2);
+            border-color: #8fcbdf;
             background: #ffffff;
         }
 
@@ -157,7 +155,7 @@
         .product-image {
             width: 100%;
             height: 210px;
-            background: #fbe8e8;
+            background: #f0f8fc;
             border-radius: 1.5rem;
             margin-bottom: 0.8rem;
             overflow: hidden;
@@ -173,7 +171,7 @@
             height: 100%;
             object-fit: contain;
             transition: transform 0.25s ease;
-            background-color: #fbe8e8;
+            background-color: #f0f8fc;
             object-position: center;
         }
 
@@ -193,7 +191,7 @@
             flex: 1;
             overflow: hidden;
             border-radius: 1rem;
-            background: #fbe3e0;
+            background: #f0f8fc;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -203,7 +201,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            background-color: #fbe3e0;
+            background-color: #f0f8fc;
         }
 
         .card-icon {
@@ -215,7 +213,7 @@
         .product-title {
             font-size: 1.3rem;
             font-weight: 700;
-            color: #2d1809;
+            color: #1a3b4c;
             margin: 0.2rem 0 0.1rem;
         }
 
@@ -251,29 +249,29 @@
 
         .buy-btn {
             margin-top: 0.5rem;
-            background: #fbe4e0;
-            border: 1px solid #ffcfc0;
+            background: #eef3f7;
+            border: 1px solid #c0dae6;
             border-radius: 40px;
             padding: 0.5rem 0;
             font-weight: 700;
             font-size: 0.8rem;
-            color: #bc4e2c;
+            color: #2c6e8f;
             cursor: pointer;
             transition: all 0.2s;
             font-family: inherit;
         }
 
         .buy-btn:hover {
-            background: #ffd6cc;
-            color: #942e0c;
-            border-color: #eaa06a;
+            background: #d8eaf2;
+            color: #145c7a;
+            border-color: #8fcbdf;
             transform: scale(0.97);
         }
 
-        /* spotlight banner */
+        /* spotlight banner - adjusted for blue theme */
         .rhode-spotlight {
             margin: 2rem 0 1.2rem;
-            background: radial-gradient(ellipse at 20% 30%, #fff0ec, #ffe4e0);
+            background: radial-gradient(ellipse at 20% 30%, #e5f2f7, #d4eaf2);
             padding: 1.4rem 2rem;
             border-radius: 2rem;
             display: flex;
@@ -302,13 +300,13 @@
             margin: 1.8rem 0 1rem;
             border: none;
             height: 2px;
-            background: linear-gradient(90deg, #ffcdbb, #ffab88, #ffcdbb);
+            background: linear-gradient(90deg, #b4d6e8, #7fc1dc, #b4d6e8);
         }
 
         .footer-note {
             text-align: center;
             font-size: 0.8rem;
-            color: #b97a56;
+            color: #4f8eae;
             font-weight: 500;
             margin-top: 1.8rem;
         }
@@ -322,12 +320,12 @@
         }
 
         .tag-row span {
-            background: #ffede8;
+            background: #eef3f7;
             padding: 0.25rem 1rem;
             border-radius: 50px;
             font-size: 0.75rem;
             font-weight: 500;
-            color: #b5522e;
+            color: #2c6e8f;
         }
 
         @media (max-width: 720px) {
@@ -362,14 +360,14 @@
     <div class="brand-header">
         <h1>RHODE</h1>
         <div class="brand-sub">peptide-infused • glazed finish • luminous rituals</div>
-        <div style="font-size: 0.85rem; margin-top: 0.3rem; color: #bf7c58;">✨ rhode skincare + lip + blush essentials ✨</div>
+        <div style="font-size: 0.85rem; margin-top: 0.3rem; color: #2c6e8f;">✨ rhode skincare + lip + blush essentials ✨</div>
     </div>
 
-    <!-- NEW RECTANGULAR PHOTO IN LOGO/HEADER AREA - STRAIGHT (NO ROTATION) -->
+    <!-- RECTANGULAR PHOTO IN LOGO/HEADER AREA - STRAIGHT -->
     <!-- Photo: rhode world at coachella 2026 | rhode x the biebers -->
     <div class="logo-photo-section">
         <div class="logo-rectangle-photo">
-            <img src="rhode world at coachella 2026 _ rhode x the biebers.jpg" alt="Rhode World at Coachella 2026 - Rhode x The Biebers" onerror="this.onerror=null; this.src='https://placehold.co/800x450/fce0e0/c95a3f?text=Rhode+x+The+Biebers+%7C+Coachella+2026'">
+            <img src="rhode world at coachella 2026 _ rhode x the biebers.jpg" alt="Rhode World at Coachella 2026 - Rhode x The Biebers" onerror="this.onerror=null; this.src='https://placehold.co/800x450/e0f0f8/2c6e8f?text=Rhode+x+The+Biebers+%7C+Coachella+2026'">
         </div>
     </div>
     <div class="photo-separator"></div>
@@ -379,7 +377,7 @@
         <!-- 1. Glazier Lip Tint -->
         <div class="product-card">
             <div class="product-image">
-                <img src="anna (@annaivanus) on Ideogram.jpeg" alt="Rhode Glazier Lip Tint" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fce0e0/c95a3f?text=Glazier+Lip+Tint'">
+                <img src="anna (@annaivanus) on Ideogram.jpeg" alt="Rhode Glazier Lip Tint" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e0f0f8/2c6e8f?text=Glazier+Lip+Tint'">
             </div>
             <div class="card-icon">💋✨</div>
             <div class="product-title">Glazier Lip Tint</div>
@@ -457,7 +455,7 @@
     </div>
     <hr />
     <div class="footer-note">
-        🌈 rhode — peptide-powered, color-drenched rituals • free shipping worldwide
+        🌊 rhode — peptide-powered, color-drenched rituals • free shipping worldwide
     </div>
 </div>
 
