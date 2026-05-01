@@ -23,7 +23,7 @@
 
         /* main glass container */
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             background: rgba(255, 250, 248, 0.92);
             backdrop-filter: blur(2px);
@@ -124,10 +124,10 @@
             margin: 0.8rem auto 1.5rem auto;
         }
 
-        /* product grid */
+        /* product grid - NOW 5 COLUMNS */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin: 2rem 0 2rem;
         }
@@ -142,7 +142,7 @@
             border: 1px solid #cce3ed;
             display: flex;
             flex-direction: column;
-            min-height: 460px;
+            min-height: 480px;
             height: auto;
         }
 
@@ -320,6 +320,12 @@
             color: #2c6e8f;
         }
 
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
         @media (max-width: 720px) {
             body {
                 padding: 1rem;
@@ -364,7 +370,7 @@
     </div>
     <div class="photo-separator"></div>
 
-    <!-- ALL 4 PRODUCTS WITH ALL IMAGES -->
+    <!-- ALL 5 PRODUCTS - NEW LIP LINER COLUMN ADDED -->
     <div class="product-grid">
         <!-- 1. Glazier Lip Tint - cherry lips.jpg -->
         <div class="product-card">
@@ -414,7 +420,7 @@
             <button class="buy-btn" data-product="Glazing Milk">discover →</button>
         </div>
 
-        <!-- 4. Peptide Eye Prep - NEW "peptide eye prep.jpg" PHOTO ADDED LARGE & CLEAR -->
+        <!-- 4. Peptide Eye Prep - peptide eye prep.jpg -->
         <div class="product-card">
             <div class="product-image">
                 <div class="single-image-full">
@@ -429,13 +435,29 @@
             <div style="font-size: 0.75rem;">60 patches · soothing peptides · brightening effect</div>
             <button class="buy-btn" data-product="Peptide Eye Prep">treat eyes →</button>
         </div>
+
+        <!-- 5. NEW: Rhode Lip Liner - Define Your Perfect Everyday Look -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="single-image-full">
+                    <img src="Rhode Lip Liner – Define Your Perfect Everyday Look🫶🏻.jpg" alt="Rhode Lip Liner - Define Your Perfect Everyday Look" onerror="this.onerror=null; this.src='https://placehold.co/500x500/e0f0f8/2c6e8f?text=Rhode+Lip+Liner'">
+                </div>
+            </div>
+            <div class="card-icon">✍️💄🫶🏻</div>
+            <div class="product-title">Rhode Lip Liner</div>
+            <div class="product-desc">Define Your Perfect Everyday Look</div>
+            <div class="product-highlight">✨ creamy texture · long-wear · precise application ✨</div>
+            <div class="price-tag">$18.00</div>
+            <div style="font-size: 0.75rem; color:#b5653f;">0.35g · peptide-infused · smooth glide</div>
+            <button class="buy-btn" data-product="Rhode Lip Liner">add to bag →</button>
+        </div>
     </div>
 
     <!-- Rhode spotlight -->
     <div class="rhode-spotlight">
         <div class="spotlight-text">
             <h3>🍯 glazed donut skin ritual 🍯</h3>
-            <p>Ceramide-rich essence + peptide eye prep & blush bundles — lit-from-within glow</p>
+            <p>Ceramide-rich essence + peptide eye prep + blush bundles + lip liners — lit-from-within glow</p>
         </div>
         <div class="badge-stats">🏆 2K+ 5-star ratings</div>
     </div>
@@ -445,6 +467,7 @@
         <span>🌸 blush bundle · 10 colors cream blush</span>
         <span>🥛 glazing milk essence · ceramide complex · viral favorite</span>
         <span>👁️ peptide eye patches · depuffing · cooling hydrogel</span>
+        <span>✍️ rhode lip liner · define your look · creamy & long-wear 🫶🏻</span>
     </div>
     <hr />
     <div class="footer-note">
