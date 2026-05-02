@@ -148,7 +148,7 @@
             margin: 0.8rem auto 1.5rem auto;
         }
 
-        /* ===== NEW SWIPABLE CAROUSEL SECTION ===== */
+        /* ===== EXPANDED SWIPABLE CAROUSEL SECTION ===== */
         .carousel-section {
             margin: 2rem 0 2rem;
             background: rgba(255, 248, 245, 0.7);
@@ -231,15 +231,16 @@
         }
 
         .slide-caption h4 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #c95a3f;
         }
 
         .slide-caption p {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #2c6e8f;
             margin-top: 0.3rem;
+            word-break: break-word;
         }
 
         .carousel-nav {
@@ -610,9 +611,9 @@
     </div>
     <div class="photo-separator"></div>
 
-    <!-- ===== SWIPABLE CAROUSEL SECTION: RHODE LIP CASE + PINTEREST AESTHETIC ===== -->
+    <!-- ===== EXPANDED SWIPABLE CAROUSEL: 6 ACCESSORIES (Lip Case + 5 new aesthetic images) ===== -->
     <div class="carousel-section">
-        <div class="carousel-title">✨ #rhode accessories ✨</div>
+        <div class="carousel-title">✨ #rhode aesthetic accessories ✨</div>
         <div class="carousel-container">
             <div class="carousel-track-wrapper" id="carouselWrapper">
                 <div class="carousel-track" id="carouselTrack">
@@ -625,13 +626,49 @@
                             <span style="font-size:0.7rem; color:#c95a3f;">#rhode #lipcase</span>
                         </div>
                     </div>
-                    <!-- Slide 2: Pinterest Aesthetic / #rhode #★~777~★ #pinterest -->
+                    <!-- Slide 2: #rhode #★~777~★ #pinterest.jpg -->
                     <div class="carousel-slide">
-                        <img src="#rhode #★~777~★ #pinterest.jpg" alt="Rhode Pinterest aesthetic" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+%E2%98%85~777~%E2%98%85+Pinterest'">
+                        <img src="#rhode #★~777~★ #pinterest.jpg" alt="Rhode Pinterest aesthetic 777" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+%E2%98%85~777~%E2%98%85+Pinterest'">
                         <div class="slide-caption">
                             <h4>★~777~★ glazed dreams</h4>
                             <p>#rhode aesthetic • it girl energy • pinterest worthy</p>
                             <span style="font-size:0.7rem; color:#c95a3f;">#rhode #pinterest #aesthetic</span>
+                        </div>
+                    </div>
+                    <!-- Slide 3: #rhode #summer.jpg -->
+                    <div class="carousel-slide">
+                        <img src="#rhode #summer.jpg" alt="Rhode Summer Glow" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+Summer+Vibes'">
+                        <div class="slide-caption">
+                            <h4>☀️ rhode summer glow</h4>
+                            <p>golden hour • glazed skin • summer essential</p>
+                            <span style="font-size:0.7rem; color:#c95a3f;">#rhode #summer #glazedskin</span>
+                        </div>
+                    </div>
+                    <!-- Slide 4: #rhode #summer (1).jpg -->
+                    <div class="carousel-slide">
+                        <img src="#rhode #summer (1).jpg" alt="Rhode Summer Breeze" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+Summer+Edition'">
+                        <div class="slide-caption">
+                            <h4>🌊 summer breeze ritual</h4>
+                            <p>peptide refresh • dewy finish • vacation mode</p>
+                            <span style="font-size:0.7rem; color:#c95a3f;">#rhode #summer #glazedonut</span>
+                        </div>
+                    </div>
+                    <!-- Slide 5: #rhode #haileybieber #conceptdesign -->
+                    <div class="carousel-slide">
+                        <img src="#rhode #haileybieber #conceptdesign.jpg" alt="Hailey Bieber Rhode Concept" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Hailey+Bieber+Rhode+Concept'">
+                        <div class="slide-caption">
+                            <h4>👼 Hailey Bieber concept</h4>
+                            <p>#rhode #haileybieber • dreamy aesthetic • it girl</p>
+                            <span style="font-size:0.7rem; color:#c95a3f;">#haileybieber #rhodeconcept</span>
+                        </div>
+                    </div>
+                    <!-- Slide 6: #makeup #skincare (1).jpg -->
+                    <div class="carousel-slide">
+                        <img src="#makeup #skincare (1).jpg" alt="Makeup Skincare Rhode" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Makeup+Skincare+Rhode'">
+                        <div class="slide-caption">
+                            <h4>💄 makeup + skincare fusion</h4>
+                            <p>peptide infused • clean beauty • daily ritual</p>
+                            <span style="font-size:0.7rem; color:#c95a3f;">#makeup #skincare #rhode</span>
                         </div>
                     </div>
                 </div>
@@ -766,8 +803,8 @@
         const prevBtn = document.getElementById('prevSlideBtn');
         const nextBtn = document.getElementById('nextSlideBtn');
         if (wrapper && prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', () => { wrapper.scrollBy({ left: -280, behavior: 'smooth' }); });
-            nextBtn.addEventListener('click', () => { wrapper.scrollBy({ left: 280, behavior: 'smooth' }); });
+            prevBtn.addEventListener('click', () => { wrapper.scrollBy({ left: -300, behavior: 'smooth' }); });
+            nextBtn.addEventListener('click', () => { wrapper.scrollBy({ left: 300, behavior: 'smooth' }); });
         }
     }
     
