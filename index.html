@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Rhode | Peptide Skincare + Lip Essentials</title>
+    <title>Rhode | Peptide Skincare + Lip Essentials | Hailey Bieber Aesthetic</title>
     <!-- Google Fonts - Cursive Handwriting -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -57,6 +57,7 @@
             font-weight: 600;
             font-size: 1rem;
             color: #2c6e8f;
+            z-index: 10;
         }
 
         .cart-icon-btn:hover {
@@ -241,15 +242,15 @@
             color: #145c7a;
         }
 
-        /* CART MODAL / SLIDE-OUT PANEL */
+        /* CART MODAL / SLIDE-OUT PANEL WITH HAILEY BIEBER RHODE BACKGROUND */
         .cart-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(3px);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
             z-index: 1000;
             display: flex;
             justify-content: flex-end;
@@ -265,15 +266,39 @@
 
         .cart-panel {
             width: 100%;
-            max-width: 480px;
-            background: white;
+            max-width: 500px;
             height: 100%;
             overflow-y: auto;
             padding: 1.5rem;
             border-radius: 2rem 0 0 2rem;
-            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
+            position: relative;
+            /* GORGEOUS BACKGROUND IMAGE - Hailey Bieber Rhode aesthetic */
+            background-image: url('#haileybieber #rhodeskincare #rhodeskin #glazeddonut #glazedonutskin #wallpaper #aesthetic #itgirl #iphonebackground #lockscreen #screensaver #winterwallpaper #christmaswallpaper #rhode #rhodebeauty.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+        }
+        
+        /* Frosted glass overlay on cart panel to make text readable while keeping aesthetic */
+        .cart-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 245, 240, 0.75);
+            backdrop-filter: blur(8px);
+            border-radius: 2rem 0 0 2rem;
+            z-index: 0;
+        }
+        
+        .cart-header, .cart-items, .cart-footer, .empty-cart {
+            position: relative;
+            z-index: 2;
         }
 
         .cart-header {
@@ -281,43 +306,57 @@
             justify-content: space-between;
             align-items: center;
             padding-bottom: 1rem;
-            border-bottom: 2px solid #f0d6cc;
+            border-bottom: 2px solid rgba(201, 90, 63, 0.4);
             margin-bottom: 1.5rem;
         }
 
         .cart-header h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-family: 'Great Vibes', cursive;
             color: #c95a3f;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
         }
 
         .close-cart {
-            background: none;
+            background: rgba(255,255,255,0.8);
             border: none;
             font-size: 2rem;
             cursor: pointer;
             color: #b55a34;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .cart-items {
             flex: 1;
             margin-bottom: 1rem;
+            max-height: 60vh;
+            overflow-y: auto;
         }
 
         .cart-item {
             display: flex;
             gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 1.5rem;
+            margin-bottom: 0.8rem;
             align-items: center;
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(255,200,180,0.5);
         }
 
         .cart-item-img {
             width: 70px;
             height: 70px;
-            background: #f0f8fc;
+            background: white;
             border-radius: 1rem;
             object-fit: contain;
+            padding: 0.3rem;
         }
 
         .cart-item-details {
@@ -326,6 +365,7 @@
 
         .cart-item-title {
             font-weight: 700;
+            color: #1a3b4c;
         }
 
         .cart-item-price {
@@ -351,17 +391,23 @@
         }
 
         .remove-item {
-            background: none;
+            background: rgba(255,240,235,0.9);
             border: none;
             color: #c95a3f;
             font-size: 1.2rem;
             cursor: pointer;
-            padding: 0.3rem;
+            padding: 0.5rem;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
         }
 
         .cart-footer {
-            border-top: 2px solid #f0d6cc;
+            border-top: 2px solid rgba(201, 90, 63, 0.3);
             padding-top: 1rem;
+            background: rgba(255,250,245,0.9);
+            border-radius: 1.5rem;
+            padding: 1rem;
         }
 
         .cart-total {
@@ -382,12 +428,20 @@
             font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
+            transition: transform 0.1s;
+        }
+        
+        .checkout-btn:hover {
+            transform: scale(0.98);
         }
 
         .empty-cart {
             text-align: center;
             padding: 2rem;
-            color: #8c8c8c;
+            background: rgba(255,255,245,0.85);
+            border-radius: 1.5rem;
+            color: #b55a34;
+            font-weight: 500;
         }
 
         .spotlight {
@@ -422,11 +476,25 @@
             color: #4f8eae;
             margin-top: 1.5rem;
         }
+        
+        /* Custom scrollbar for cart */
+        .cart-items::-webkit-scrollbar {
+            width: 5px;
+        }
+        .cart-items::-webkit-scrollbar-track {
+            background: #f0d6cc;
+            border-radius: 10px;
+        }
+        .cart-items::-webkit-scrollbar-thumb {
+            background: #c95a3f;
+            border-radius: 10px;
+        }
 
         @media (max-width: 720px) {
             body { padding: 1rem; }
             .container { padding: 1rem; }
             .brand-header h1 { font-size: 3.5rem; }
+            .cart-panel { max-width: 100%; border-radius: 1.5rem 0 0 1.5rem; }
         }
     </style>
 </head>
@@ -451,31 +519,29 @@
     <div class="photo-separator"></div>
 
     <!-- PRODUCT GRID -->
-    <div class="product-grid" id="productGrid">
-        <!-- Products will be populated by JS for easier management -->
-    </div>
+    <div class="product-grid" id="productGrid"></div>
 
     <div class="spotlight">
-        <div style="font-weight: bold;">🍯 glazed donut skin ritual</div>
+        <div style="font-weight: bold;">🍯 glazed donut skin ritual • #HaileyBieber mode</div>
         <div>🏆 2K+ 5-star ratings</div>
     </div>
     <div class="tag-row" id="tagRow"></div>
-    <div class="footer-note">🌊 rhode — peptide-powered, color-drenched rituals • free shipping worldwide</div>
+    <div class="footer-note">🌊 rhode — peptide-powered, color-drenched rituals • free shipping • glazed for life ✨</div>
 </div>
 
-<!-- CART MODAL -->
+<!-- CART MODAL with HAILEY BIEBER RHODE BACKGROUND -->
 <div id="cartOverlay" class="cart-overlay">
     <div class="cart-panel">
         <div class="cart-header">
-            <h2>Your Rhode Ritual</h2>
+            <h2>✨ your glazed ritual ✨</h2>
             <button class="close-cart" id="closeCartBtn">&times;</button>
         </div>
         <div id="cartItemsContainer" class="cart-items">
-            <div class="empty-cart">Your cart is empty ✨</div>
+            <div class="empty-cart">🛍️ your cart is empty... add some rhode magic 🍯</div>
         </div>
         <div class="cart-footer">
             <div class="cart-total" id="cartTotal">$0.00</div>
-            <button class="checkout-btn" id="checkoutBtn">Checkout →</button>
+            <button class="checkout-btn" id="checkoutBtn">checkout → #glazedonutskin</button>
         </div>
     </div>
 </div>
@@ -535,10 +601,9 @@
         }
     ];
 
-    // Cart state: array of { id, name, price, quantity, image }
+    // Cart state
     let cart = [];
 
-    // Load cart from localStorage if available
     function loadCart() {
         const saved = localStorage.getItem("rhode_cart");
         if (saved) {
@@ -555,18 +620,16 @@
     }
 
     function updateCartUI() {
-        // Update cart count badge on main button
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         const cartCountDisplay = document.getElementById("cartCountDisplay");
         if (cartCountDisplay) cartCountDisplay.innerText = totalItems;
         
-        // Render cart panel items
         const container = document.getElementById("cartItemsContainer");
         const totalSpan = document.getElementById("cartTotal");
         if (!container) return;
         
         if (cart.length === 0) {
-            container.innerHTML = '<div class="empty-cart">Your cart is empty ✨</div>';
+            container.innerHTML = '<div class="empty-cart">🛍️ your cart is empty... add some rhode magic 🍯</div>';
             if (totalSpan) totalSpan.innerText = "$0.00";
             return;
         }
@@ -595,7 +658,6 @@
         container.innerHTML = html;
         if (totalSpan) totalSpan.innerText = `$${total.toFixed(2)}`;
         
-        // Attach event listeners to dynamic buttons
         document.querySelectorAll('.qty-minus').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const prodId = btn.getAttribute('data-id');
@@ -648,9 +710,7 @@
             });
         }
         saveCart();
-        // Show a small toast and open cart optionally
-        showToast(`✨ ${product.name} added to your ritual ✨`);
-        // auto-open cart for better UX (optional)
+        showToast(`✨ ${product.name} added to your glazed ritual ✨`);
         openCart();
     }
     
@@ -661,7 +721,7 @@
         toast.style.bottom = '30px';
         toast.style.left = '50%';
         toast.style.transform = 'translateX(-50%)';
-        toast.style.background = 'linear-gradient(135deg, #c95a3f, #d97a48)';
+        toast.style.background = 'linear-gradient(135deg, #c95a3f, #e67748)';
         toast.style.color = 'white';
         toast.style.padding = '12px 24px';
         toast.style.borderRadius = '60px';
@@ -687,7 +747,6 @@
         if (overlay) overlay.classList.remove('open');
     }
     
-    // Render product grid dynamically
     function renderProducts() {
         const grid = document.getElementById('productGrid');
         const tagRow = document.getElementById('tagRow');
@@ -700,7 +759,7 @@
                     <div class="product-image">
                         <img src="${prod.image}" alt="${prod.name}" onerror="this.src='https://placehold.co/500x500/e0f0f8/2c6e8f?text=${prod.name.replace(/ /g, '+')}'">
                     </div>
-                    <div class="card-icon">${prod.tagIcon}</div>
+                    <div class="card-icon" style="font-size:1.6rem;">${prod.tagIcon}</div>
                     <div class="product-title">${prod.name}</div>
                     <div class="product-desc">${prod.desc}</div>
                     <div class="product-highlight">${prod.highlight}</div>
@@ -713,7 +772,6 @@
         grid.innerHTML = productsHtml;
         if (tagRow) tagRow.innerHTML = tagsHtml;
         
-        // attach add to cart events
         document.querySelectorAll('.buy-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const prodId = btn.getAttribute('data-id');
@@ -723,17 +781,16 @@
         });
     }
     
-    // Checkout handler
     function setupCheckout() {
         const checkoutBtn = document.getElementById('checkoutBtn');
         if (checkoutBtn) {
             checkoutBtn.addEventListener('click', () => {
                 if (cart.length === 0) {
-                    showToast("Your cart is empty. Add some Rhode magic! 🛍️");
+                    showToast("🍯 your cart is glazed with emptiness... add some rhode!");
                     return;
                 }
-                showToast("💖 Thanks for shopping! This is a demo order. ✨");
-                // optional: clear cart after "purchase"
+                showToast("💖 #glazedonutskin purchase complete! thank you for the rhode ritual ✨");
+                // Optional: clear cart after checkout simulation
                 // cart = [];
                 // saveCart();
                 // closeCart();
@@ -741,7 +798,6 @@
         }
     }
     
-    // Event listeners for modal
     function bindModalEvents() {
         const viewBtn = document.getElementById('viewCartBtn');
         const closeBtn = document.getElementById('closeCartBtn');
@@ -755,7 +811,6 @@
         }
     }
     
-    // initialization
     function init() {
         renderProducts();
         loadCart();
