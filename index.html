@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Rhode | Peptide Skincare + Lip Essentials | 777 Glazed Dreams</title>
-    <!-- Google Fonts - Cursive Handwriting -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -17,19 +17,18 @@
             background: linear-gradient(135deg, #d4eef7 0%, #b8e1f0 50%, #cce8f5 100%);
             font-family: 'Inter', sans-serif;
             color: #1a2c3e;
-            padding: 2rem 1.5rem;
+            padding: 1.5rem 1rem;
         }
 
         .container {
-            max-width: 1800px;
+            max-width: 1400px;
             margin: 0 auto;
             background: rgba(255, 250, 248, 0.92);
             backdrop-filter: blur(2px);
-            border-radius: 3rem 2rem 4rem 2rem;
+            border-radius: 2rem 1.5rem 3rem 1.5rem;
             box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(100, 180, 210, 0.4);
             overflow: hidden;
-            padding: 2rem 2rem 2.5rem;
-            transition: all 0.2s;
+            padding: 1.5rem 1.5rem 2rem;
         }
 
         .main-header {
@@ -37,59 +36,51 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-            gap: 1rem;
+            margin-bottom: 1rem;
+            gap: 0.8rem;
         }
 
         .cart-icon-btn {
             background: #eef3f7;
             border: 2px solid #8fcbdf;
             border-radius: 60px;
-            padding: 0.8rem 2rem;
+            padding: 0.4rem 1.2rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.6rem;
             cursor: pointer;
             transition: all 0.2s ease;
-            font-weight: 700;
-            font-size: 1.2rem;
+            font-weight: 600;
+            font-size: 0.85rem;
             color: #2c6e8f;
             z-index: 10;
-        }
-
-        .cart-icon-btn:hover {
-            background: #d8eaf2;
-            transform: scale(1.02);
-            border-color: #4aa3c9;
         }
 
         .cart-count {
             background: #c95a3f;
             color: white;
             border-radius: 50px;
-            padding: 0.3rem 0.9rem;
-            font-size: 1rem;
+            padding: 0.15rem 0.6rem;
+            font-size: 0.7rem;
             font-weight: bold;
         }
 
         .brand-header {
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             flex: 1;
         }
 
         .brand-header h1 {
-            font-size: 6rem;
+            font-size: 3.5rem;
             font-weight: 700;
             font-family: 'Great Vibes', 'Dancing Script', cursive;
-            letter-spacing: 0.02em;
             background: linear-gradient(125deg, #D45F2E, #BF3F22, #EE9B54, #C1542C);
             background-size: 220% auto;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             animation: waveGradient 6s ease infinite;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.05);
         }
 
         @keyframes waveGradient {
@@ -99,10 +90,10 @@
         }
 
         .brand-sub {
-            font-size: 1.2rem;
+            font-size: 0.8rem;
             background: #eef7fc;
             display: inline-block;
-            padding: 0.5rem 2rem;
+            padding: 0.2rem 1rem;
             border-radius: 60px;
             font-weight: 500;
             color: #2c6e8f;
@@ -113,59 +104,50 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            margin: 1.5rem 0 1.5rem 0;
+            margin: 0.8rem 0 0.8rem 0;
         }
 
         .logo-rectangle-photo {
-            width: 85%;
-            max-width: 1000px;
+            width: 80%;
+            max-width: 700px;
             background: #ffffff;
-            border-radius: 2rem;
-            padding: 1rem;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
-            border: 3px solid rgba(100, 180, 210, 0.7);
+            border-radius: 1.2rem;
+            padding: 0.5rem;
+            box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(100, 180, 210, 0.5);
         }
 
         .logo-rectangle-photo img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 1.2rem;
+            border-radius: 0.8rem;
             aspect-ratio: 16 / 9;
             object-fit: cover;
         }
 
         .photo-separator {
-            width: 120px;
-            height: 4px;
+            width: 60px;
+            height: 3px;
             background: linear-gradient(90deg, #a8d1e6, #6bb5d9, #a8d1e6);
-            border-radius: 4px;
-            margin: 1rem auto 2rem auto;
+            border-radius: 3px;
+            margin: 0.5rem auto 1rem auto;
         }
 
-        /* Carousel Section - BIGGER */
+        /* Carousel Section - SMALLER */
         .carousel-section {
-            margin: 2.5rem 0 2.5rem;
+            margin: 1.5rem 0 1.5rem;
             background: rgba(255, 248, 245, 0.7);
-            border-radius: 2.5rem;
-            padding: 1.5rem;
-            backdrop-filter: blur(3px);
+            border-radius: 1.5rem;
+            padding: 1rem;
         }
 
         .carousel-title {
             text-align: center;
             font-family: 'Great Vibes', cursive;
-            font-size: 2.5rem;
+            font-size: 1.6rem;
             color: #c95a3f;
-            margin-bottom: 1.5rem;
-        }
-
-        .carousel-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            border-radius: 2rem;
+            margin-bottom: 0.8rem;
         }
 
         .carousel-track-wrapper {
@@ -174,121 +156,99 @@
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: thin;
-            border-radius: 1.5rem;
-            cursor: grab;
-            scrollbar-color: #c95a3f #f0d6cc;
-        }
-
-        .carousel-track-wrapper::-webkit-scrollbar {
-            height: 8px;
-        }
-        .carousel-track-wrapper::-webkit-scrollbar-track {
-            background: #f0d6cc;
-            border-radius: 10px;
-        }
-        .carousel-track-wrapper::-webkit-scrollbar-thumb {
-            background: #c95a3f;
-            border-radius: 10px;
+            border-radius: 1rem;
         }
 
         .carousel-track {
             display: flex;
-            gap: 1.5rem;
-            padding: 1rem;
+            gap: 0.8rem;
+            padding: 0.5rem;
         }
 
         .carousel-slide {
-            flex: 0 0 85%;
+            flex: 0 0 75%;
             scroll-snap-align: start;
             background: #ffffff;
-            border-radius: 2rem;
+            border-radius: 1.2rem;
             overflow: hidden;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s;
+            box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.15);
             border: 1px solid #ffd9cc;
-        }
-
-        .carousel-slide:hover {
-            transform: scale(1.02);
         }
 
         .carousel-slide img {
             width: 100%;
-            height: 420px;
+            height: 200px;
             object-fit: cover;
             display: block;
         }
 
         .slide-caption {
-            padding: 1.2rem;
+            padding: 0.6rem;
             text-align: center;
-            background: rgba(255, 250, 245, 0.95);
         }
 
         .slide-caption h4 {
-            font-size: 1.5rem;
+            font-size: 0.9rem;
             font-weight: 700;
             color: #c95a3f;
         }
 
         .slide-caption p {
-            font-size: 0.9rem;
+            font-size: 0.65rem;
             color: #2c6e8f;
-            margin-top: 0.4rem;
         }
 
         .carousel-nav {
             display: flex;
             justify-content: center;
-            gap: 1.2rem;
-            margin-top: 1.5rem;
+            gap: 0.8rem;
+            margin-top: 0.8rem;
         }
 
         .carousel-nav button {
             background: #eef3f7;
             border: 1px solid #c0dae6;
             border-radius: 60px;
-            padding: 0.7rem 1.8rem;
+            padding: 0.3rem 1rem;
             cursor: pointer;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.75rem;
             color: #2c6e8f;
-            transition: all 0.2s;
         }
 
-        /* PRODUCT GRID - BIGGER PRODUCT CARDS */
+        /* PRODUCT GRID - SMALLER CARDS */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin: 2.5rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
 
-        /* PRODUCT CARD - LARGER */
+        /* PRODUCT CARD - SMALLER */
         .product-card {
             background: #fffffffa;
-            border-radius: 2.5rem;
-            padding: 1.8rem;
-            transition: transform 0.25s ease, box-shadow 0.3s;
-            box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.1);
+            border-radius: 1.2rem;
+            padding: 0.8rem;
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            box-shadow: 0 6px 12px -8px rgba(0, 0, 0, 0.08);
             border: 1px solid #cce3ed;
             display: flex;
             flex-direction: column;
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 40px -14px rgba(44, 110, 143, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 18px -10px rgba(44, 110, 143, 0.2);
             border-color: #8fcbdf;
         }
 
-        /* PRODUCT IMAGE - BIGGER */
+        /* PRODUCT IMAGE - SMALLER */
         .product-image {
             width: 100%;
-            height: 320px;
+            height: 160px;
             background: #f0f8fc;
-            border-radius: 2rem;
-            margin-bottom: 1.2rem;
+            border-radius: 1rem;
+            margin-bottom: 0.6rem;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -302,49 +262,46 @@
         }
 
         .product-title {
-            font-size: 1.7rem;
+            font-size: 1rem;
             font-weight: 700;
             color: #1a3b4c;
-            margin-top: 0.3rem;
         }
 
         .product-desc {
-            font-size: 0.85rem;
+            font-size: 0.6rem;
             font-weight: 600;
             color: #b55a34;
             text-transform: uppercase;
-            margin: 0.3rem 0;
-            letter-spacing: 0.5px;
+            margin: 0.2rem 0;
         }
 
         .product-highlight {
-            font-size: 0.85rem;
+            font-size: 0.6rem;
             background: #fef0ea;
-            padding: 0.3rem 1rem;
+            padding: 0.15rem 0.6rem;
             border-radius: 30px;
             display: inline-block;
             width: fit-content;
-            font-weight: 500;
         }
 
         .price-tag {
-            font-size: 1.8rem;
+            font-size: 1.1rem;
             font-weight: 800;
             background: linear-gradient(125deg, #c95a3f, #e67748);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin: 0.6rem 0 0.3rem;
+            margin: 0.3rem 0 0.2rem;
         }
 
         .buy-btn {
-            margin-top: 0.8rem;
+            margin-top: 0.4rem;
             background: #eef3f7;
             border: 1px solid #c0dae6;
             border-radius: 60px;
-            padding: 0.9rem;
-            font-weight: 700;
-            font-size: 1rem;
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 0.7rem;
             color: #2c6e8f;
             cursor: pointer;
             transition: all 0.2s;
@@ -353,18 +310,17 @@
         .buy-btn:hover {
             background: #d8eaf2;
             color: #145c7a;
-            transform: scale(0.98);
         }
 
-        /* CART MODAL - LARGER */
+        /* CART MODAL - SMALLER */
         .cart-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(3px);
             z-index: 1000;
             display: flex;
             justify-content: flex-end;
@@ -380,19 +336,18 @@
 
         .cart-panel {
             width: 100%;
-            max-width: 600px;
+            max-width: 380px;
             height: 100%;
             overflow-y: auto;
-            padding: 2rem;
-            border-radius: 2rem 0 0 2rem;
-            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 1.5rem 0 0 1.5rem;
+            box-shadow: -3px 0 20px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
             position: relative;
             background-image: url('#haileybieber #rhodeskincare #rhodeskin #glazeddonut #glazedonutskin #wallpaper #aesthetic #itgirl #iphonebackground #lockscreen #screensaver #winterwallpaper #christmaswallpaper #rhode #rhodebeauty.jpg');
             background-size: cover;
-            background-position: center 30%;
-            background-repeat: no-repeat;
+            background-position: center;
         }
         
         .cart-panel::before {
@@ -403,8 +358,8 @@
             right: 0;
             bottom: 0;
             background: rgba(255, 245, 240, 0.85);
-            backdrop-filter: blur(10px);
-            border-radius: 2rem 0 0 2rem;
+            backdrop-filter: blur(6px);
+            border-radius: 1.5rem 0 0 1.5rem;
             z-index: 0;
         }
         
@@ -417,53 +372,50 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 1.2rem;
-            border-bottom: 2px solid rgba(201, 90, 63, 0.4);
-            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(201, 90, 63, 0.3);
+            margin-bottom: 1rem;
         }
 
         .cart-header h2 {
-            font-size: 2.2rem;
+            font-size: 1.4rem;
             font-family: 'Great Vibes', cursive;
             color: #c95a3f;
         }
 
         .close-cart {
-            background: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.8);
             border: none;
-            font-size: 2.2rem;
+            font-size: 1.5rem;
             cursor: pointer;
             color: #b55a34;
-            width: 45px;
-            height: 45px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .cart-items {
             flex: 1;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             max-height: 55vh;
             overflow-y: auto;
         }
 
         .cart-item {
             display: flex;
-            gap: 1.2rem;
-            padding: 1.2rem;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 1.5rem;
-            margin-bottom: 1rem;
+            gap: 0.8rem;
+            padding: 0.7rem;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 1rem;
+            margin-bottom: 0.6rem;
             align-items: center;
         }
 
         .cart-item-img {
-            width: 85px;
-            height: 85px;
+            width: 50px;
+            height: 50px;
             background: white;
-            border-radius: 1rem;
+            border-radius: 0.8rem;
             object-fit: contain;
         }
 
@@ -473,137 +425,122 @@
 
         .cart-item-title {
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 0.8rem;
         }
 
         .cart-item-price {
             color: #c95a3f;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.75rem;
         }
 
         .cart-item-qty {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
-            margin-top: 0.5rem;
+            gap: 0.4rem;
+            margin-top: 0.2rem;
         }
 
         .cart-item-qty button {
             background: #eef3f7;
             border: none;
-            width: 32px;
-            height: 32px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             cursor: pointer;
-            font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 0.8rem;
         }
 
         .remove-item {
             background: rgba(255,240,235,0.9);
             border: none;
             color: #c95a3f;
-            font-size: 1.3rem;
+            font-size: 0.9rem;
             cursor: pointer;
-            padding: 0.6rem;
+            padding: 0.3rem;
             border-radius: 50%;
-            width: 45px;
-            height: 45px;
+            width: 30px;
+            height: 30px;
         }
 
         .cart-footer {
-            border-top: 2px solid rgba(201, 90, 63, 0.3);
-            padding-top: 1.2rem;
+            border-top: 1px solid rgba(201, 90, 63, 0.3);
+            padding-top: 0.8rem;
             background: rgba(255,250,245,0.95);
-            border-radius: 1.5rem;
-            padding: 1.2rem;
+            border-radius: 1rem;
+            padding: 0.8rem;
         }
 
         .cart-total {
-            font-size: 1.6rem;
+            font-size: 1.1rem;
             font-weight: 800;
             text-align: right;
-            margin-bottom: 1rem;
+            margin-bottom: 0.6rem;
         }
 
         .checkout-btn {
             width: 100%;
             background: linear-gradient(125deg, #c95a3f, #e67748);
             border: none;
-            padding: 1.2rem;
+            padding: 0.7rem;
             border-radius: 60px;
             color: white;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             cursor: pointer;
-            transition: transform 0.1s;
-        }
-        
-        .checkout-btn:hover {
-            transform: scale(0.98);
         }
 
         .empty-cart {
             text-align: center;
-            padding: 2.5rem;
-            background: rgba(255,255,245,0.9);
-            border-radius: 1.5rem;
-            font-size: 1.1rem;
+            padding: 1.5rem;
+            background: rgba(255,255,245,0.85);
+            border-radius: 1rem;
+            font-size: 0.8rem;
         }
         
         .spotlight {
             background: radial-gradient(ellipse at 20% 30%, #e5f2f7, #d4eaf2);
-            padding: 1.5rem 2rem;
-            border-radius: 2rem;
+            padding: 0.8rem 1rem;
+            border-radius: 1.2rem;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin: 2rem 0;
-            font-size: 1.1rem;
+            margin: 1rem 0;
+            font-size: 0.75rem;
         }
 
         .tag-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.5rem;
             justify-content: center;
-            margin: 1.5rem 0;
+            margin: 0.8rem 0;
         }
 
         .tag-row span {
             background: #eef3f7;
-            padding: 0.4rem 1.3rem;
+            padding: 0.2rem 0.8rem;
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.65rem;
             color: #2c6e8f;
         }
 
         .footer-note {
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             color: #4f8eae;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
 
         @media (min-width: 600px) {
-            .carousel-slide {
-                flex: 0 0 45%;
-            }
+            .carousel-slide { flex: 0 0 40%; }
         }
-        @media (min-width: 1000px) {
-            .carousel-slide {
-                flex: 0 0 30%;
-            }
+        @media (min-width: 900px) {
+            .carousel-slide { flex: 0 0 25%; }
         }
-
-        @media (max-width: 768px) {
-            body { padding: 1rem; }
-            .container { padding: 1rem; }
-            .brand-header h1 { font-size: 4rem; }
-            .product-grid { grid-template-columns: 1fr; }
-            .product-image { height: 280px; }
-            .carousel-slide img { height: 300px; }
+        @media (max-width: 550px) {
+            .product-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+            .product-image { height: 130px; }
         }
     </style>
 </head>
@@ -613,228 +550,108 @@
     <div class="main-header">
         <div class="brand-header">
             <h1>RHODE</h1>
-            <div class="brand-sub">peptide-infused • glazed finish • luminous rituals</div>
+            <div class="brand-sub">peptide-infused • glazed finish</div>
         </div>
         <button class="cart-icon-btn" id="viewCartBtn">
-            🛍️ Cart <span id="cartCountDisplay" class="cart-count">0</span>
+            🛍️ <span id="cartCountDisplay" class="cart-count">0</span>
         </button>
     </div>
 
     <div class="logo-photo-section">
         <div class="logo-rectangle-photo">
-            <img src="rhode world at coachella 2026 _ rhode x the biebers.jpg" alt="Rhode x The Biebers" onerror="this.src='https://placehold.co/1200x675/e0f0f8/2c6e8f?text=Rhode+Coachella'">
+            <img src="rhode world at coachella 2026 _ rhode x the biebers.jpg" alt="Rhode x The Biebers" onerror="this.src='https://placehold.co/800x450/e0f0f8/2c6e8f?text=Rhode'">
         </div>
     </div>
     <div class="photo-separator"></div>
 
-    <!-- SWIPABLE CAROUSEL: 777 GLAZED DREAMS -->
+    <!-- CAROUSEL -->
     <div class="carousel-section">
         <div class="carousel-title">✨ 777 glazed dreams ✨</div>
-        <div class="carousel-container">
-            <div class="carousel-track-wrapper" id="carouselWrapper">
-                <div class="carousel-track" id="carouselTrack">
-                    <div class="carousel-slide">
-                        <img src="rhode lip case.jpg" alt="Rhode Lip Case" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+Lip+Case'">
-                        <div class="slide-caption">
-                            <h4>Rhode Lip Case</h4>
-                            <p>protective + glossy • perfect for your peptide lip tint</p>
-                            <span style="font-size:0.8rem; color:#c95a3f;">#rhode #lipcase</span>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="#rhode #★~777~★ #pinterest.jpg" alt="777 Glazed Dreams" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=777+Glazed+Dreams'">
-                        <div class="slide-caption">
-                            <h4>★ 777 glazed dreams ★</h4>
-                            <p>angel numbers • rhode aesthetic • it girl energy • manifest glazed skin</p>
-                            <span style="font-size:0.8rem; color:#c95a3f;">#rhode #777 #glazedonutskin</span>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="#rhode #summer.jpg" alt="Rhode Summer Glow" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+Summer+Vibes'">
-                        <div class="slide-caption">
-                            <h4>☀️ rhode summer glow</h4>
-                            <p>golden hour • glazed skin • summer essential</p>
-                            <span style="font-size:0.8rem; color:#c95a3f;">#rhode #summer #glazedskin</span>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="#rhode #summer (1).jpg" alt="Rhode Summer Breeze" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+Summer+Edition'">
-                        <div class="slide-caption">
-                            <h4>🌊 summer breeze ritual</h4>
-                            <p>peptide refresh • dewy finish • vacation mode</p>
-                            <span style="font-size:0.8rem; color:#c95a3f;">#rhode #summer #glazedonut</span>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="#rhode #haileybieber #conceptdesign.jpg" alt="Hailey Bieber Rhode Concept" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Hailey+Bieber+Rhode+Concept'">
-                        <div class="slide-caption">
-                            <h4>👼 Hailey Bieber concept</h4>
-                            <p>#rhode #haileybieber • dreamy aesthetic • it girl</p>
-                            <span style="font-size:0.8rem; color:#c95a3f;">#haileybieber #rhodeconcept</span>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="#makeup #skincare (1).jpg" alt="Makeup Skincare Rhode" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Makeup+Skincare+Rhode'">
-                        <div class="slide-caption">
-                            <h4>💄 makeup + skincare fusion</h4>
-                            <p>peptide infused • clean beauty • daily ritual</p>
-                            <span style="font-size:0.8rem; color:#c95a3f;">#makeup #skincare #rhode</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="carousel-track-wrapper" id="carouselWrapper">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide"><img src="rhode lip case.jpg" alt="Lip Case"><div class="slide-caption"><h4>Rhode Lip Case</h4><p>#rhode #lipcase</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #★~777~★ #pinterest.jpg" alt="777"><div class="slide-caption"><h4>★777 glazed dreams★</h4><p>#rhode #777</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #summer.jpg" alt="Summer"><div class="slide-caption"><h4>☀️ summer glow</h4><p>#rhode #summer</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #summer (1).jpg" alt="Summer2"><div class="slide-caption"><h4>🌊 summer breeze</h4><p>#rhode #summer</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #haileybieber #conceptdesign.jpg" alt="Hailey"><div class="slide-caption"><h4>👼 Hailey concept</h4><p>#haileybieber</p></div></div>
+                <div class="carousel-slide"><img src="#makeup #skincare (1).jpg" alt="Makeup"><div class="slide-caption"><h4>💄 makeup + skincare</h4><p>#makeup #skincare</p></div></div>
             </div>
         </div>
-        <div class="carousel-nav">
-            <button id="prevSlideBtn">◀ swipe back</button>
-            <button id="nextSlideBtn">swipe forward ▶</button>
-        </div>
+        <div class="carousel-nav"><button id="prevSlideBtn">◀</button><button id="nextSlideBtn">▶</button></div>
     </div>
 
-    <!-- PRODUCT GRID - BIGGER PRODUCTS -->
+    <!-- ALL 5 PRODUCTS - SMALLER CARDS -->
     <div class="product-grid" id="productGrid"></div>
 
-    <div class="spotlight">
-        <div style="font-weight: bold;">🍯 glazed donut skin ritual • #HaileyBieber mode • 777</div>
-        <div>🏆 2K+ 5-star ratings</div>
-    </div>
+    <div class="spotlight"><span>🍯 glazed donut skin • 777</span><span>🏆 2K+ ratings</span></div>
     <div class="tag-row" id="tagRow"></div>
-    <div class="footer-note">🌊 rhode — peptide-powered, color-drenched rituals • free shipping • glazed for life • 777 ✨</div>
+    <div class="footer-note">🌊 rhode — peptide-powered • free shipping • glazed for life ✨</div>
 </div>
 
 <!-- CART MODAL -->
 <div id="cartOverlay" class="cart-overlay">
     <div class="cart-panel">
-        <div class="cart-header">
-            <h2>✨ your glazed ritual 777 ✨</h2>
-            <button class="close-cart" id="closeCartBtn">&times;</button>
-        </div>
-        <div id="cartItemsContainer" class="cart-items">
-            <div class="empty-cart">🛍️ your cart is empty... add some rhode magic 777 🍯</div>
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total" id="cartTotal">$0.00</div>
-            <button class="checkout-btn" id="checkoutBtn">checkout → #glazedonutskin 777</button>
-        </div>
+        <div class="cart-header"><h2>✨ your ritual ✨</h2><button class="close-cart" id="closeCartBtn">&times;</button></div>
+        <div id="cartItemsContainer" class="cart-items"><div class="empty-cart">🛍️ cart is empty</div></div>
+        <div class="cart-footer"><div class="cart-total" id="cartTotal">$0.00</div><button class="checkout-btn" id="checkoutBtn">checkout →</button></div>
     </div>
 </div>
 
 <script>
-    // ----- PRODUCT DATABASE - ALL PRODUCTS BIGGER -----
+    // ALL 5 PRODUCTS
     const products = [
-        { id: "lip_tint", name: "Glazier Lip Tint", desc: "rhode Lipstick · Pourriture Glazier Colors", highlight: "✨ cherry kiss glass shine ✨", price: 20.00, image: "cherry lips.jpg", tagIcon: "💋🍒✨" },
-        { id: "blush_bundle", name: "Packet Blush Bundle", desc: "Hydrating Cream Blush · 10 Colors", highlight: "🌟 creamy dewy flush", price: 25.00, image: "Blush Rhode.jpg", tagIcon: "🌸🎨" },
-        { id: "glazing_milk", name: "Glazing Milk", desc: "Ceramide Facial Essence", highlight: "🔥 viral milky hydration", price: 34.00, image: "Rhode Glazing Milk.jpg", tagIcon: "🥛✨" },
-        { id: "eye_prep", name: "Peptide Eye Prep", desc: "Depuffing Eye Patches", highlight: "⚡ cooling hydrogel · peptide infusion", price: 32.00, image: "peptide eye prep.jpg", tagIcon: "👁️💧" },
-        { id: "lip_liner", name: "Rhode Lip Liner", desc: "Define Your Perfect Everyday Look", highlight: "✍️ creamy & long-wear 🫶🏻", price: 18.00, image: "Rhode Lip Liner – Define Your Perfect Everyday Look🫶🏻.jpg", tagIcon: "✍️💄🫶🏻" }
+        { id: "lip_tint", name: "Glazier Lip Tint", desc: "Lipstick · Glazier Colors", highlight: "✨ cherry kiss shine", price: 20.00, image: "cherry lips.jpg", tagIcon: "💋🍒" },
+        { id: "blush_bundle", name: "Packet Blush Bundle", desc: "Cream Blush · 10 Colors", highlight: "🌟 creamy dewy flush", price: 25.00, image: "Blush Rhode.jpg", tagIcon: "🌸" },
+        { id: "glazing_milk", name: "Glazing Milk", desc: "Ceramide Facial Essence", highlight: "🔥 viral hydration", price: 34.00, image: "Rhode Glazing Milk.jpg", tagIcon: "🥛" },
+        { id: "eye_prep", name: "Peptide Eye Prep", desc: "Depuffing Eye Patches", highlight: "⚡ cooling hydrogel", price: 32.00, image: "peptide eye prep.jpg", tagIcon: "👁️" },
+        { id: "lip_liner", name: "Rhode Lip Liner", desc: "Define Your Look", highlight: "✍️ creamy & long-wear", price: 18.00, image: "Rhode Lip Liner – Define Your Perfect Everyday Look🫶🏻.jpg", tagIcon: "✍️" }
     ];
 
     let cart = [];
 
-    function loadCart() {
-        const saved = localStorage.getItem("rhode_cart");
-        if (saved) {
-            try { cart = JSON.parse(saved); } catch(e) { cart = []; }
-        }
-        updateCartUI();
-    }
-    function saveCart() {
-        localStorage.setItem("rhode_cart", JSON.stringify(cart));
-        updateCartUI();
-    }
+    function loadCart() { const saved = localStorage.getItem("rhode_cart"); if(saved) try{ cart = JSON.parse(saved); }catch(e){} updateCartUI(); }
+    function saveCart() { localStorage.setItem("rhode_cart", JSON.stringify(cart)); updateCartUI(); }
     function updateCartUI() {
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        const cartCountDisplay = document.getElementById("cartCountDisplay");
-        if (cartCountDisplay) cartCountDisplay.innerText = totalItems;
+        const totalItems = cart.reduce((s,i)=> s+i.quantity,0);
+        document.getElementById("cartCountDisplay").innerText = totalItems;
         const container = document.getElementById("cartItemsContainer");
         const totalSpan = document.getElementById("cartTotal");
-        if (!container) return;
-        if (cart.length === 0) {
-            container.innerHTML = '<div class="empty-cart">🛍️ your cart is empty... add some rhode magic 777 🍯</div>';
-            if (totalSpan) totalSpan.innerText = "$0.00";
-            return;
-        }
-        let html = ''; let total = 0;
-        cart.forEach((item) => {
-            const itemTotal = item.price * item.quantity;
-            total += itemTotal;
-            html += `<div class="cart-item"><img class="cart-item-img" src="${item.image}" onerror="this.src='https://placehold.co/85x85/e0f0f8/2c6e8f'"><div class="cart-item-details"><div class="cart-item-title">${item.name}</div><div class="cart-item-price">$${item.price.toFixed(2)}</div><div class="cart-item-qty"><button class="qty-minus" data-id="${item.id}">−</button><span>${item.quantity}</span><button class="qty-plus" data-id="${item.id}">+</button></div></div><button class="remove-item" data-id="${item.id}">🗑️</button></div>`;
+        if(!container) return;
+        if(cart.length===0){ container.innerHTML='<div class="empty-cart">🛍️ cart is empty</div>'; if(totalSpan) totalSpan.innerText="$0.00"; return; }
+        let html='', total=0;
+        cart.forEach(item=>{ total+=item.price*item.quantity;
+            html+=`<div class="cart-item"><img class="cart-item-img" src="${item.image}" onerror="this.src='https://placehold.co/50x50'"><div class="cart-item-details"><div class="cart-item-title">${item.name}</div><div class="cart-item-price">$${item.price}</div><div class="cart-item-qty"><button class="qty-minus" data-id="${item.id}">−</button><span>${item.quantity}</span><button class="qty-plus" data-id="${item.id}">+</button></div></div><button class="remove-item" data-id="${item.id}">🗑️</button></div>`;
         });
-        container.innerHTML = html;
-        if (totalSpan) totalSpan.innerText = `$${total.toFixed(2)}`;
-        document.querySelectorAll('.qty-minus').forEach(btn => btn.addEventListener('click', (e) => { updateQuantity(btn.getAttribute('data-id'), -1); }));
-        document.querySelectorAll('.qty-plus').forEach(btn => btn.addEventListener('click', (e) => { updateQuantity(btn.getAttribute('data-id'), 1); }));
-        document.querySelectorAll('.remove-item').forEach(btn => btn.addEventListener('click', (e) => { removeItemCompletely(btn.getAttribute('data-id')); }));
+        container.innerHTML=html; if(totalSpan) totalSpan.innerText=`$${total.toFixed(2)}`;
+        document.querySelectorAll('.qty-minus').forEach(btn=>btn.addEventListener('click',()=>updateQuantity(btn.dataset.id,-1)));
+        document.querySelectorAll('.qty-plus').forEach(btn=>btn.addEventListener('click',()=>updateQuantity(btn.dataset.id,1)));
+        document.querySelectorAll('.remove-item').forEach(btn=>btn.addEventListener('click',()=>removeItemCompletely(btn.dataset.id)));
     }
-    function updateQuantity(pid, delta) {
-        const idx = cart.findIndex(i => i.id === pid);
-        if (idx !== -1) {
-            const newQty = cart[idx].quantity + delta;
-            if (newQty <= 0) cart.splice(idx, 1);
-            else cart[idx].quantity = newQty;
-            saveCart();
-        }
-    }
-    function removeItemCompletely(pid) { cart = cart.filter(i => i.id !== pid); saveCart(); }
-    function addToCart(product) {
-        const existing = cart.find(i => i.id === product.id);
-        if (existing) existing.quantity += 1;
-        else cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1, image: product.image });
-        saveCart();
-        showToast(`✨ ${product.name} added to glazed ritual 777 ✨`);
-        openCart();
-    }
-    function showToast(msg) {
-        let toast = document.createElement('div');
-        toast.innerText = msg;
-        toast.style.cssText = 'position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#c95a3f,#e67748); color:white; padding:14px 28px; border-radius:60px; font-weight:bold; z-index:1100; font-family:Inter; font-size:1rem; box-shadow:0 8px 16px rgba(0,0,0,0.2);';
-        document.body.appendChild(toast);
-        setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 400); }, 2000);
-    }
-    function openCart() { document.getElementById('cartOverlay').classList.add('open'); }
-    function closeCart() { document.getElementById('cartOverlay').classList.remove('open'); }
-    
-    function goToCheckout() {
-        if (cart.length === 0) {
-            showToast("🍯 add some rhode first! 777");
-            return;
-        }
-        localStorage.setItem("rhode_cart", JSON.stringify(cart));
-        // For demo purposes, show success message (in real app would navigate)
-        showToast("💖 Thank you! Your glazed ritual is complete! ✨");
-        // Optional: clear cart after checkout simulation
-        // cart = [];
-        // saveCart();
-        // closeCart();
-    }
-    
-    function renderProducts() {
-        const grid = document.getElementById('productGrid');
-        const tagRow = document.getElementById('tagRow');
-        if (!grid) return;
-        let prods = '', tags = '';
-        products.forEach(p => {
-            prods += `<div class="product-card"><div class="product-image"><img src="${p.image}" onerror="this.src='https://placehold.co/500x500/e0f0f8/2c6e8f?text=${p.name.replace(/ /g,'+')}'"></div><div class="card-icon" style="font-size:1.8rem;">${p.tagIcon}</div><div class="product-title">${p.name}</div><div class="product-desc">${p.desc}</div><div class="product-highlight">${p.highlight}</div><div class="price-tag">$${p.price.toFixed(2)}</div><button class="buy-btn" data-id="${p.id}">add to bag →</button></div>`;
-            tags += `<span>${p.tagIcon} ${p.name}</span>`;
+    function updateQuantity(pid,delta){ let idx=cart.findIndex(i=>i.id===pid); if(idx!==-1){ let newQty=cart[idx].quantity+delta; if(newQty<=0) cart.splice(idx,1); else cart[idx].quantity=newQty; saveCart(); } }
+    function removeItemCompletely(pid){ cart=cart.filter(i=>i.id!==pid); saveCart(); }
+    function addToCart(product){ let existing=cart.find(i=>i.id===product.id); if(existing) existing.quantity+=1; else cart.push({id:product.id,name:product.name,price:product.price,quantity:1,image:product.image}); saveCart(); showToast(`✨ ${product.name} added ✨`); openCart(); }
+    function showToast(msg){ let t=document.createElement('div'); t.innerText=msg; t.style.cssText='position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#c95a3f,#e67748); color:white; padding:8px 16px; border-radius:60px; font-weight:bold; font-size:0.8rem; z-index:1100;'; document.body.appendChild(t); setTimeout(()=>{ t.style.opacity='0'; setTimeout(()=>t.remove(),300); },1500); }
+    function openCart(){ document.getElementById('cartOverlay').classList.add('open'); }
+    function closeCart(){ document.getElementById('cartOverlay').classList.remove('open'); }
+    function goToCheckout(){ if(cart.length===0){ showToast("🍯 add some rhode first!"); return; } showToast("💖 Thank you! Glazed ritual complete! ✨"); }
+
+    function renderProducts(){
+        const grid=document.getElementById('productGrid'), tagRow=document.getElementById('tagRow');
+        if(!grid) return;
+        let prods='', tags='';
+        products.forEach(p=>{
+            prods+=`<div class="product-card"><div class="product-image"><img src="${p.image}" onerror="this.src='https://placehold.co/160x160/e0f0f8'"></div><div style="font-size:1.2rem;">${p.tagIcon}</div><div class="product-title">${p.name}</div><div class="product-desc">${p.desc}</div><div class="product-highlight">${p.highlight}</div><div class="price-tag">$${p.price}</div><button class="buy-btn" data-id="${p.id}">add to bag →</button></div>`;
+            tags+=`<span>${p.tagIcon} ${p.name}</span>`;
         });
-        grid.innerHTML = prods;
-        if (tagRow) tagRow.innerHTML = tags;
-        document.querySelectorAll('.buy-btn').forEach(btn => btn.addEventListener('click', (e) => { const prod = products.find(p => p.id === btn.getAttribute('data-id')); if (prod) addToCart(prod); }));
+        grid.innerHTML=prods; if(tagRow) tagRow.innerHTML=tags;
+        document.querySelectorAll('.buy-btn').forEach(btn=>btn.addEventListener('click',()=>{ let prod=products.find(p=>p.id===btn.dataset.id); if(prod) addToCart(prod); }));
     }
-    
-    function setupCarousel() {
-        const wrapper = document.getElementById('carouselWrapper');
-        const prevBtn = document.getElementById('prevSlideBtn');
-        const nextBtn = document.getElementById('nextSlideBtn');
-        if (wrapper && prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', () => { wrapper.scrollBy({ left: -350, behavior: 'smooth' }); });
-            nextBtn.addEventListener('click', () => { wrapper.scrollBy({ left: 350, behavior: 'smooth' }); });
-        }
-    }
-    
-    function init() {
-        renderProducts();
-        loadCart();
-        document.getElementById('viewCartBtn').addEventListener('click', openCart);
-        document.getElementById('closeCartBtn').addEventListener('click', closeCart);
-        document.getElementById('cartOverlay').addEventListener('click', (e) => { if (e.target === document.getElementById('cartOverlay')) closeCart(); });
-        document.getElementById('checkoutBtn').addEventListener('
+
+    // Carousel
+    function setupCarousel(){ const w=document.getElementById('carouselWrapper'), p=document.getElementById('prevSlideBtn'), n=document.getElementById('nextSlideBtn'); if(w&&p&&n){ p.onclick=()=>w.scrollBy({left:-200,behavior:'smooth'}); n.onclick=()=>w.scrollBy({left:200,behavior:'smooth'}); } }
+
+    function init(){ renderProducts(); loadCart(); document.getElementById('viewCartBtn').onclick=openCart; document.getElementById('closeCartBtn').onclick=closeCart; document.getElementById('cartOverlay').onclick=(e)=>{ if(e.target===document.getElementById('cartOverlay')) closeCart(); }; document.getElementById('checkoutBtn').onclick=goToCheckout; setupCarousel(); }
+    init();
+</script>
+</body>
+</html>
