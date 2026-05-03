@@ -730,7 +730,7 @@
     </div>
     <div class="photo-separator"></div>
 
-    <!-- CAROUSEL -->
+    <!-- CAROUSEL - ALL ACCESSORIES -->
     <div class="carousel-section">
         <div class="carousel-title">✨ 777 glazed dreams ✨</div>
         <div class="carousel-track-wrapper" id="carouselWrapper">
@@ -746,7 +746,7 @@
         <div class="carousel-nav"><button id="prevSlideBtn">◀</button><button id="nextSlideBtn">▶</button></div>
     </div>
 
-    <!-- ALL PRODUCTS - CLICKABLE -->
+    <!-- ALL 5 PRODUCTS - FULLY RESTORED -->
     <div class="product-grid" id="productGrid"></div>
 
     <div class="spotlight"><span>🍯 glazed donut skin • 777</span><span>🏆 2K+ ratings</span></div>
@@ -781,7 +781,7 @@
 </div>
 
 <script>
-    // ALL 5 PRODUCTS with full details
+    // ALL 5 PRODUCTS - FULLY RESTORED with complete details
     const products = [
         { 
             id: "lip_tint", 
@@ -878,11 +878,6 @@
         showToast(`✨ ${product.name} added ✨`); 
     }
     
-    function addToCartFromModal(product){
-        addToCart(product);
-        closeModal();
-    }
-    
     function showToast(msg){ 
         let t=document.createElement('div'); 
         t.innerText=msg; 
@@ -893,6 +888,7 @@
     
     function openCart(){ document.getElementById('cartOverlay').classList.add('open'); }
     function closeCart(){ document.getElementById('cartOverlay').classList.remove('open'); }
+    function goToCheckout(){ if(cart.length===0){ showToast("🍯 add some rhode first!"); return; } showToast("💖 Thank you! Glazed ritual complete! ✨"); }
     
     // Product Modal Functions
     let currentProduct = null;
@@ -905,4 +901,4 @@
         document.getElementById('modalDescription').innerText = product.fullDesc;
         document.getElementById('modalHighlight').innerHTML = product.highlight;
         document.getElementById('modalPrice').innerHTML = `$${product.price.toFixed(2)}`;
-        document.getElementById('modalDetails').innerHTML = `<p>✨ ${product.details}</p><p>🛍️ Free shipping on orders $50
+       
