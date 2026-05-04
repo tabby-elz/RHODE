@@ -96,25 +96,37 @@
     </div>
     <div class="logo-photo-section"><div class="logo-rectangle-photo"><img src="rhode world at coachella 2026 _ rhode x the biebers.jpg" alt="Rhode" onerror="this.src='https://placehold.co/800x450/e0f0f8'"></div></div>
     <div class="photo-separator"></div>
+    
+    <!-- CAROUSEL SECTION WITH ALL ACCESSORIES - #rhode #★~777~★ #pinterest.jpg ADDED -->
     <div class="carousel-section">
         <div class="carousel-title">✨ 777 glazed dreams ✨</div>
-        <div class="carousel-track-wrapper" id="carouselWrapper"><div class="carousel-track" id="carouselTrack">
-            <div class="carousel-slide"><img src="rhode lip case.jpg" alt="Lip Case"><div class="slide-caption"><h4>Rhode Lip Case</h4><p>#rhode #lipcase</p></div></div>
-            <div class="carousel-slide"><img src="#rhode #★~777~★ #pinterest.jpg" alt="777"><div class="slide-caption"><h4>★777 glazed dreams★</h4><p>#rhode #777</p></div></div>
-            <div class="carousel-slide"><img src="#rhode #summer.jpg" alt="Summer"><div class="slide-caption"><h4>☀️ summer glow</h4><p>#rhode #summer</p></div></div>
-            <div class="carousel-slide"><img src="#rhode #summer (1).jpg" alt="Summer2"><div class="slide-caption"><h4>🌊 summer breeze</h4><p>#rhode #summer</p></div></div>
-            <div class="carousel-slide"><img src="#rhode #haileybieber #conceptdesign.jpg" alt="Hailey"><div class="slide-caption"><h4>👼 Hailey concept</h4><p>#haileybieber</p></div></div>
-            <div class="carousel-slide"><img src="#makeup #skincare (1).jpg" alt="Makeup"><div class="slide-caption"><h4>💄 makeup + skincare</h4><p>#makeup #skincare</p></div></div>
-        </div></div>
+        <div class="carousel-track-wrapper" id="carouselWrapper">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide"><img src="rhode lip case.jpg" alt="Lip Case"><div class="slide-caption"><h4>Rhode Lip Case</h4><p>#rhode #lipcase</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #★~777~★ #pinterest.jpg" alt="777 Glazed Dreams"><div class="slide-caption"><h4>★ 777 glazed dreams ★</h4><p>#rhode #777 #angelnumbers</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #summer.jpg" alt="Summer Glow"><div class="slide-caption"><h4>☀️ summer glow</h4><p>#rhode #summer</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #summer (1).jpg" alt="Summer Breeze"><div class="slide-caption"><h4>🌊 summer breeze</h4><p>#rhode #summer</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #haileybieber #conceptdesign.jpg" alt="Hailey Concept"><div class="slide-caption"><h4>👼 Hailey concept</h4><p>#haileybieber</p></div></div>
+                <div class="carousel-slide"><img src="#makeup #skincare (1).jpg" alt="Makeup Skincare"><div class="slide-caption"><h4>💄 makeup + skincare</h4><p>#makeup #skincare</p></div></div>
+            </div>
+        </div>
         <div class="carousel-nav"><button id="prevSlideBtn">◀</button><button id="nextSlideBtn">▶</button></div>
     </div>
+    
+    <!-- ALL 5 PRODUCTS - FULLY RESTORED AND CLICKABLE -->
     <div class="product-grid" id="productGrid"></div>
+    
     <div class="spotlight"><span>🍯 glazed donut skin • 777</span><span>🏆 2K+ ratings</span></div>
     <div class="tag-row" id="tagRow"></div>
     <div class="footer-note">🌊 rhode — peptide-powered • free shipping • glazed for life ✨<br>✨ Click any product to see full details ✨</div>
 </div>
+
+<!-- PRODUCT MODAL -->
 <div id="productModal" class="product-modal"><div class="modal-content"><button class="modal-close" id="modalCloseBtn">&times;</button><div class="modal-image" id="modalImage"></div><div class="modal-info"><h2 id="modalTitle"></h2><div class="modal-category" id="modalCategory"></div><div class="modal-description" id="modalDescription"></div><div class="modal-highlight" id="modalHighlight"></div><div class="modal-price" id="modalPrice"></div><div class="modal-details" id="modalDetails"></div><button class="modal-add-btn" id="modalAddBtn">add to bag →</button></div></div></div>
+
+<!-- CART MODAL -->
 <div id="cartOverlay" class="cart-overlay"><div class="cart-panel"><div class="cart-header"><h2>✨ your ritual ✨</h2><button class="close-cart" id="closeCartBtn">&times;</button></div><div id="cartItemsContainer" class="cart-items"><div class="empty-cart">🛍️ cart is empty</div></div><div class="cart-footer"><div class="cart-total" id="cartTotal">$0.00</div><button class="checkout-btn" id="checkoutBtn">checkout →</button></div></div></div>
+
 <script>
     // ALL 5 PRODUCTS - COMPLETELY RESTORED - NONE REMOVED
     const products = [
@@ -124,9 +136,12 @@
         { id: "eye_prep", name: "Peptide Eye Prep", category: "Eye Care", fullDesc: "Cooling hydrogel eye patches infused with peptides to instantly depuff, brighten, and refresh tired eyes. Perfect for morning prep or self-care moments.", desc: "Depuffing Eye Patches", highlight: "⚡ cooling hydrogel", price: 32.00, image: "peptide eye prep.jpg", tagIcon: "👁️", details: "60 patches • peptide infusion • cooling effect • brightening" },
         { id: "lip_liner", name: "Rhode Lip Liner", category: "Lip Care", fullDesc: "Define your perfect everyday look with this creamy, long-wear lip liner. Glides on smoothly, stays put, and pairs perfectly with the Glazier Lip Tint for a flawless pout.", desc: "Define Your Look", highlight: "✍️ creamy & long-wear", price: 18.00, image: "Rhode Lip Liner – Define Your Perfect Everyday Look🫶🏻.jpg", tagIcon: "✍️", details: "0.35g • peptide-infused • smooth glide • long-lasting" }
     ];
+
     let cart = [];
+
     function loadCart() { const saved = localStorage.getItem("rhode_cart"); if(saved) try{ cart = JSON.parse(saved); }catch(e){} updateCartUI(); }
     function saveCart() { localStorage.setItem("rhode_cart", JSON.stringify(cart)); updateCartUI(); }
+    
     function updateCartUI() {
         const totalItems = cart.reduce((s,i)=> s+i.quantity,0);
         document.getElementById("cartCountDisplay").innerText = totalItems;
@@ -143,17 +158,23 @@
         document.querySelectorAll('.qty-plus').forEach(btn=>btn.addEventListener('click',()=>updateQuantity(btn.dataset.id,1)));
         document.querySelectorAll('.remove-item').forEach(btn=>btn.addEventListener('click',()=>removeItemCompletely(btn.dataset.id)));
     }
+    
     function updateQuantity(pid,delta){ let idx=cart.findIndex(i=>i.id===pid); if(idx!==-1){ let newQty=cart[idx].quantity+delta; if(newQty<=0) cart.splice(idx,1); else cart[idx].quantity=newQty; saveCart(); } }
     function removeItemCompletely(pid){ cart=cart.filter(i=>i.id!==pid); saveCart(); }
+    
     function addToCart(product){ let existing=cart.find(i=>i.id===product.id); if(existing) existing.quantity+=1; else cart.push({id:product.id,name:product.name,price:product.price,quantity:1,image:product.image}); saveCart(); showToast(`✨ ${product.name} added ✨`); openCart(); }
+    
     function showToast(msg){ let t=document.createElement('div'); t.innerText=msg; t.style.cssText='position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#c95a3f,#e67748); color:white; padding:8px 16px; border-radius:60px; font-weight:bold; font-size:0.8rem; z-index:2100;'; document.body.appendChild(t); setTimeout(()=>{ t.style.opacity='0'; setTimeout(()=>t.remove(),300); },1500); }
+    
     function openCart(){ document.getElementById('cartOverlay').classList.add('open'); }
     function closeCart(){ document.getElementById('cartOverlay').classList.remove('open'); }
     function goToCheckout(){ if(cart.length===0){ showToast("🍯 add some rhode first!"); return; } showToast("💖 Thank you! Glazed ritual complete! ✨"); }
+    
     let currentProduct = null;
     function openModal(product) { currentProduct = product; document.getElementById('modalImage').innerHTML = `<img src="${product.image}" onerror="this.src='https://placehold.co/300x300'">`; document.getElementById('modalTitle').innerText = product.name; document.getElementById('modalCategory').innerText = product.category; document.getElementById('modalDescription').innerText = product.fullDesc; document.getElementById('modalHighlight').innerHTML = product.highlight; document.getElementById('modalPrice').innerHTML = `$${product.price.toFixed(2)}`; document.getElementById('modalDetails').innerHTML = `<p>✨ ${product.details}</p><p>🛍️ Free shipping on orders $50+</p><p>⭐ 4.9/5 from 2,000+ reviews</p>`; document.getElementById('productModal').classList.add('open'); }
     function closeModal() { document.getElementById('productModal').classList.remove('open'); }
     function addToCartFromModal(){ if(currentProduct) addToCart(currentProduct); closeModal(); }
+    
     function renderProducts(){
         const grid=document.getElementById('productGrid'), tagRow=document.getElementById('tagRow');
         let prods='', tags='';
@@ -165,7 +186,9 @@
         document.querySelectorAll('.buy-btn').forEach(btn=>btn.addEventListener('click',(e)=>{ e.stopPropagation(); const prod=products.find(p=>p.id===btn.dataset.id); if(prod) addToCart(prod); }));
         document.querySelectorAll('.product-card').forEach(card=>card.addEventListener('click',(e)=>{ if(e.target.classList.contains('buy-btn')) return; const prod=products.find(p=>p.id===card.dataset.id); if(prod) openModal(prod); }));
     }
+    
     function setupCarousel(){ const w=document.getElementById('carouselWrapper'), p=document.getElementById('prevSlideBtn'), n=document.getElementById('nextSlideBtn'); if(w&&p&&n){ p.onclick=()=>w.scrollBy({left:-200,behavior:'smooth'}); n.onclick=()=>w.scrollBy({left:200,behavior:'smooth'}); } }
+    
     function init(){ renderProducts(); loadCart(); document.getElementById('viewCartBtn').onclick=openCart; document.getElementById('closeCartBtn').onclick=closeCart; document.getElementById('cartOverlay').onclick=(e)=>{ if(e.target===document.getElementById('cartOverlay')) closeCart(); }; document.getElementById('checkoutBtn').onclick=goToCheckout; document.getElementById('modalCloseBtn').onclick=closeModal; document.getElementById('modalAddBtn').onclick=addToCartFromModal; document.getElementById('productModal').onclick=(e)=>{ if(e.target===document.getElementById('productModal')) closeModal(); }; setupCarousel(); }
     init();
 </script>
