@@ -62,12 +62,12 @@
             cursor: pointer; 
         }
         .product-card:hover { transform: translateY(-3px); box-shadow: 0 12px 18px -10px rgba(0,0,0,0.4); border-color: #5a8ec5; }
-        .product-image { width: 100%; height: 180px; background: #0d1a35; border-radius: 1rem; margin-bottom: 0.6rem; display: flex; align-items: center; justify-content: center; overflow: hidden; pointer-events: none; }
-        .product-image img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
-        .product-title { font-size: 1rem; font-weight: 700; color: #e0e8f5; pointer-events: none; }
-        .product-desc { font-size: 0.6rem; font-weight: 600; color: #e8a07c; text-transform: uppercase; margin: 0.2rem 0; pointer-events: none; }
-        .product-highlight { font-size: 0.6rem; background: #2a3e5a; padding: 0.15rem 0.6rem; border-radius: 30px; display: inline-block; color: #e0e8f5; pointer-events: none; }
-        .price-tag { font-size: 1.1rem; font-weight: 800; background: linear-gradient(125deg, #c95a3f, #e67748); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0.3rem 0; pointer-events: none; }
+        .product-image { width: 100%; height: 180px; background: #0d1a35; border-radius: 1rem; margin-bottom: 0.6rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .product-image img { width: 100%; height: 100%; object-fit: contain; }
+        .product-title { font-size: 1rem; font-weight: 700; color: #e0e8f5; }
+        .product-desc { font-size: 0.6rem; font-weight: 600; color: #e8a07c; text-transform: uppercase; margin: 0.2rem 0; }
+        .product-highlight { font-size: 0.6rem; background: #2a3e5a; padding: 0.15rem 0.6rem; border-radius: 30px; display: inline-block; color: #e0e8f5; }
+        .price-tag { font-size: 1.1rem; font-weight: 800; background: linear-gradient(125deg, #c95a3f, #e67748); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0.3rem 0; }
         .buy-btn { 
             margin-top: 0.4rem; 
             background: #1a2a4a; 
@@ -79,6 +79,7 @@
             color: #a8c8f0; 
             cursor: pointer; 
             transition: all 0.2s; 
+            width: 100%;
         }
         .buy-btn:hover { background: #2a3e64; border-color: #5a8ec5; }
         .cart-modal {
@@ -149,7 +150,7 @@
     <div class="product-grid" id="productGrid"></div>
     <div class="spotlight"><span>🍯 glazed donut skin</span><span>🏆 2K+ ratings</span></div>
     <div class="tag-row" id="tagRow"></div>
-    <div class="footer-note">✨ Click ANY product to see full details ✨</div>
+    <div class="footer-note">✨ CLICK ANY PRODUCT to see full details ✨</div>
 </div>
 
 <div id="cartModal" class="cart-modal">
@@ -210,14 +211,14 @@
         
         products.forEach(p => {
             prods += `
-                <div class="product-card" data-id="${p.id}">
+                <div class="product-card" data-id="${p.id}" onclick="showProductDetails(products.find(prod => prod.id === '${p.id}'))">
                     <div class="product-image"><img src="${p.image}" onerror="this.src='https://placehold.co/180x180'"></div>
                     <div style="font-size:1.2rem;">${p.tagIcon}</div>
                     <div class="product-title">${p.name}</div>
                     <div class="product-desc">${p.desc}</div>
                     <div class="product-highlight">${p.highlight}</div>
                     <div class="price-tag">$${p.price}</div>
-                    <button class="buy-btn" data-id="${p.id}">add to bag →</button>
+                    <button class="buy-btn" data-id="${p.id}" onclick="event.stopPropagation(); addToCart(products.find(prod => prod.id === '${p.id}'))">add to bag →</button>
                 </div>
             `;
             tags += `<span>${p.tagIcon} ${p.name}</span>`;
@@ -225,27 +226,6 @@
         
         grid.innerHTML = prods;
         tagRow.innerHTML = tags;
-        
-        // Make ALL product cards CLICKABLE - shows details
-        document.querySelectorAll('.product-card').forEach(card => {
-            const productId = card.getAttribute('data-id');
-            const product = products.find(p => p.id === productId);
-            if (product) {
-                card.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('buy-btn')) return;
-                    showProductDetails(product);
-                });
-            }
-        });
-        
-        // Buy buttons
-        document.querySelectorAll('.buy-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const prod = products.find(p => p.id === btn.getAttribute('data-id'));
-                if (prod) addToCart(prod);
-            });
-        });
     }
     
     function setupCarousel() { const w = document.getElementById('carouselWrapper'); const p = document.getElementById('prevSlideBtn'); const n = document.getElementById('nextSlideBtn'); if (w && p && n) { p.onclick = () => w.scrollBy({ left: -250, behavior: 'smooth' }); n.onclick = () => w.scrollBy({ left: 250, behavior: 'smooth' }); } }
