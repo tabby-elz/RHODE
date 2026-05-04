@@ -7,43 +7,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: linear-gradient(135deg, #d4eef7 0%, #b8e1f0 50%, #cce8f5 100%); font-family: 'Inter', sans-serif; color: #1a2c3e; padding: 1.5rem 1rem; }
-        .container { max-width: 1400px; margin: 0 auto; background: rgba(255,250,248,0.92); backdrop-filter: blur(2px); border-radius: 2rem 1.5rem 3rem 1.5rem; box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15); overflow: hidden; padding: 1.5rem; }
+        body { background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 50%, #0b1730 100%); font-family: 'Inter', sans-serif; color: #e0e8f5; padding: 1.5rem 1rem; }
+        .container { max-width: 1400px; margin: 0 auto; background: rgba(15, 25, 45, 0.85); backdrop-filter: blur(2px); border-radius: 2rem 1.5rem 3rem 1.5rem; box-shadow: 0 25px 45px -12px rgba(0,0,0,0.4); overflow: hidden; padding: 1.5rem; border: 1px solid rgba(70, 130, 200, 0.3); }
         .main-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; gap: 0.8rem; }
-        .cart-icon-btn { background: #eef3f7; border: 2px solid #8fcbdf; border-radius: 60px; padding: 0.4rem 1.2rem; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #2c6e8f; }
+        .cart-icon-btn { background: #1a2a4a; border: 2px solid #3a6ea5; border-radius: 60px; padding: 0.4rem 1.2rem; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #a8c8f0; transition: all 0.2s; }
+        .cart-icon-btn:hover { background: #2a3e64; border-color: #5a8ec5; }
         .cart-count { background: #c95a3f; color: white; border-radius: 50px; padding: 0.15rem 0.6rem; font-size: 0.7rem; font-weight: bold; }
         .brand-header { text-align: center; margin-bottom: 0.5rem; flex: 1; }
-        .brand-header h1 { font-size: 3.5rem; font-family: 'Great Vibes', cursive; background: linear-gradient(125deg, #D45F2E, #BF3F22, #EE9B54, #C1542C); -webkit-background-clip: text; background-clip: text; color: transparent; animation: waveGradient 6s ease infinite; }
+        .brand-header h1 { font-size: 3.5rem; font-family: 'Great Vibes', cursive; background: linear-gradient(125deg, #D45F2E, #BF3F22, #EE9B54, #C1542C); background-size: 220% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: waveGradient 6s ease infinite; }
         @keyframes waveGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        .brand-sub { font-size: 0.8rem; background: #eef7fc; display: inline-block; padding: 0.2rem 1rem; border-radius: 60px; color: #2c6e8f; border: 1px solid #b8d9e8; }
+        .brand-sub { font-size: 0.8rem; background: #1a2a4a; display: inline-block; padding: 0.2rem 1rem; border-radius: 60px; color: #a8c8f0; border: 1px solid #3a6ea5; }
         .logo-photo-section { width: 100%; display: flex; justify-content: center; margin: 0.8rem 0; }
-        .logo-rectangle-photo { width: 80%; max-width: 700px; background: white; border-radius: 1.2rem; padding: 0.5rem; box-shadow: 0 10px 20px -8px rgba(0,0,0,0.15); border: 2px solid rgba(100,180,210,0.5); }
+        .logo-rectangle-photo { width: 80%; max-width: 700px; background: #0a1530; border-radius: 1.2rem; padding: 0.5rem; box-shadow: 0 10px 20px -8px rgba(0,0,0,0.3); border: 2px solid rgba(70, 130, 200, 0.5); }
         .logo-rectangle-photo img { width: 100%; border-radius: 0.8rem; aspect-ratio: 16/9; object-fit: cover; }
-        .photo-separator { width: 60px; height: 3px; background: linear-gradient(90deg, #a8d1e6, #6bb5d9, #a8d1e6); border-radius: 3px; margin: 0.5rem auto 1rem auto; }
-        .carousel-section { margin: 1.5rem 0; background: rgba(255,248,245,0.7); border-radius: 1.5rem; padding: 1rem; }
-        .carousel-title { text-align: center; font-family: 'Great Vibes', cursive; font-size: 1.6rem; color: #c95a3f; margin-bottom: 0.8rem; }
+        .photo-separator { width: 60px; height: 3px; background: linear-gradient(90deg, #3a6ea5, #6b9ed0, #3a6ea5); border-radius: 3px; margin: 0.5rem auto 1rem auto; }
+        .carousel-section { margin: 1.5rem 0; background: rgba(10, 20, 40, 0.6); border-radius: 1.5rem; padding: 1rem; }
+        .carousel-title { text-align: center; font-family: 'Great Vibes', cursive; font-size: 1.6rem; color: #e8a07c; margin-bottom: 0.8rem; }
         .carousel-track-wrapper { overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; border-radius: 1rem; }
         .carousel-track { display: flex; gap: 0.8rem; padding: 0.5rem; }
-        .carousel-slide { flex: 0 0 75%; scroll-snap-align: start; background: white; border-radius: 1.2rem; overflow: hidden; box-shadow: 0 8px 15px -8px rgba(0,0,0,0.15); border: 1px solid #ffd9cc; }
+        .carousel-slide { flex: 0 0 75%; scroll-snap-align: start; background: #0a1530; border-radius: 1.2rem; overflow: hidden; box-shadow: 0 8px 15px -8px rgba(0,0,0,0.3); border: 1px solid #3a6ea5; }
         .carousel-slide img { width: 100%; height: 200px; object-fit: cover; }
         .slide-caption { padding: 0.6rem; text-align: center; }
-        .slide-caption h4 { font-size: 0.9rem; font-weight: 700; color: #c95a3f; }
+        .slide-caption h4 { font-size: 0.9rem; font-weight: 700; color: #e8a07c; }
         .carousel-nav { display: flex; justify-content: center; gap: 0.8rem; margin-top: 0.8rem; }
-        .carousel-nav button { background: #eef3f7; border: 1px solid #c0dae6; border-radius: 60px; padding: 0.3rem 1rem; cursor: pointer; font-size: 0.75rem; color: #2c6e8f; }
+        .carousel-nav button { background: #1a2a4a; border: 1px solid #3a6ea5; border-radius: 60px; padding: 0.3rem 1rem; cursor: pointer; font-size: 0.75rem; color: #a8c8f0; transition: all 0.2s; }
+        .carousel-nav button:hover { background: #2a3e64; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
-        .product-card { background: white; border-radius: 1.2rem; padding: 0.8rem; transition: transform 0.2s; box-shadow: 0 6px 12px -8px rgba(0,0,0,0.08); border: 1px solid #cce3ed; cursor: pointer; }
-        .product-card:hover { transform: translateY(-3px); box-shadow: 0 12px 18px -10px rgba(44,110,143,0.2); border-color: #8fcbdf; }
-        .product-image { width: 100%; height: 180px; background: #f0f8fc; border-radius: 1rem; margin-bottom: 0.6rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .product-card { background: #0a1530; border-radius: 1.2rem; padding: 0.8rem; transition: transform 0.2s; box-shadow: 0 6px 12px -8px rgba(0,0,0,0.3); border: 1px solid #2a4a7a; cursor: pointer; }
+        .product-card:hover { transform: translateY(-3px); box-shadow: 0 12px 18px -10px rgba(0,0,0,0.4); border-color: #5a8ec5; }
+        .product-image { width: 100%; height: 180px; background: #0d1a35; border-radius: 1rem; margin-bottom: 0.6rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .product-image img { width: 100%; height: 100%; object-fit: contain; }
-        .product-title { font-size: 1rem; font-weight: 700; color: #1a3b4c; }
-        .product-desc { font-size: 0.6rem; font-weight: 600; color: #b55a34; text-transform: uppercase; margin: 0.2rem 0; }
-        .product-highlight { font-size: 0.6rem; background: #fef0ea; padding: 0.15rem 0.6rem; border-radius: 30px; display: inline-block; }
+        .product-title { font-size: 1rem; font-weight: 700; color: #e0e8f5; }
+        .product-desc { font-size: 0.6rem; font-weight: 600; color: #e8a07c; text-transform: uppercase; margin: 0.2rem 0; }
+        .product-highlight { font-size: 0.6rem; background: #2a3e5a; padding: 0.15rem 0.6rem; border-radius: 30px; display: inline-block; color: #e0e8f5; }
         .price-tag { font-size: 1.1rem; font-weight: 800; background: linear-gradient(125deg, #c95a3f, #e67748); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0.3rem 0; }
-        .buy-btn { margin-top: 0.4rem; background: #eef3f7; border: 1px solid #c0dae6; border-radius: 60px; padding: 0.4rem; font-weight: 600; font-size: 0.7rem; color: #2c6e8f; cursor: pointer; }
-        .spotlight { background: radial-gradient(ellipse at 20% 30%, #e5f2f7, #d4eaf2); padding: 0.8rem 1rem; border-radius: 1.2rem; display: flex; justify-content: space-between; margin: 1rem 0; font-size: 0.75rem; }
+        .buy-btn { margin-top: 0.4rem; background: #1a2a4a; border: 1px solid #3a6ea5; border-radius: 60px; padding: 0.4rem; font-weight: 600; font-size: 0.7rem; color: #a8c8f0; cursor: pointer; transition: all 0.2s; }
+        .buy-btn:hover { background: #2a3e64; border-color: #5a8ec5; }
+        .spotlight { background: rgba(10, 20, 40, 0.8); padding: 0.8rem 1rem; border-radius: 1.2rem; display: flex; justify-content: space-between; margin: 1rem 0; font-size: 0.75rem; border: 1px solid #3a6ea5; }
         .tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 0.8rem 0; }
-        .tag-row span { background: #eef3f7; padding: 0.2rem 0.8rem; border-radius: 50px; font-size: 0.65rem; color: #2c6e8f; }
-        .footer-note { text-align: center; font-size: 0.7rem; color: #4f8eae; margin-top: 1rem; }
+        .tag-row span { background: #1a2a4a; padding: 0.2rem 0.8rem; border-radius: 50px; font-size: 0.65rem; color: #a8c8f0; border: 1px solid #3a6ea5; }
+        .footer-note { text-align: center; font-size: 0.7rem; color: #8aaec0; margin-top: 1rem; }
         @media (min-width:600px){ .carousel-slide { flex: 0 0 40%; } }
         @media (min-width:900px){ .carousel-slide { flex: 0 0 25%; } }
         @media (max-width:550px){ .product-grid { grid-template-columns: 1fr 1fr; } .product-image { height: 140px; } }
