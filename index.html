@@ -134,7 +134,7 @@
             margin: 0.5rem auto 1rem auto;
         }
 
-        /* Carousel Section */
+        /* Carousel Section - SMALLER */
         .carousel-section {
             margin: 1.5rem 0 1.5rem;
             background: rgba(255, 248, 245, 0.7);
@@ -216,7 +216,7 @@
             color: #2c6e8f;
         }
 
-        /* PRODUCT GRID */
+        /* PRODUCT GRID - SMALLER CARDS */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -224,7 +224,7 @@
             margin: 1.5rem 0;
         }
 
-        /* PRODUCT CARD - CLICKABLE */
+        /* PRODUCT CARD - SMALLER */
         .product-card {
             background: #fffffffa;
             border-radius: 1.2rem;
@@ -234,7 +234,6 @@
             border: 1px solid #cce3ed;
             display: flex;
             flex-direction: column;
-            cursor: pointer;
         }
 
         .product-card:hover {
@@ -243,6 +242,7 @@
             border-color: #8fcbdf;
         }
 
+        /* PRODUCT IMAGE - SMALLER */
         .product-image {
             width: 100%;
             height: 160px;
@@ -253,21 +253,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            pointer-events: none;
         }
 
         .product-image img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            pointer-events: none;
         }
 
         .product-title {
             font-size: 1rem;
             font-weight: 700;
             color: #1a3b4c;
-            pointer-events: none;
         }
 
         .product-desc {
@@ -276,7 +273,6 @@
             color: #b55a34;
             text-transform: uppercase;
             margin: 0.2rem 0;
-            pointer-events: none;
         }
 
         .product-highlight {
@@ -286,7 +282,6 @@
             border-radius: 30px;
             display: inline-block;
             width: fit-content;
-            pointer-events: none;
         }
 
         .price-tag {
@@ -297,7 +292,6 @@
             background-clip: text;
             color: transparent;
             margin: 0.3rem 0 0.2rem;
-            pointer-events: none;
         }
 
         .buy-btn {
@@ -311,7 +305,6 @@
             color: #2c6e8f;
             cursor: pointer;
             transition: all 0.2s;
-            pointer-events: auto;
         }
 
         .buy-btn:hover {
@@ -319,166 +312,7 @@
             color: #145c7a;
         }
 
-        /* PRODUCT DETAIL MODAL */
-        .product-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(8px);
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0.2s, opacity 0.2s;
-        }
-
-        .product-modal.open {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 2rem;
-            max-width: 500px;
-            width: 90%;
-            max-height: 85vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.3);
-            animation: modalPop 0.3s ease;
-        }
-
-        @keyframes modalPop {
-            from { transform: scale(0.95); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255,255,255,0.9);
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #c95a3f;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            transition: all 0.2s;
-        }
-
-        .modal-close:hover {
-            background: #c95a3f;
-            color: white;
-        }
-
-        .modal-image {
-            width: 100%;
-            height: 300px;
-            background: #f0f8fc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 2rem 2rem 0 0;
-            overflow: hidden;
-        }
-
-        .modal-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .modal-info {
-            padding: 1.5rem;
-        }
-
-        .modal-info h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #1a3b4c;
-            margin-bottom: 0.3rem;
-        }
-
-        .modal-category {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: #b55a34;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.8rem;
-        }
-
-        .modal-description {
-            font-size: 0.9rem;
-            color: #4a627a;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-
-        .modal-highlight {
-            background: #fef0ea;
-            padding: 0.4rem 1rem;
-            border-radius: 30px;
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: #b9512a;
-            margin-bottom: 1rem;
-        }
-
-        .modal-price {
-            font-size: 2rem;
-            font-weight: 800;
-            background: linear-gradient(125deg, #c95a3f, #e67748);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin: 0.8rem 0;
-        }
-
-        .modal-details {
-            margin: 1rem 0;
-            padding-top: 0.8rem;
-            border-top: 1px solid #f0d6cc;
-        }
-
-        .modal-details p {
-            font-size: 0.8rem;
-            color: #6b8a9e;
-            margin: 0.3rem 0;
-        }
-
-        .modal-add-btn {
-            width: 100%;
-            background: linear-gradient(125deg, #c95a3f, #e67748);
-            border: none;
-            padding: 1rem;
-            border-radius: 60px;
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 0.5rem;
-            transition: transform 0.1s;
-        }
-
-        .modal-add-btn:hover {
-            transform: scale(0.98);
-        }
-
-        /* CART MODAL */
+        /* CART MODAL - SMALLER */
         .cart-overlay {
             position: fixed;
             top: 0;
@@ -730,93 +564,28 @@
     </div>
     <div class="photo-separator"></div>
 
-    <!-- CAROUSEL - ALL ACCESSORIES - SECOND BOX IS NOW #rhode #★~777~★ #pinterest.jpg -->
+    <!-- CAROUSEL -->
     <div class="carousel-section">
         <div class="carousel-title">✨ 777 glazed dreams ✨</div>
         <div class="carousel-track-wrapper" id="carouselWrapper">
             <div class="carousel-track" id="carouselTrack">
-                <!-- Box 1: Rhode Lip Case -->
-                <div class="carousel-slide">
-                    <img src="rhode lip case.jpg" alt="Rhode Lip Case" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+Lip+Case'">
-                    <div class="slide-caption">
-                        <h4>Rhode Lip Case</h4>
-                        <p>protective + glossy • perfect for your peptide lip tint</p>
-                        <span style="font-size:0.7rem; color:#c95a3f;">#rhode #lipcase</span>
-                    </div>
-                </div>
-                <!-- Box 2: #rhode #★~777~★ #pinterest.jpg - 777 GLAZED DREAMS PHOTO -->
-                <div class="carousel-slide">
-                    <img src="#rhode #★~777~★ #pinterest.jpg" alt="777 Glazed Dreams - Rhode Pinterest Aesthetic" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=777+Glazed+Dreams'">
-                    <div class="slide-caption">
-                        <h4>★ 777 glazed dreams ★</h4>
-                        <p>angel numbers • rhode aesthetic • it girl energy • manifest glazed skin</p>
-                        <span style="font-size:0.7rem; color:#c95a3f;">#rhode #777 #glazedonutskin</span>
-                    </div>
-                </div>
-                <!-- Box 3: #rhode #summer.jpg -->
-                <div class="carousel-slide">
-                    <img src="#rhode #summer.jpg" alt="Rhode Summer Glow" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+Summer+Vibes'">
-                    <div class="slide-caption">
-                        <h4>☀️ rhode summer glow</h4>
-                        <p>golden hour • glazed skin • summer essential</p>
-                        <span style="font-size:0.7rem; color:#c95a3f;">#rhode #summer #glazedskin</span>
-                    </div>
-                </div>
-                <!-- Box 4: #rhode #summer (1).jpg -->
-                <div class="carousel-slide">
-                    <img src="#rhode #summer (1).jpg" alt="Rhode Summer Breeze" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Rhode+Summer+Edition'">
-                    <div class="slide-caption">
-                        <h4>🌊 summer breeze ritual</h4>
-                        <p>peptide refresh • dewy finish • vacation mode</p>
-                        <span style="font-size:0.7rem; color:#c95a3f;">#rhode #summer #glazedonut</span>
-                    </div>
-                </div>
-                <!-- Box 5: #rhode #haileybieber #conceptdesign -->
-                <div class="carousel-slide">
-                    <img src="#rhode #haileybieber #conceptdesign.jpg" alt="Hailey Bieber Rhode Concept" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Hailey+Bieber+Rhode+Concept'">
-                    <div class="slide-caption">
-                        <h4>👼 Hailey Bieber concept</h4>
-                        <p>#rhode #haileybieber • dreamy aesthetic • it girl</p>
-                        <span style="font-size:0.7rem; color:#c95a3f;">#haileybieber #rhodeconcept</span>
-                    </div>
-                </div>
-                <!-- Box 6: #makeup #skincare (1).jpg -->
-                <div class="carousel-slide">
-                    <img src="#makeup #skincare (1).jpg" alt="Makeup Skincare Rhode" onerror="this.src='https://placehold.co/600x400/fce8e0/c95a3f?text=Makeup+Skincare+Rhode'">
-                    <div class="slide-caption">
-                        <h4>💄 makeup + skincare fusion</h4>
-                        <p>peptide infused • clean beauty • daily ritual</p>
-                        <span style="font-size:0.7rem; color:#c95a3f;">#makeup #skincare #rhode</span>
-                    </div>
-                </div>
+                <div class="carousel-slide"><img src="rhode lip case.jpg" alt="Lip Case"><div class="slide-caption"><h4>Rhode Lip Case</h4><p>#rhode #lipcase</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #★~777~★ #pinterest.jpg" alt="777"><div class="slide-caption"><h4>★777 glazed dreams★</h4><p>#rhode #777</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #summer.jpg" alt="Summer"><div class="slide-caption"><h4>☀️ summer glow</h4><p>#rhode #summer</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #summer (1).jpg" alt="Summer2"><div class="slide-caption"><h4>🌊 summer breeze</h4><p>#rhode #summer</p></div></div>
+                <div class="carousel-slide"><img src="#rhode #haileybieber #conceptdesign.jpg" alt="Hailey"><div class="slide-caption"><h4>👼 Hailey concept</h4><p>#haileybieber</p></div></div>
+                <div class="carousel-slide"><img src="#makeup #skincare (1).jpg" alt="Makeup"><div class="slide-caption"><h4>💄 makeup + skincare</h4><p>#makeup #skincare</p></div></div>
             </div>
         </div>
         <div class="carousel-nav"><button id="prevSlideBtn">◀</button><button id="nextSlideBtn">▶</button></div>
     </div>
 
-    <!-- ALL 5 PRODUCTS - FULLY RESTORED -->
+    <!-- ALL 5 PRODUCTS - SMALLER CARDS -->
     <div class="product-grid" id="productGrid"></div>
 
     <div class="spotlight"><span>🍯 glazed donut skin • 777</span><span>🏆 2K+ ratings</span></div>
     <div class="tag-row" id="tagRow"></div>
-    <div class="footer-note">🌊 rhode — peptide-powered • free shipping • glazed for life ✨<br>✨ Click any product to see full details ✨</div>
-</div>
-
-<!-- PRODUCT DETAIL MODAL -->
-<div id="productModal" class="product-modal">
-    <div class="modal-content">
-        <button class="modal-close" id="modalCloseBtn">&times;</button>
-        <div class="modal-image" id="modalImage"></div>
-        <div class="modal-info">
-            <h2 id="modalTitle"></h2>
-            <div class="modal-category" id="modalCategory"></div>
-            <div class="modal-description" id="modalDescription"></div>
-            <div class="modal-highlight" id="modalHighlight"></div>
-            <div class="modal-price" id="modalPrice"></div>
-            <div class="modal-details" id="modalDetails"></div>
-            <button class="modal-add-btn" id="modalAddBtn">add to bag →</button>
-        </div>
-    </div>
+    <div class="footer-note">🌊 rhode — peptide-powered • free shipping • glazed for life ✨</div>
 </div>
 
 <!-- CART MODAL -->
@@ -829,75 +598,19 @@
 </div>
 
 <script>
-    // ALL 5 PRODUCTS - FULLY RESTORED
+    // ALL 5 PRODUCTS
     const products = [
-        { 
-            id: "lip_tint", 
-            name: "Glazier Lip Tint", 
-            category: "Lip Care",
-            fullDesc: "A peptide-infused lip tint that delivers a glass-like shine with a sheer wash of cherry color. Formulated with moisturizing peptides and antioxidants to keep lips soft, plump, and hydrated all day.",
-            desc: "Lipstick · Glazier Colors", 
-            highlight: "✨ cherry kiss glass shine ✨", 
-            price: 20.00, 
-            image: "cherry lips.jpg", 
-            tagIcon: "💋🍒",
-            details: "23.5 ml • peptide infused • sheer buildable color • glossy finish"
-        },
-        { 
-            id: "blush_bundle", 
-            name: "Packet Blush Bundle", 
-            category: "Face Makeup",
-            fullDesc: "A hydrating cream blush bundle featuring 10 versatile shades. The dewy, buildable formula blends seamlessly into skin for a natural, lit-from-within flush. Infused with skin-loving ingredients.",
-            desc: "Cream Blush · 10 Colors", 
-            highlight: "🌟 creamy dewy flush", 
-            price: 25.00, 
-            image: "Blush Rhode.jpg", 
-            tagIcon: "🌸",
-            details: "1.6g each • 10 shades • clean formula • buildable coverage"
-        },
-        { 
-            id: "glazing_milk", 
-            name: "Glazing Milk", 
-            category: "Skincare Essence",
-            fullDesc: "A viral ceramide facial essence that gives you that coveted 'glazed donut' skin. Packed with ceramides and peptides to hydrate, plump, and create a dewy, luminous finish.",
-            desc: "Ceramide Facial Essence", 
-            highlight: "🔥 viral milky hydration", 
-            price: 34.00, 
-            image: "Rhode Glazing Milk.jpg", 
-            tagIcon: "🥛",
-            details: "Milky toner • ceramides • peptides • 2K+ 5-star reviews"
-        },
-        { 
-            id: "eye_prep", 
-            name: "Peptide Eye Prep", 
-            category: "Eye Care",
-            fullDesc: "Cooling hydrogel eye patches infused with peptides to instantly depuff, brighten, and refresh tired eyes. Perfect for morning prep or self-care moments.",
-            desc: "Depuffing Eye Patches", 
-            highlight: "⚡ cooling hydrogel", 
-            price: 32.00, 
-            image: "peptide eye prep.jpg", 
-            tagIcon: "👁️",
-            details: "60 patches • peptide infusion • cooling effect • brightening"
-        },
-        { 
-            id: "lip_liner", 
-            name: "Rhode Lip Liner", 
-            category: "Lip Care",
-            fullDesc: "Define your perfect everyday look with this creamy, long-wear lip liner. Glides on smoothly, stays put, and pairs perfectly with the Glazier Lip Tint for a flawless pout.",
-            desc: "Define Your Look", 
-            highlight: "✍️ creamy & long-wear", 
-            price: 18.00, 
-            image: "Rhode Lip Liner – Define Your Perfect Everyday Look🫶🏻.jpg", 
-            tagIcon: "✍️",
-            details: "0.35g • peptide-infused • smooth glide • long-lasting"
-        }
+        { id: "lip_tint", name: "Glazier Lip Tint", desc: "Lipstick · Glazier Colors", highlight: "✨ cherry kiss shine", price: 20.00, image: "cherry lips.jpg", tagIcon: "💋🍒" },
+        { id: "blush_bundle", name: "Packet Blush Bundle", desc: "Cream Blush · 10 Colors", highlight: "🌟 creamy dewy flush", price: 25.00, image: "Blush Rhode.jpg", tagIcon: "🌸" },
+        { id: "glazing_milk", name: "Glazing Milk", desc: "Ceramide Facial Essence", highlight: "🔥 viral hydration", price: 34.00, image: "Rhode Glazing Milk.jpg", tagIcon: "🥛" },
+        { id: "eye_prep", name: "Peptide Eye Prep", desc: "Depuffing Eye Patches", highlight: "⚡ cooling hydrogel", price: 32.00, image: "peptide eye prep.jpg", tagIcon: "👁️" },
+        { id: "lip_liner", name: "Rhode Lip Liner", desc: "Define Your Look", highlight: "✍️ creamy & long-wear", price: 18.00, image: "Rhode Lip Liner – Define Your Perfect Everyday Look🫶🏻.jpg", tagIcon: "✍️" }
     ];
 
     let cart = [];
 
     function loadCart() { const saved = localStorage.getItem("rhode_cart"); if(saved) try{ cart = JSON.parse(saved); }catch(e){} updateCartUI(); }
     function saveCart() { localStorage.setItem("rhode_cart", JSON.stringify(cart)); updateCartUI(); }
-    
     function updateCartUI() {
         const totalItems = cart.reduce((s,i)=> s+i.quantity,0);
         document.getElementById("cartCountDisplay").innerText = totalItems;
@@ -907,4 +620,38 @@
         if(cart.length===0){ container.innerHTML='<div class="empty-cart">🛍️ cart is empty</div>'; if(totalSpan) totalSpan.innerText="$0.00"; return; }
         let html='', total=0;
         cart.forEach(item=>{ total+=item.price*item.quantity;
-            html+=`<div class="cart-item"><img class="cart-item-img" src="${item.image}" onerror="this.src='https://placehold.co/50x50'"><div class="cart-item-details"><div class="cart-item-title">${item.name}</div><div class="cart-item-price">$${item.price}</div><div class="cart-item-qty"><button class="qty-minus" data-id="${item.id}">−</button><span>${item.quantity}</span><button class="qty-plus" data-id="${item.id}">+</button></div></div><button class="remove
+            html+=`<div class="cart-item"><img class="cart-item-img" src="${item.image}" onerror="this.src='https://placehold.co/50x50'"><div class="cart-item-details"><div class="cart-item-title">${item.name}</div><div class="cart-item-price">$${item.price}</div><div class="cart-item-qty"><button class="qty-minus" data-id="${item.id}">−</button><span>${item.quantity}</span><button class="qty-plus" data-id="${item.id}">+</button></div></div><button class="remove-item" data-id="${item.id}">🗑️</button></div>`;
+        });
+        container.innerHTML=html; if(totalSpan) totalSpan.innerText=`$${total.toFixed(2)}`;
+        document.querySelectorAll('.qty-minus').forEach(btn=>btn.addEventListener('click',()=>updateQuantity(btn.dataset.id,-1)));
+        document.querySelectorAll('.qty-plus').forEach(btn=>btn.addEventListener('click',()=>updateQuantity(btn.dataset.id,1)));
+        document.querySelectorAll('.remove-item').forEach(btn=>btn.addEventListener('click',()=>removeItemCompletely(btn.dataset.id)));
+    }
+    function updateQuantity(pid,delta){ let idx=cart.findIndex(i=>i.id===pid); if(idx!==-1){ let newQty=cart[idx].quantity+delta; if(newQty<=0) cart.splice(idx,1); else cart[idx].quantity=newQty; saveCart(); } }
+    function removeItemCompletely(pid){ cart=cart.filter(i=>i.id!==pid); saveCart(); }
+    function addToCart(product){ let existing=cart.find(i=>i.id===product.id); if(existing) existing.quantity+=1; else cart.push({id:product.id,name:product.name,price:product.price,quantity:1,image:product.image}); saveCart(); showToast(`✨ ${product.name} added ✨`); openCart(); }
+    function showToast(msg){ let t=document.createElement('div'); t.innerText=msg; t.style.cssText='position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#c95a3f,#e67748); color:white; padding:8px 16px; border-radius:60px; font-weight:bold; font-size:0.8rem; z-index:1100;'; document.body.appendChild(t); setTimeout(()=>{ t.style.opacity='0'; setTimeout(()=>t.remove(),300); },1500); }
+    function openCart(){ document.getElementById('cartOverlay').classList.add('open'); }
+    function closeCart(){ document.getElementById('cartOverlay').classList.remove('open'); }
+    function goToCheckout(){ if(cart.length===0){ showToast("🍯 add some rhode first!"); return; } showToast("💖 Thank you! Glazed ritual complete! ✨"); }
+
+    function renderProducts(){
+        const grid=document.getElementById('productGrid'), tagRow=document.getElementById('tagRow');
+        if(!grid) return;
+        let prods='', tags='';
+        products.forEach(p=>{
+            prods+=`<div class="product-card"><div class="product-image"><img src="${p.image}" onerror="this.src='https://placehold.co/160x160/e0f0f8'"></div><div style="font-size:1.2rem;">${p.tagIcon}</div><div class="product-title">${p.name}</div><div class="product-desc">${p.desc}</div><div class="product-highlight">${p.highlight}</div><div class="price-tag">$${p.price}</div><button class="buy-btn" data-id="${p.id}">add to bag →</button></div>`;
+            tags+=`<span>${p.tagIcon} ${p.name}</span>`;
+        });
+        grid.innerHTML=prods; if(tagRow) tagRow.innerHTML=tags;
+        document.querySelectorAll('.buy-btn').forEach(btn=>btn.addEventListener('click',()=>{ let prod=products.find(p=>p.id===btn.dataset.id); if(prod) addToCart(prod); }));
+    }
+
+    // Carousel
+    function setupCarousel(){ const w=document.getElementById('carouselWrapper'), p=document.getElementById('prevSlideBtn'), n=document.getElementById('nextSlideBtn'); if(w&&p&&n){ p.onclick=()=>w.scrollBy({left:-200,behavior:'smooth'}); n.onclick=()=>w.scrollBy({left:200,behavior:'smooth'}); } }
+
+    function init(){ renderProducts(); loadCart(); document.getElementById('viewCartBtn').onclick=openCart; document.getElementById('closeCartBtn').onclick=closeCart; document.getElementById('cartOverlay').onclick=(e)=>{ if(e.target===document.getElementById('cartOverlay')) closeCart(); }; document.getElementById('checkoutBtn').onclick=goToCheckout; setupCarousel(); }
+    init();
+</script>
+</body>
+</html>
