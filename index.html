@@ -52,15 +52,34 @@
         .carousel-nav button { background: #1a2a4a; border: 1px solid #3a6ea5; border-radius: 60px; padding: 0.3rem 1rem; cursor: pointer; font-size: 0.75rem; color: #a8c8f0; transition: all 0.2s; }
         .carousel-nav button:hover { background: #2a3e64; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
-        .product-card { background: #0a1530; border-radius: 1.2rem; padding: 0.8rem; transition: transform 0.2s; box-shadow: 0 6px 12px -8px rgba(0,0,0,0.3); border: 1px solid #2a4a7a; cursor: pointer; }
+        .product-card { 
+            background: #0a1530; 
+            border-radius: 1.2rem; 
+            padding: 0.8rem; 
+            transition: transform 0.2s; 
+            box-shadow: 0 6px 12px -8px rgba(0,0,0,0.3); 
+            border: 1px solid #2a4a7a; 
+            cursor: pointer; 
+        }
         .product-card:hover { transform: translateY(-3px); box-shadow: 0 12px 18px -10px rgba(0,0,0,0.4); border-color: #5a8ec5; }
-        .product-image { width: 100%; height: 180px; background: #0d1a35; border-radius: 1rem; margin-bottom: 0.6rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .product-image img { width: 100%; height: 100%; object-fit: contain; }
-        .product-title { font-size: 1rem; font-weight: 700; color: #e0e8f5; }
-        .product-desc { font-size: 0.6rem; font-weight: 600; color: #e8a07c; text-transform: uppercase; margin: 0.2rem 0; }
-        .product-highlight { font-size: 0.6rem; background: #2a3e5a; padding: 0.15rem 0.6rem; border-radius: 30px; display: inline-block; color: #e0e8f5; }
-        .price-tag { font-size: 1.1rem; font-weight: 800; background: linear-gradient(125deg, #c95a3f, #e67748); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0.3rem 0; }
-        .buy-btn { margin-top: 0.4rem; background: #1a2a4a; border: 1px solid #3a6ea5; border-radius: 60px; padding: 0.4rem; font-weight: 600; font-size: 0.7rem; color: #a8c8f0; cursor: pointer; transition: all 0.2s; }
+        .product-image { width: 100%; height: 180px; background: #0d1a35; border-radius: 1rem; margin-bottom: 0.6rem; display: flex; align-items: center; justify-content: center; overflow: hidden; pointer-events: none; }
+        .product-image img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+        .product-title { font-size: 1rem; font-weight: 700; color: #e0e8f5; pointer-events: none; }
+        .product-desc { font-size: 0.6rem; font-weight: 600; color: #e8a07c; text-transform: uppercase; margin: 0.2rem 0; pointer-events: none; }
+        .product-highlight { font-size: 0.6rem; background: #2a3e5a; padding: 0.15rem 0.6rem; border-radius: 30px; display: inline-block; color: #e0e8f5; pointer-events: none; }
+        .price-tag { font-size: 1.1rem; font-weight: 800; background: linear-gradient(125deg, #c95a3f, #e67748); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0.3rem 0; pointer-events: none; }
+        .buy-btn { 
+            margin-top: 0.4rem; 
+            background: #1a2a4a; 
+            border: 1px solid #3a6ea5; 
+            border-radius: 60px; 
+            padding: 0.4rem; 
+            font-weight: 600; 
+            font-size: 0.7rem; 
+            color: #a8c8f0; 
+            cursor: pointer; 
+            transition: all 0.2s; 
+        }
         .buy-btn:hover { background: #2a3e64; border-color: #5a8ec5; }
         .cart-modal {
             display: none;
@@ -123,7 +142,6 @@
             <div class="carousel-slide"><img src="rhode lip case.jpg" alt="Lip Case"><div class="slide-caption"><h4>Rhode Lip Case</h4></div></div>
             <div class="carousel-slide"><img src="Current obsession 🐻🤎.jpg" alt="Current Obsession"><div class="slide-caption"><h4>🐻 current obsession 🐻🤎</h4></div></div>
             <div class="carousel-slide"><img src="rhode • rhode lip tint • charms • crafts • diy • lipgloss charms • arts and crafts • pink.jfif" alt="Lipgloss Charms DIY"><div class="slide-caption"><h4>💗 rhode lip tint charms 💗</h4></div></div>
-            <!-- NEW PHOTO ADDED - Rhode compact mirror - I DID NOT REMOVE ANYTHING -->
             <div class="carousel-slide"><img src="Rhode compact mirror.jfif" alt="Rhode Compact Mirror"><div class="slide-caption"><h4>🪞 rhode compact mirror 🪞</h4></div></div>
         </div></div>
         <div class="carousel-nav"><button id="prevSlideBtn">◀</button><button id="nextSlideBtn">▶</button></div>
@@ -131,7 +149,7 @@
     <div class="product-grid" id="productGrid"></div>
     <div class="spotlight"><span>🍯 glazed donut skin</span><span>🏆 2K+ ratings</span></div>
     <div class="tag-row" id="tagRow"></div>
-    <div class="footer-note">✨ Click any product to see full details ✨</div>
+    <div class="footer-note">✨ Click ANY product to see full details ✨</div>
 </div>
 
 <div id="cartModal" class="cart-modal">
@@ -145,11 +163,11 @@
 
 <script>
     const products = [
-        { id: "lip_tint", name: "Glazier Lip Tint", desc: "Lipstick · Glazier Colors", highlight: "✨ cherry kiss glass shine", price: 20.00, image: "cherry lips.jpg", tagIcon: "💋🍒", fullDesc: "A peptide-infused lip tint that delivers a glass-like shine with a sheer wash of cherry color." },
-        { id: "blush_bundle", name: "Packet Blush Bundle", desc: "Cream Blush · 10 Colors", highlight: "🌟 creamy dewy flush", price: 25.00, image: "Blush Rhode.jpg", tagIcon: "🌸", fullDesc: "A hydrating cream blush bundle featuring 10 versatile shades." },
-        { id: "glazing_milk", name: "Glazing Milk", desc: "Ceramide Facial Essence", highlight: "🔥 viral milky hydration", price: 34.00, image: "Rhode Glazing Milk.jpg", tagIcon: "🥛", fullDesc: "A viral ceramide facial essence that gives you that coveted 'glazed donut' skin." },
-        { id: "eye_prep", name: "Peptide Eye Prep", desc: "Depuffing Eye Patches", highlight: "⚡ cooling hydrogel", price: 32.00, image: "peptide eye prep.jpg", tagIcon: "👁️", fullDesc: "Cooling hydrogel eye patches infused with peptides to instantly depuff and refresh." },
-        { id: "lip_liner", name: "Rhode Lip Liner", desc: "Define Your Look", highlight: "✍️ creamy & long-wear", price: 18.00, image: "Rhode Lip Liner – Define Your Perfect Everyday Look🫶🏻.jpg", tagIcon: "✍️", fullDesc: "Define your perfect everyday look with this creamy, long-wear lip liner." }
+        { id: "lip_tint", name: "Glazier Lip Tint", desc: "Lipstick · Glazier Colors", highlight: "✨ cherry kiss glass shine", price: 20.00, image: "cherry lips.jpg", tagIcon: "💋🍒", fullDesc: "A peptide-infused lip tint that delivers a glass-like shine with a sheer wash of cherry color. Formulated with moisturizing peptides and antioxidants to keep lips soft, plump, and hydrated all day." },
+        { id: "blush_bundle", name: "Packet Blush Bundle", desc: "Cream Blush · 10 Colors", highlight: "🌟 creamy dewy flush", price: 25.00, image: "Blush Rhode.jpg", tagIcon: "🌸", fullDesc: "A hydrating cream blush bundle featuring 10 versatile shades. The dewy, buildable formula blends seamlessly into skin for a natural, lit-from-within flush." },
+        { id: "glazing_milk", name: "Glazing Milk", desc: "Ceramide Facial Essence", highlight: "🔥 viral milky hydration", price: 34.00, image: "Rhode Glazing Milk.jpg", tagIcon: "🥛", fullDesc: "A viral ceramide facial essence that gives you that coveted 'glazed donut' skin. Packed with ceramides and peptides to hydrate, plump, and create a dewy, luminous finish." },
+        { id: "eye_prep", name: "Peptide Eye Prep", desc: "Depuffing Eye Patches", highlight: "⚡ cooling hydrogel", price: 32.00, image: "peptide eye prep.jpg", tagIcon: "👁️", fullDesc: "Cooling hydrogel eye patches infused with peptides to instantly depuff, brighten, and refresh tired eyes. Perfect for morning prep or self-care moments." },
+        { id: "lip_liner", name: "Rhode Lip Liner", desc: "Define Your Look", highlight: "✍️ creamy & long-wear", price: 18.00, image: "Rhode Lip Liner – Define Your Perfect Everyday Look🫶🏻.jpg", tagIcon: "✍️", fullDesc: "Define your perfect everyday look with this creamy, long-wear lip liner. Glides on smoothly, stays put, and pairs perfectly with the Glazier Lip Tint." }
     ];
 
     let cart = [];
@@ -179,19 +197,60 @@
     function showToast(msg) { let toast = document.createElement('div'); toast.innerText = msg; toast.style.cssText = 'position:fixed; bottom:80px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#c95a3f,#e67748); color:white; padding:10px 20px; border-radius:60px; font-weight:bold; font-size:0.8rem; z-index:1100;'; document.body.appendChild(toast); setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 500); }, 2000); }
     function openCartModal() { document.getElementById('cartModal').classList.add('open'); updateCartModal(); }
     function closeCartModal() { document.getElementById('cartModal').classList.remove('open'); }
+    
+    function showProductDetails(product) {
+        alert(`📦 ${product.name}\n💰 $${product.price}\n✨ ${product.highlight}\n\n${product.fullDesc}\n\n🛍️ Click "add to bag" to purchase!`);
+    }
+    
     function renderProducts() {
-        const grid = document.getElementById('productGrid'); const tagRow = document.getElementById('tagRow');
-        let prods = ''; let tags = '';
+        const grid = document.getElementById('productGrid');
+        const tagRow = document.getElementById('tagRow');
+        let prods = '';
+        let tags = '';
+        
         products.forEach(p => {
-            prods += `<div class="product-card" data-id="${p.id}"><div class="product-image"><img src="${p.image}" onerror="this.src='https://placehold.co/180x180'"></div><div style="font-size:1.2rem;">${p.tagIcon}</div><div class="product-title">${p.name}</div><div class="product-desc">${p.desc}</div><div class="product-highlight">${p.highlight}</div><div class="price-tag">$${p.price}</div><button class="buy-btn" data-id="${p.id}">add to bag →</button></div>`;
+            prods += `
+                <div class="product-card" data-id="${p.id}">
+                    <div class="product-image"><img src="${p.image}" onerror="this.src='https://placehold.co/180x180'"></div>
+                    <div style="font-size:1.2rem;">${p.tagIcon}</div>
+                    <div class="product-title">${p.name}</div>
+                    <div class="product-desc">${p.desc}</div>
+                    <div class="product-highlight">${p.highlight}</div>
+                    <div class="price-tag">$${p.price}</div>
+                    <button class="buy-btn" data-id="${p.id}">add to bag →</button>
+                </div>
+            `;
             tags += `<span>${p.tagIcon} ${p.name}</span>`;
         });
-        grid.innerHTML = prods; tagRow.innerHTML = tags;
-        document.querySelectorAll('.buy-btn').forEach(btn => { btn.addEventListener('click', (e) => { e.stopPropagation(); const prod = products.find(p => p.id === btn.getAttribute('data-id')); if (prod) addToCart(prod); }); });
-        document.querySelectorAll('.product-card').forEach(card => { card.addEventListener('click', (e) => { if (e.target.classList.contains('buy-btn')) return; const prod = products.find(p => p.id === card.getAttribute('data-id')); if (prod) alert(`📦 ${prod.name}\n💰 $${prod.price}\n✨ ${prod.highlight}\n\n${prod.fullDesc}`); }); });
+        
+        grid.innerHTML = prods;
+        tagRow.innerHTML = tags;
+        
+        // Make ALL product cards CLICKABLE - shows details
+        document.querySelectorAll('.product-card').forEach(card => {
+            const productId = card.getAttribute('data-id');
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                card.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('buy-btn')) return;
+                    showProductDetails(product);
+                });
+            }
+        });
+        
+        // Buy buttons
+        document.querySelectorAll('.buy-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const prod = products.find(p => p.id === btn.getAttribute('data-id'));
+                if (prod) addToCart(prod);
+            });
+        });
     }
+    
     function setupCarousel() { const w = document.getElementById('carouselWrapper'); const p = document.getElementById('prevSlideBtn'); const n = document.getElementById('nextSlideBtn'); if (w && p && n) { p.onclick = () => w.scrollBy({ left: -250, behavior: 'smooth' }); n.onclick = () => w.scrollBy({ left: 250, behavior: 'smooth' }); } }
     function setupCartModal() { document.getElementById('viewCartBtn').onclick = openCartModal; document.getElementById('closeCartBtn').onclick = closeCartModal; document.getElementById('cartModal').onclick = (e) => { if (e.target === document.getElementById('cartModal')) closeCartModal(); }; document.getElementById('checkoutBtn').onclick = () => { if (cart.length === 0) showToast("🛍️ Your bag is empty! Add some products first."); else showToast("💖 Thank you for your order! Glazed ritual complete ✨"); }; }
+    
     renderProducts(); loadCart(); setupCarousel(); setupCartModal();
 </script>
 </body>
