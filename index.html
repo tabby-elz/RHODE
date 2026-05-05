@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Rhode | Clickable Products</title>
+    <title>Rhode | Original Size - Clickable Products</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,31 +25,32 @@
             padding: 1.5rem; 
         }
         .main-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
-        .cart-btn { background: #1a2a4a; border: 2px solid #3a6ea5; border-radius: 60px; padding: 0.4rem 1.2rem; cursor: pointer; font-weight: 600; color: #a8c8f0; }
-        .cart-count { background: #c95a3f; color: white; border-radius: 50px; padding: 0.15rem 0.6rem; margin-left: 0.5rem; }
+        .cart-btn { background: #1a2a4a; border: 2px solid #3a6ea5; border-radius: 60px; padding: 0.4rem 1.2rem; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #a8c8f0; }
+        .cart-count { background: #c95a3f; color: white; border-radius: 50px; padding: 0.15rem 0.6rem; margin-left: 0.5rem; font-size: 0.7rem; }
         .brand-header h1 { font-size: 3.5rem; font-family: 'Great Vibes', cursive; background: linear-gradient(125deg, #D45F2E, #BF3F22, #EE9B54, #C1542C); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .brand-sub { font-size: 0.8rem; background: #1a2a4a; display: inline-block; padding: 0.2rem 1rem; border-radius: 60px; }
         .logo-photo { width: 80%; max-width: 700px; margin: 1rem auto; background: #0a1530; border-radius: 1rem; padding: 0.5rem; }
         .logo-photo img { width: 100%; border-radius: 0.8rem; }
         .carousel-section { margin: 1.5rem 0; background: rgba(10,20,40,0.6); border-radius: 1rem; padding: 1rem; }
-        .carousel-title { text-align: center; font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: #e8a07c; }
+        .carousel-title { text-align: center; font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: #e8a07c; margin-bottom: 0.8rem; }
         .carousel-track { display: flex; gap: 0.8rem; overflow-x: auto; padding: 0.5rem; }
         .carousel-slide { flex: 0 0 70%; background: #0a1530; border-radius: 1rem; overflow: hidden; }
-        .carousel-slide img { width: 100%; height: 180px; object-fit: cover; }
-        .slide-caption { padding: 0.5rem; text-align: center; }
-        .carousel-nav { display: flex; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; }
-        .carousel-nav button { background: #1a2a4a; border: 1px solid #3a6ea5; border-radius: 60px; padding: 0.2rem 0.8rem; cursor: pointer; color: #a8c8f0; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .carousel-slide img { width: 100%; height: 200px; object-fit: cover; }
+        .slide-caption { padding: 0.6rem; text-align: center; }
+        .slide-caption h4 { font-size: 0.9rem; font-weight: 700; }
+        .carousel-nav { display: flex; justify-content: center; gap: 0.8rem; margin-top: 0.5rem; }
+        .carousel-nav button { background: #1a2a4a; border: 1px solid #3a6ea5; border-radius: 60px; padding: 0.3rem 1rem; cursor: pointer; font-size: 0.75rem; color: #a8c8f0; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
         .product-card { 
             background: #0a1530; 
-            border-radius: 1rem; 
-            padding: 1rem; 
+            border-radius: 1.2rem; 
+            padding: 0.8rem; 
             border: 1px solid #2a4a7a; 
             cursor: pointer;
             transition: all 0.2s;
         }
         .product-card:hover { transform: translateY(-3px); border-color: #5a8ec5; background: #0f1a3a; }
-        .product-card img { width: 100%; height: 170px; object-fit: contain; background: #0d1a35; border-radius: 0.8rem; margin-bottom: 0.5rem; }
+        .product-card img { width: 100%; height: 180px; object-fit: contain; background: #0d1a35; border-radius: 1rem; margin-bottom: 0.6rem; }
         .product-card h3 { font-size: 1rem; font-weight: 700; margin: 0.3rem 0; }
         .product-card p { font-size: 0.7rem; color: #e8a07c; }
         .product-card .price { font-size: 1.1rem; font-weight: 800; background: linear-gradient(125deg, #c95a3f, #e67748); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0.3rem 0; }
@@ -71,7 +72,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.85);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -88,15 +89,15 @@
             border: 2px solid #3a6ea5;
         }
         .cart-header { display: flex; justify-content: space-between; margin-bottom: 1rem; }
-        .cart-header h2 { font-family: 'Great Vibes', cursive; color: #e8a07c; }
-        .close-cart { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #e8a07c; }
-        .cart-item { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #2a4a7a; }
-        .cart-total { text-align: right; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; padding-top: 0.5rem; border-top: 2px solid #3a6ea5; }
-        .checkout-btn { width: 100%; margin-top: 1rem; background: linear-gradient(125deg, #c95a3f, #e67748); border: none; padding: 0.7rem; border-radius: 60px; color: white; cursor: pointer; }
-        .empty-cart { text-align: center; padding: 1rem; color: #8aaec0; }
-        .spotlight { background: rgba(10,20,40,0.6); padding: 0.5rem; border-radius: 1rem; display: flex; justify-content: space-between; margin: 1rem 0; font-size: 0.7rem; }
+        .cart-header h2 { font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: #e8a07c; }
+        .close-cart { background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #e8a07c; }
+        .cart-item { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid #2a4a7a; font-size: 0.9rem; }
+        .cart-total { text-align: right; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; padding-top: 0.8rem; border-top: 2px solid #3a6ea5; }
+        .checkout-btn { width: 100%; margin-top: 1rem; background: linear-gradient(125deg, #c95a3f, #e67748); border: none; padding: 0.8rem; border-radius: 60px; color: white; font-size: 0.9rem; cursor: pointer; }
+        .empty-cart { text-align: center; padding: 1.5rem; color: #8aaec0; }
+        .spotlight { background: rgba(10,20,40,0.6); padding: 0.8rem 1rem; border-radius: 1rem; display: flex; justify-content: space-between; margin: 1rem 0; font-size: 0.75rem; }
         .footer-note { text-align: center; font-size: 0.7rem; margin-top: 1rem; }
-        @media (max-width:550px){ .product-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width:550px){ .product-grid { grid-template-columns: 1fr 1fr; } .carousel-slide { flex: 0 0 85%; } }
     </style>
 </head>
 <body>
@@ -107,6 +108,7 @@
     </div>
     <div class="logo-photo"><img src="rhode world at coachella 2026 _ rhode x the biebers.jpg" alt="Rhode" onerror="this.src='https://placehold.co/800x450'"></div>
     
+    <!-- ACCESSORIES - ORIGINAL SIZE -->
     <div class="carousel-section">
         <div class="carousel-title">✨ accessories ✨</div>
         <div class="carousel-track" id="carouselTrack">
@@ -119,6 +121,7 @@
         <div class="carousel-nav"><button id="prevBtn">◀</button><button id="nextBtn">▶</button></div>
     </div>
     
+    <!-- PRODUCTS - ORIGINAL SIZE & CLICKABLE -->
     <div class="product-grid" id="productGrid"></div>
     
     <div class="spotlight"><span>🍯 glazed donut skin</span><span>🏆 2K+ ratings</span></div>
@@ -135,7 +138,6 @@
 </div>
 
 <script>
-    // PRODUCTS DATA
     const products = [
         { id: "lip_tint", name: "Glazier Lip Tint", desc: "Lipstick · Glazier Colors", highlight: "cherry kiss glass shine", price: 20, image: "cherry lips.jpg", icon: "💋🍒", details: "23.5 ml • peptide infused • sheer buildable color • glossy finish" },
         { id: "blush_bundle", name: "Packet Blush Bundle", desc: "Cream Blush · 10 Colors", highlight: "creamy dewy flush", price: 25, image: "Blush Rhode.jpg", icon: "🌸", details: "1.6g each • 10 shades • clean formula • buildable coverage" },
@@ -173,20 +175,18 @@
         alert(`✨ ${product.name} added to bag! ✨`);
     }
     
-    // PRODUCT CLICK FUNCTION - THIS WORKS 100%
     function showProductDetails(product) {
         alert(`📦 ${product.name}\n💰 $${product.price}\n✨ ${product.highlight}\n\n${product.details}\n\n🛍️ Click "add to bag" to purchase!`);
     }
     
-    // RENDER PRODUCTS - EACH CARD HAS ONCLICK
     function renderProducts() {
         const grid = document.getElementById('productGrid');
         let html = '';
         products.forEach(p => {
             html += `
                 <div class="product-card" onclick="showProductDetails(products.find(prod => prod.id === '${p.id}'))">
-                    <img src="${p.image}" onerror="this.src='https://placehold.co/170x170'">
-                    <div style="font-size:1.3rem;">${p.icon}</div>
+                    <img src="${p.image}" onerror="this.src='https://placehold.co/180x180'">
+                    <div style="font-size:1.2rem;">${p.icon}</div>
                     <h3>${p.name}</h3>
                     <p>${p.desc}</p>
                     <div class="price">$${p.price}</div>
@@ -197,12 +197,12 @@
         grid.innerHTML = html;
     }
     
-    // CAROUSEL
+    // Carousel scroll
     const track = document.getElementById('carouselTrack');
-    document.getElementById('prevBtn')?.addEventListener('click', () => track.scrollBy({ left: -200, behavior: 'smooth' }));
-    document.getElementById('nextBtn')?.addEventListener('click', () => track.scrollBy({ left: 200, behavior: 'smooth' }));
+    document.getElementById('prevBtn')?.addEventListener('click', () => track.scrollBy({ left: -250, behavior: 'smooth' }));
+    document.getElementById('nextBtn')?.addEventListener('click', () => track.scrollBy({ left: 250, behavior: 'smooth' }));
     
-    // CART MODAL
+    // Cart modal
     function openCart() { document.getElementById('cartModal').classList.add('open'); updateCartModal(); }
     function closeCart() { document.getElementById('cartModal').classList.remove('open'); }
     document.getElementById('viewCartBtn').onclick = openCart;
