@@ -117,11 +117,14 @@
             padding: 1rem;
             text-align: center;
             border: 1px solid #2a4a7a;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
         .value-card:hover {
             border-color: #e8a07c;
-            transform: translateY(-3px);
-            transition: all 0.2s;
+            transform: translateY(-5px);
+            background: rgba(20, 35, 55, 0.8);
+            box-shadow: 0 10px 20px -8px rgba(0,0,0,0.3);
         }
         .value-icon {
             font-size: 2rem;
@@ -269,7 +272,7 @@
         <div class="footer-note">✨ CLICK ANY PRODUCT to see full details ✨</div>
     </div>
     
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT SECTION with CLICKABLE VALUE CARDS -->
     <div id="aboutSection" class="about-section">
         <div class="about-title">✨ our story ✨</div>
         <div class="about-content">
@@ -284,11 +287,28 @@
             </div>
         </div>
         
+        <!-- CLICKABLE VALUE CARDS - each one opens a detailed popup -->
         <div class="values-grid">
-            <div class="value-card"><div class="value-icon">🧪</div><div class="value-title">Peptide-Powered</div><div class="value-desc">Clinically-backed ingredients for real results</div></div>
-            <div class="value-card"><div class="value-icon">🌸</div><div class="value-title">Clean Beauty</div><div class="value-desc">No parabens, sulfates, or harmful additives</div></div>
-            <div class="value-card"><div class="value-icon">✨</div><div class="value-title">Glazed Finish</div><div class="value-desc">That dewy, luminous, glass-skin effect</div></div>
-            <div class="value-card"><div class="value-icon">🌎</div><div class="value-title">Cruelty-Free</div><div class="value-desc">Never tested on animals. Leaping Bunny certified</div></div>
+            <div class="value-card" onclick="showValueDetails('peptide')">
+                <div class="value-icon">🧪</div>
+                <div class="value-title">Peptide-Powered</div>
+                <div class="value-desc">Clinically-backed ingredients for real results</div>
+            </div>
+            <div class="value-card" onclick="showValueDetails('clean')">
+                <div class="value-icon">🌸</div>
+                <div class="value-title">Clean Beauty</div>
+                <div class="value-desc">No parabens, sulfates, or harmful additives</div>
+            </div>
+            <div class="value-card" onclick="showValueDetails('glazed')">
+                <div class="value-icon">✨</div>
+                <div class="value-title">Glazed Finish</div>
+                <div class="value-desc">That dewy, luminous, glass-skin effect</div>
+            </div>
+            <div class="value-card" onclick="showValueDetails('cruelty')">
+                <div class="value-icon">🌎</div>
+                <div class="value-title">Cruelty-Free</div>
+                <div class="value-desc">Never tested on animals. Leaping Bunny certified</div>
+            </div>
         </div>
     </div>
 </div>
@@ -345,6 +365,19 @@
         alert(`📦 ${product.name}\n💰 $${product.price}\n✨ ${product.highlight}\n\n${product.fullDesc}\n\n🛍️ Click "add to bag" to purchase!`);
     }
     
+    // Function for clickable about value cards - detailed information
+    function showValueDetails(type) {
+        if (type === 'peptide') {
+            alert(`🧪 PEPTIDE-POWERED\n\nAt Rhode, we harness the science of peptides — powerful amino acid chains that signal your skin to produce more collagen and elastin. Our peptide-infused formulas help:\n\n• Boost skin firmness and elasticity\n• Reduce fine lines and wrinkles\n• Strengthen skin barrier\n• Improve hydration retention\n\nEvery Rhode product is formulated with clinically-proven peptide complexes for real, visible results.`);
+        } else if (type === 'clean') {
+            alert(`🌸 CLEAN BEAUTY\n\nWe believe what you put ON your body matters as much as what you put IN it. Rhode is committed to clean, safe ingredients:\n\n✓ NO parabens\n✓ NO sulfates (SLS/SLES)\n✓ NO phthalates\n✓ NO synthetic fragrances\n✓ NO formaldehyde donors\n✓ NO mineral oil\n\nOur formulas are thoughtfully crafted with skin-loving ingredients you can trust.`);
+        } else if (type === 'glazed') {
+            alert(`✨ GLAZED FINISH\n\nThe signature Rhode glow — luminous, dewy, and radiant. Our glazed finish is achieved through:\n\n• Hydrating ceramides\n• Light-reflecting humectants\n• Non-sticky, silky textures\n• Multi-dimensional shine\n\nIt's not just a look — it's a feeling. Skin that looks healthy, hydrated, and effortlessly beautiful. The "glazed donut" skin everyone is talking about.`);
+        } else if (type === 'cruelty') {
+            alert(`🌎 CRUELTY-FREE\n\nRhode is proudly cruelty-free. We NEVER test on animals at any stage of product development.\n\n• Leaping Bunny Certified\n• PETA Cruelty-Free\n• Vegan-friendly formulas\n• Ethically sourced ingredients\n\nWe believe beauty should be kind — to your skin, to animals, and to the planet. Love your skin without compromise.`);
+        }
+    }
+    
     function renderProducts() {
         const grid = document.getElementById('productGrid');
         const tagRow = document.getElementById('tagRow');
@@ -370,15 +403,4 @@
     function switchToAbout() {
         document.getElementById('shopSection').style.display = 'none';
         document.getElementById('aboutSection').classList.add('active');
-        document.getElementById('aboutNavBtn').classList.add('active');
-        document.getElementById('shopNavBtn').classList.remove('active');
-        currentSection = 'about';
-    }
-    
-    document.getElementById('shopNavBtn').onclick = switchToShop;
-    document.getElementById('aboutNavBtn').onclick = switchToAbout;
-    
-    renderProducts(); loadCart(); setupCarousel(); setupCartModal();
-</script>
-</body>
-</html>
+       
