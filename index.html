@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Rhode | Barrier Cream + Glazing Milk | Glazed Collection</title>
+    <title>Rhode | Skincare Routine + How To Use | Glazed Collection</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -65,19 +65,22 @@
         .value-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; color: #e8a07c; }
         .value-desc { font-size: 0.7rem; color: #a8c8f0; }
         
-        /* ROUTINE & HOW TO USE SECTION */
+        /* ROUTINE & HOW TO USE SECTION - WITH PHOTO SPOTS */
         .routine-header { text-align: center; margin-bottom: 2rem; }
         .routine-header h2 { font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: #e8a07c; margin-bottom: 0.5rem; }
         .routine-header p { color: #a8c8f0; font-size: 0.9rem; }
-        .routine-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .routine-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
         .routine-card { background: rgba(10, 20, 40, 0.7); border-radius: 1.5rem; padding: 1.2rem; border: 1px solid #2a4a7a; transition: all 0.2s; cursor: pointer; }
         .routine-card:hover { transform: translateY(-5px); border-color: #e8a07c; background: rgba(20, 35, 55, 0.8); }
+        .routine-image { width: 100%; height: 200px; background: #0d1a35; border-radius: 1rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .routine-image img { width: 100%; height: 100%; object-fit: cover; }
         .step-number { display: inline-block; background: linear-gradient(125deg, #c95a3f, #e67748); border-radius: 60px; padding: 0.2rem 0.8rem; font-size: 0.7rem; font-weight: bold; margin-bottom: 0.8rem; }
         .routine-card h3 { font-size: 1.3rem; font-weight: 700; margin: 0.5rem 0; color: #e8a07c; }
         .routine-card p { font-size: 0.85rem; color: #a8c8f0; line-height: 1.5; margin: 0.5rem 0; }
         .howto-list { margin-top: 0.8rem; padding-left: 1rem; }
         .howto-list li { font-size: 0.75rem; color: #a8c8f0; margin: 0.3rem 0; }
         .product-ref { display: inline-block; margin-top: 0.8rem; background: #1a2a4a; border-radius: 60px; padding: 0.2rem 0.8rem; font-size: 0.65rem; color: #e8a07c; }
+        .photo-placeholder-text { font-size: 0.6rem; color: #8aaec0; text-align: center; margin-top: 0.3rem; }
         
         /* SHOP STYLES */
         .carousel-section { margin: 1.5rem 0; background: rgba(10, 20, 40, 0.6); border-radius: 1.5rem; padding: 1rem; }
@@ -153,7 +156,7 @@
         <button class="cart-icon-btn" id="viewCartBtn">🛍️ CART <span id="cartCountDisplay" class="cart-count">0</span></button>
     </div>
     
-    <!-- SHOP SECTION - UPDATED: Glazing Milk, Eye Prep, Barrier Cream -->
+    <!-- SHOP SECTION - ALL 5 PRODUCTS RESTORED -->
     <div id="shopSection" class="shop-section active">
         <div class="logo-photo-section"><div class="logo-rectangle-photo"><img src="rhode world at coachella 2026 _ rhode x the biebers.jpg" alt="Rhode" onerror="this.src='https://placehold.co/800x450'"></div></div>
         <div class="photo-separator"></div>
@@ -180,7 +183,7 @@
             <div class="about-text">
                 <p><strong>Rhode</strong> was born from a simple idea: skincare that makes you feel like the best version of yourself. Founded with a passion for peptide-powered formulas and that coveted "glazed donut" glow, we believe that true beauty comes from healthy, radiant skin.</p>
                 <p>Our name, <strong>Rhode</strong>, is inspired by the Greek word for "rose" — symbolizing beauty, love, and renewal. Every product we create is carefully crafted with clean, effective ingredients.</p>
-                <p>From our viral <strong>Glazing Milk</strong> to our peptide-infused <strong>Barrier Cream</strong>, each formula is designed to hydrate, plump, and illuminate.</p>
+                <p>From our viral <strong>Glazing Milk</strong> to our peptide-infused <strong>lip treatments</strong>, each formula is designed to hydrate, plump, and illuminate.</p>
                 <p>Welcome to Rhode. Welcome to your glazed ritual. 🤍</p>
             </div>
             <div class="about-image">
@@ -211,16 +214,20 @@
         </div>
     </div>
     
-    <!-- ROUTINE & HOW TO USE SECTION - UPDATED WITH BARRIER CREAM -->
+    <!-- ROUTINE & HOW TO USE SECTION - WITH PHOTO SPOTS FOR YOU TO ADD IMAGES -->
     <div id="routineSection" class="routine-section">
         <div class="routine-header">
             <h2>✨ glazed skincare routine ✨</h2>
             <p>how to achieve that peptide-powered, dewy finish — step by step</p>
+            <p style="font-size: 0.7rem; margin-top: 0.3rem;">📷 Click the image area to add your photo</p>
         </div>
         
         <div class="routine-grid">
-            <!-- STEP 1 -->
-            <div class="routine-card" onclick="alert('STEP 1: CLEANSE\n\nStart with a gentle, hydrating cleanser to remove impurities without stripping your skin. Pat dry with a soft towel.\n\n✨ Pro tip: Use lukewarm water to keep your skin barrier happy!')">
+            <!-- STEP 1: Cleanse - PHOTO SPOT -->
+            <div class="routine-card">
+                <div class="routine-image" onclick="alert('📷 ADD YOUR PHOTO HERE\n\nReplace the image filename in the code for this step.\n\nCurrent placeholder: routine-cleanser.jpg')">
+                    <img src="routine-cleanser.jpg" alt="Cleanse" onerror="this.src='https://placehold.co/400x200/0a1530/3a6ea5?text=Click+to+add+photo+%F0%9F%93%B7'">
+                </div>
                 <span class="step-number">STEP 01</span>
                 <h3>🧼 Cleanse</h3>
                 <p>Start with a clean canvas. Gently wash away dirt, oil, and makeup with a hydrating cleanser.</p>
@@ -230,10 +237,14 @@
                     <li>💧 Pat dry - don't rub!</li>
                 </div>
                 <span class="product-ref">recommended: any gentle cleanser</span>
+                <div class="photo-placeholder-text">📷 YOUR PHOTO HERE</div>
             </div>
             
-            <!-- STEP 2: GLAZING MILK -->
-            <div class="routine-card" onclick="alert('STEP 2: GLAZING MILK\n\nOur viral ceramide facial essence! Apply 2-3 drops to your fingertips and press gently into damp skin. Follow with your favorite moisturizer.\n\n✨ The result: plump, dewy, glass-like skin that glows from within.')">
+            <!-- STEP 2: Glazing Milk - PHOTO SPOT -->
+            <div class="routine-card">
+                <div class="routine-image" onclick="alert('📷 ADD YOUR PHOTO HERE\n\nReplace the image filename for Glazing Milk step.\n\nCurrent placeholder: routine-glazing-milk.jpg')">
+                    <img src="routine-glazing-milk.jpg" alt="Glazing Milk" onerror="this.src='https://placehold.co/400x200/0a1530/3a6ea5?text=Click+to+add+photo+%F0%9F%93%B7'">
+                </div>
                 <span class="step-number">STEP 02</span>
                 <h3>🥛 Glazing Milk</h3>
                 <p>Our viral ceramide facial essence. Apply to damp skin for instant hydration and that signature glazed finish.</p>
@@ -243,10 +254,14 @@
                     <li>💧 Follow with moisturizer</li>
                 </div>
                 <span class="product-ref">✨ rhode Glazing Milk — $34.00</span>
+                <div class="photo-placeholder-text">📷 YOUR PHOTO HERE</div>
             </div>
             
-            <!-- STEP 3: EYE PREP -->
-            <div class="routine-card" onclick="alert('STEP 3: EYE PREP\n\nApply peptide eye patches under eyes for 10-15 minutes. Gently tap any remaining essence into skin. Use morning or night to depuff and brighten.\n\n✨ Perfect for tired eyes or pre-makeup prep!')">
+            <!-- STEP 3: Eye Prep - PHOTO SPOT -->
+            <div class="routine-card">
+                <div class="routine-image" onclick="alert('📷 ADD YOUR PHOTO HERE\n\nReplace the image filename for Eye Prep step.\n\nCurrent placeholder: routine-eye-prep.jpg')">
+                    <img src="routine-eye-prep.jpg" alt="Eye Prep" onerror="this.src='https://placehold.co/400x200/0a1530/3a6ea5?text=Click+to+add+photo+%F0%9F%93%B7'">
+                </div>
                 <span class="step-number">STEP 03</span>
                 <h3>👁️ Peptide Eye Prep</h3>
                 <p>Depuff and brighten with cooling hydrogel eye patches infused with peptides.</p>
@@ -256,151 +271,52 @@
                     <li>💧 Use morning or night</li>
                 </div>
                 <span class="product-ref">✨ rhode Peptide Eye Prep — $32.00</span>
+                <div class="photo-placeholder-text">📷 YOUR PHOTO HERE</div>
             </div>
             
-            <!-- STEP 4: BARRIER CREAM (NEW) -->
-            <div class="routine-card" onclick="alert('STEP 4: BARRIER CREAM\n\nOur rich, peptide-infused barrier cream locks in moisture and strengthens your skin barrier. Apply a pearl-sized amount to face and neck. Use morning and night.\n\n✨ The ultimate step for that glazed, protected finish!')">
+            <!-- STEP 4: Lip Tint - PHOTO SPOT -->
+            <div class="routine-card">
+                <div class="routine-image" onclick="alert('📷 ADD YOUR PHOTO HERE\n\nReplace the image filename for Lip Tint step.\n\nCurrent placeholder: routine-lip-tint.jpg')">
+                    <img src="routine-lip-tint.jpg" alt="Lip Tint" onerror="this.src='https://placehold.co/400x200/0a1530/3a6ea5?text=Click+to+add+photo+%F0%9F%93%B7'">
+                </div>
                 <span class="step-number">STEP 04</span>
-                <h3>🧴 Rhode Barrier Cream</h3>
-                <p>Strengthen and protect with our peptide-rich barrier cream. Locks in moisture for that signature glazed finish.</p>
+                <h3>💋 Glazier Lip Tint</h3>
+                <p>A peptide-infused lip tint that delivers a glass-like shine with a sheer wash of cherry color.</p>
                 <div class="howto-list">
-                    <li>💧 Apply pearl-sized amount to face</li>
-                    <li>💧 Gently massage into skin</li>
-                    <li>💧 Use morning and night</li>
+                    <li>💧 Apply directly to lips</li>
+                    <li>💧 Layer for more intensity</li>
+                    <li>💧 Reapply throughout the day</li>
                 </div>
-                <span class="product-ref">✨ rhode Barrier Cream — $42.00</span>
+                <span class="product-ref">✨ rhode Glazier Lip Tint — $20.00</span>
+                <div class="photo-placeholder-text">📷 YOUR PHOTO HERE</div>
             </div>
             
-            <!-- BONUS TIP -->
-            <div class="routine-card" onclick="alert('✨ PRO TIPS FOR THE PERFECT GLAZE ✨\n\n1. Always apply Glazing Milk to DAMP skin for maximum absorption.\n2. Store eye patches in the fridge for an extra cooling effect.\n3. Layer Barrier Cream over Glazing Milk for ultimate hydration.\n4. Drink water! Hydration starts from within. 💧')">
-                <span class="step-number">⭐ BONUS</span>
-                <h3>💡 Pro Tips</h3>
-                <p>Little secrets for the ultimate glazed look. Get the most out of your Rhode routine.</p>
-                <div class="howto-list">
-                    <li>💧 Apply Glazing Milk to damp skin</li>
-                    <li>💧 Store eye patches in the fridge</li>
-                    <li>💧 Layer Barrier Cream over essence</li>
-                    <li>💧 Drink water for internal glow</li>
+            <!-- STEP 5: Lip Liner - PHOTO SPOT -->
+            <div class="routine-card">
+                <div class="routine-image" onclick="alert('📷 ADD YOUR PHOTO HERE\n\nReplace the image filename for Lip Liner step.\n\nCurrent placeholder: routine-lip-liner.jpg')">
+                    <img src="routine-lip-liner.jpg" alt="Lip Liner" onerror="this.src='https://placehold.co/400x200/0a1530/3a6ea5?text=Click+to+add+photo+%F0%9F%93%B7'">
                 </div>
-                <span class="product-ref">✨ #GlazedDonutSkin</span>
+                <span class="step-number">STEP 05</span>
+                <h3>✍️ Rhode Lip Liner</h3>
+                <p>Define your perfect everyday look with this creamy, long-wear lip liner.</p>
+                <div class="howto-list">
+                    <li>💧 Outline lips for definition</li>
+                    <li>💧 Fill in for all-day wear</li>
+                    <li>💧 Pairs perfectly with Lip Tint</li>
+                </div>
+                <span class="product-ref">✨ rhode Lip Liner — $18.00</span>
+                <div class="photo-placeholder-text">📷 YOUR PHOTO HERE</div>
             </div>
-        </div>
-        
-        <div class="spotlight">
-            <span>🍯 glazed donut skin routine 🇬🇷</span>
-            <span>✨ peptide-powered • barrier cream • glass skin ✨</span>
-        </div>
-        <div class="footer-note">✨ Click any step for detailed instructions! Your glazed ritual starts here ✨</div>
-    </div>
-    
-    <div class="footer-note">✨ CLICK any product to see details and add to cart ✨</div>
-</div>
-
-<!-- CART MODAL -->
-<div id="cartModal" class="cart-modal">
-    <div class="cart-content">
-        <div class="cart-header"><h2>✨ your bag ✨</h2><button class="close-cart" id="closeCartBtn">&times;</button></div>
-        <div id="cartItemsList"><div class="empty-cart">Your cart is empty 🛍️</div></div>
-        <div class="cart-total" id="cartTotalDisplay">$0.00</div>
-        <button class="checkout-btn" id="proceedCheckoutBtn">checkout →</button>
-    </div>
-</div>
-
-<!-- CHECKOUT MODAL -->
-<div id="checkoutModal" class="checkout-modal">
-    <div class="checkout-content">
-        <button class="close-checkout" id="closeCheckoutBtn">&times;</button>
-        <h2>✨ complete your order ✨</h2>
-        <p style="margin-bottom: 1rem; color: #a8c8f0;">Enter your email or phone number</p>
-        <input type="text" id="customerContact" placeholder="Email or Phone Number">
-        <button class="submit-checkout" id="submitCheckoutBtn">place order →</button>
-    </div>
-</div>
-
-<script>
-    // UPDATED PRODUCTS: Glazing Milk, Eye Prep, Barrier Cream (removed lip tint, lip liner, blush)
-    const products = [
-        { id: "glazing_milk", name: "Glazing Milk", desc: "Ceramide Facial Essence", highlight: "🔥 viral milky hydration", price: 34.00, image: "Rhode Glazing Milk.jpg", tagIcon: "🥛", fullDesc: "A viral ceramide facial essence that gives you that coveted 'glazed donut' skin. Packed with ceramides and peptides to hydrate, plump, and create a dewy, luminous finish." },
-        { id: "eye_prep", name: "Peptide Eye Prep", desc: "Depuffing Eye Patches", highlight: "⚡ cooling hydrogel", price: 32.00, image: "peptide eye prep.jpg", tagIcon: "👁️", fullDesc: "Cooling hydrogel eye patches infused with peptides to instantly depuff, brighten, and refresh tired eyes. Perfect for morning prep or self-care moments." },
-        { id: "barrier_cream", name: "Rhode Barrier Cream", desc: "Peptide Barrier Cream", highlight: "🧴 strengthen + protect", price: 42.00, image: "rhode barrier cream.jpg", tagIcon: "🧴", fullDesc: "A rich, peptide-infused barrier cream that locks in moisture and strengthens your skin barrier. Leaves skin plump, protected, and perfectly glazed." }
-    ];
-
-    let cart = [];
-
-    function loadCart() { const saved = localStorage.getItem("rhode_cart"); if(saved) try{ cart = JSON.parse(saved); }catch(e){} updateCartUI(); updateCartModal(); }
-    function saveCart() { localStorage.setItem("rhode_cart", JSON.stringify(cart)); updateCartUI(); updateCartModal(); }
-    function updateCartUI() { document.getElementById("cartCountDisplay").innerText = cart.reduce((s,i)=> s+i.quantity, 0); }
-    
-    function updateCartModal() {
-        const container = document.getElementById("cartItemsList");
-        const totalSpan = document.getElementById("cartTotalDisplay");
-        if (!container) return;
-        if (cart.length === 0) { container.innerHTML = '<div class="empty-cart">Your cart is empty 🛍️</div>'; totalSpan.innerText = "$0.00"; return; }
-        let html = ''; let total = 0;
-        cart.forEach((item) => {
-            total += item.price * item.quantity;
-            html += `<div class="cart-item"><div class="cart-item-info"><div class="cart-item-name">${item.name}</div><div class="cart-item-price">$${item.price.toFixed(2)} each</div></div><div class="cart-item-quantity"><button class="qty-minus" data-id="${item.id}">−</button><span>${item.quantity}</span><button class="qty-plus" data-id="${item.id}">+</button></div><button class="remove-item" data-id="${item.id}">🗑️</button></div>`;
-        });
-        container.innerHTML = html;
-        totalSpan.innerText = `$${total.toFixed(2)}`;
-        document.querySelectorAll('.qty-minus').forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); updateQuantity(btn.getAttribute('data-id'), -1); }));
-        document.querySelectorAll('.qty-plus').forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); updateQuantity(btn.getAttribute('data-id'), 1); }));
-        document.querySelectorAll('.remove-item').forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); removeItemCompletely(btn.getAttribute('data-id')); }));
-    }
-    
-    function updateQuantity(productId, delta) { const index = cart.findIndex(i => i.id === productId); if (index !== -1) { const newQty = cart[index].quantity + delta; if (newQty <= 0) cart.splice(index, 1); else cart[index].quantity = newQty; saveCart(); } }
-    function removeItemCompletely(productId) { cart = cart.filter(i => i.id !== productId); saveCart(); }
-    
-    function addToCart(product) { const existing = cart.find(i => i.id === product.id); if (existing) existing.quantity += 1; else cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1, image: product.image }); saveCart(); showToast(`✨ ${product.name} added to bag ✨`); }
-    
-    function showToast(msg) { let toast = document.createElement('div'); toast.innerText = msg; toast.style.cssText = 'position:fixed; bottom:80px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#c95a3f,#e67748); color:white; padding:10px 20px; border-radius:60px; font-weight:bold; font-size:0.8rem; z-index:1100;'; document.body.appendChild(toast); setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 500); }, 2000); }
-    
-    function showProductDetails(product) {
-        let userChoice = confirm(`📦 ${product.name}\n💰 $${product.price}\n✨ ${product.highlight}\n\n${product.fullDesc}\n\nClick OK to add to cart, Cancel to cancel.`);
-        if (userChoice) { addToCart(product); }
-    }
-    
-    function renderProducts() {
-        const grid = document.getElementById('productGrid');
-        const tagRow = document.getElementById('tagRow');
-        let prods = ''; let tags = '';
-        products.forEach(p => {
-            prods += `<div class="product-card" onclick="showProductDetails(products.find(prod => prod.id === '${p.id}'))"><div class="product-image"><img src="${p.image}" onerror="this.src='https://placehold.co/180x180'"></div><div style="font-size:1.2rem;">${p.tagIcon}</div><div class="product-title">${p.name}</div><div class="product-desc">${p.desc}</div><div class="product-highlight">${p.highlight}</div><div class="price-tag">$${p.price}</div><button class="buy-btn" onclick="event.stopPropagation(); addToCart(products.find(prod => prod.id === '${p.id}'))">add to bag →</button></div>`;
-            tags += `<span>${p.tagIcon} ${p.name}</span>`;
-        });
-        grid.innerHTML = prods; tagRow.innerHTML = tags;
-    }
-    
-    function setupCarousel() { const w = document.getElementById('carouselWrapper'); const p = document.getElementById('prevSlideBtn'); const n = document.getElementById('nextSlideBtn'); if (w && p && n) { p.onclick = () => w.scrollBy({ left: -250, behavior: 'smooth' }); n.onclick = () => w.scrollBy({ left: 250, behavior: 'smooth' }); } }
-    
-    function openCartModal() { document.getElementById('cartModal').classList.add('open'); updateCartModal(); }
-    function closeCartModal() { document.getElementById('cartModal').classList.remove('open'); }
-    function openCheckoutModal() { closeCartModal(); document.getElementById('checkoutModal').classList.add('open'); }
-    function closeCheckoutModal() { document.getElementById('checkoutModal').classList.remove('open'); }
-    
-    function submitCheckout() {
-        const contact = document.getElementById('customerContact').value;
-        if (!contact || contact.trim() === "") { alert("❌ Please enter your email or phone number to complete your order."); return; }
-        alert(`💖 Thank you for your order!\n\nWe've sent a confirmation to: ${contact}\n\nYour glazed ritual is on its way! ✨`);
-        cart = []; saveCart(); closeCheckoutModal(); closeCartModal(); document.getElementById('customerContact').value = "";
-    }
-    
-    function switchToShop() { document.getElementById('shopSection').classList.add('active'); document.getElementById('aboutSection').classList.remove('active'); document.getElementById('routineSection').classList.remove('active'); document.getElementById('shopNavBtn').classList.add('active'); document.getElementById('aboutNavBtn').classList.remove('active'); document.getElementById('routineNavBtn').classList.remove('active'); }
-    function switchToAbout() { document.getElementById('shopSection').classList.remove('active'); document.getElementById('aboutSection').classList.add('active'); document.getElementById('routineSection').classList.remove('active'); document.getElementById('shopNavBtn').classList.remove('active'); document.getElementById('aboutNavBtn').classList.add('active'); document.getElementById('routineNavBtn').classList.remove('active'); }
-    function switchToRoutine() { document.getElementById('shopSection').classList.remove('active'); document.getElementById('aboutSection').classList.remove('active'); document.getElementById('routineSection').classList.add('active'); document.getElementById('shopNavBtn').classList.remove('active'); document.getElementById('aboutNavBtn').classList.remove('active'); document.getElementById('routineNavBtn').classList.add('active'); }
-    
-    document.getElementById('shopNavBtn').onclick = switchToShop;
-    document.getElementById('aboutNavBtn').onclick = switchToAbout;
-    document.getElementById('routineNavBtn').onclick = switchToRoutine;
-    document.getElementById('viewCartBtn').onclick = openCartModal;
-    document.getElementById('closeCartBtn').onclick = closeCartModal;
-    document.getElementById('proceedCheckoutBtn').onclick = openCheckoutModal;
-    document.getElementById('closeCheckoutBtn').onclick = closeCheckoutModal;
-    document.getElementById('submitCheckoutBtn').onclick = submitCheckout;
-    document.getElementById('cartModal').onclick = (e) => { if (e.target === document.getElementById('cartModal')) closeCartModal(); };
-    document.getElementById('checkoutModal').onclick = (e) => { if (e.target === document.getElementById('checkoutModal')) closeCheckoutModal(); };
-    
-    renderProducts(); loadCart(); setupCarousel();
-</script>
-</body>
-</html>
+            
+            <!-- STEP 6: Blush - PHOTO SPOT -->
+            <div class="routine-card">
+                <div class="routine-image" onclick="alert('📷 ADD YOUR PHOTO HERE\n\nReplace the image filename for Blush step.\n\nCurrent placeholder: routine-blush.jpg')">
+                    <img src="routine-blush.jpg" alt="Blush" onerror="this.src='https://placehold.co/400x200/0a1530/3a6ea5?text=Click+to+add+photo+%F0%9F%93%B7'">
+                </div>
+                <span class="step-number">STEP 06</span>
+                <h3>🌸 Packet Blush Bundle</h3>
+                <p>A hydrating cream blush bundle featuring 10 versatile shades. Dewy, buildable formula.</p>
+                <div class="howto-list">
+                    <li>💧 Dab onto cheeks with fingertips</li>
+                    <li>💧 Blend outward for natural flush</li>
+                    <li>💧 Layer for more intensity</li
