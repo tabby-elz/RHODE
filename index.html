@@ -272,7 +272,7 @@
         <div class="footer-note">✨ CLICK ANY PRODUCT to see full details ✨</div>
     </div>
     
-    <!-- ABOUT SECTION with YOUR PHOTO image.png in the box -->
+    <!-- ABOUT SECTION with CLICKABLE CARDS and YOUR PHOTO -->
     <div id="aboutSection" class="about-section">
         <div class="about-title">✨ our story ✨</div>
         <div class="about-content">
@@ -283,29 +283,29 @@
                 <p>Welcome to Rhode. Welcome to your glazed ritual. 🤍</p>
             </div>
             <div class="about-image">
-                <!-- YOUR PHOTO image.png ADDED HERE -->
+                <!-- YOUR PHOTO image.png IS RIGHT HERE -->
                 <img src="image.png" alt="Rhode Brand Image" onerror="this.src='https://placehold.co/280x350/0a1530/3a6ea5?text=RHODE'">
             </div>
         </div>
         
-        <!-- CLICKABLE VALUE CARDS -->
+        <!-- CLICKABLE VALUE CARDS - USING onclick DIRECTLY IN HTML -->
         <div class="values-grid">
-            <div class="value-card" onclick="showValueDetails('peptide')">
+            <div class="value-card" onclick="alert('🧪 PEPTIDE-POWERED\n\nAt Rhode, we harness the science of peptides — powerful amino acid chains that signal your skin to produce more collagen and elastin. Our peptide-infused formulas help:\n\n• Boost skin firmness and elasticity\n• Reduce fine lines and wrinkles\n• Strengthen skin barrier\n• Improve hydration retention\n\nEvery Rhode product is formulated with clinically-proven peptide complexes for real, visible results.')">
                 <div class="value-icon">🧪</div>
                 <div class="value-title">Peptide-Powered</div>
                 <div class="value-desc">Clinically-backed ingredients for real results</div>
             </div>
-            <div class="value-card" onclick="showValueDetails('clean')">
+            <div class="value-card" onclick="alert('🌸 CLEAN BEAUTY\n\nWe believe what you put ON your body matters as much as what you put IN it. Rhode is committed to clean, safe ingredients:\n\n✓ NO parabens\n✓ NO sulfates (SLS/SLES)\n✓ NO phthalates\n✓ NO synthetic fragrances\n✓ NO formaldehyde donors\n✓ NO mineral oil\n\nOur formulas are thoughtfully crafted with skin-loving ingredients you can trust.')">
                 <div class="value-icon">🌸</div>
                 <div class="value-title">Clean Beauty</div>
                 <div class="value-desc">No parabens, sulfates, or harmful additives</div>
             </div>
-            <div class="value-card" onclick="showValueDetails('glazed')">
+            <div class="value-card" onclick="alert('✨ GLAZED FINISH\n\nThe signature Rhode glow — luminous, dewy, and radiant. Our glazed finish is achieved through:\n\n• Hydrating ceramides\n• Light-reflecting humectants\n• Non-sticky, silky textures\n• Multi-dimensional shine\n\nIt\'s not just a look — it\'s a feeling. Skin that looks healthy, hydrated, and effortlessly beautiful. The \"glazed donut\" skin everyone is talking about.')">
                 <div class="value-icon">✨</div>
                 <div class="value-title">Glazed Finish</div>
                 <div class="value-desc">That dewy, luminous, glass-skin effect</div>
             </div>
-            <div class="value-card" onclick="showValueDetails('cruelty')">
+            <div class="value-card" onclick="alert('🌎 CRUELTY-FREE\n\nRhode is proudly cruelty-free. We NEVER test on animals at any stage of product development.\n\n• Leaping Bunny Certified\n• PETA Cruelty-Free\n• Vegan-friendly formulas\n• Ethically sourced ingredients\n\nWe believe beauty should be kind — to your skin, to animals, and to the planet. Love your skin without compromise.')">
                 <div class="value-icon">🌎</div>
                 <div class="value-title">Cruelty-Free</div>
                 <div class="value-desc">Never tested on animals. Leaping Bunny certified</div>
@@ -334,7 +334,6 @@
     ];
 
     let cart = [];
-    let currentSection = 'shop';
 
     function loadCart() { const saved = localStorage.getItem("rhode_cart"); if(saved) try{ cart = JSON.parse(saved); }catch(e){} updateCartUI(); updateCartModal(); }
     function saveCart() { localStorage.setItem("rhode_cart", JSON.stringify(cart)); updateCartUI(); updateCartModal(); }
@@ -366,18 +365,6 @@
         alert(`📦 ${product.name}\n💰 $${product.price}\n✨ ${product.highlight}\n\n${product.fullDesc}\n\n🛍️ Click "add to bag" to purchase!`);
     }
     
-    function showValueDetails(type) {
-        if (type === 'peptide') {
-            alert(`🧪 PEPTIDE-POWERED\n\nAt Rhode, we harness the science of peptides — powerful amino acid chains that signal your skin to produce more collagen and elastin. Our peptide-infused formulas help:\n\n• Boost skin firmness and elasticity\n• Reduce fine lines and wrinkles\n• Strengthen skin barrier\n• Improve hydration retention\n\nEvery Rhode product is formulated with clinically-proven peptide complexes for real, visible results.`);
-        } else if (type === 'clean') {
-            alert(`🌸 CLEAN BEAUTY\n\nWe believe what you put ON your body matters as much as what you put IN it. Rhode is committed to clean, safe ingredients:\n\n✓ NO parabens\n✓ NO sulfates (SLS/SLES)\n✓ NO phthalates\n✓ NO synthetic fragrances\n✓ NO formaldehyde donors\n✓ NO mineral oil\n\nOur formulas are thoughtfully crafted with skin-loving ingredients you can trust.`);
-        } else if (type === 'glazed') {
-            alert(`✨ GLAZED FINISH\n\nThe signature Rhode glow — luminous, dewy, and radiant. Our glazed finish is achieved through:\n\n• Hydrating ceramides\n• Light-reflecting humectants\n• Non-sticky, silky textures\n• Multi-dimensional shine\n\nIt's not just a look — it's a feeling. Skin that looks healthy, hydrated, and effortlessly beautiful. The "glazed donut" skin everyone is talking about.`);
-        } else if (type === 'cruelty') {
-            alert(`🌎 CRUELTY-FREE\n\nRhode is proudly cruelty-free. We NEVER test on animals at any stage of product development.\n\n• Leaping Bunny Certified\n• PETA Cruelty-Free\n• Vegan-friendly formulas\n• Ethically sourced ingredients\n\nWe believe beauty should be kind — to your skin, to animals, and to the planet. Love your skin without compromise.`);
-        }
-    }
-    
     function renderProducts() {
         const grid = document.getElementById('productGrid');
         const tagRow = document.getElementById('tagRow');
@@ -392,19 +379,13 @@
     function setupCarousel() { const w = document.getElementById('carouselWrapper'); const p = document.getElementById('prevSlideBtn'); const n = document.getElementById('nextSlideBtn'); if (w && p && n) { p.onclick = () => w.scrollBy({ left: -250, behavior: 'smooth' }); n.onclick = () => w.scrollBy({ left: 250, behavior: 'smooth' }); } }
     function setupCartModal() { document.getElementById('viewCartBtn').onclick = openCartModal; document.getElementById('closeCartBtn').onclick = closeCartModal; document.getElementById('cartModal').onclick = (e) => { if (e.target === document.getElementById('cartModal')) closeCartModal(); }; document.getElementById('checkoutBtn').onclick = () => { if (cart.length === 0) showToast("🛍️ Your bag is empty! Add some products first."); else showToast("💖 Thank you for your order! Glazed ritual complete ✨"); }; }
     
-    function switchToShop() {
-        document.getElementById('shopSection').style.display = 'block';
-        document.getElementById('aboutSection').classList.remove('active');
-        document.getElementById('shopNavBtn').classList.add('active');
-        document.getElementById('aboutNavBtn').classList.remove('active');
-        currentSection = 'shop';
-    }
-    function switchToAbout() {
-        document.getElementById('shopSection').style.display = 'none';
-        document.getElementById('aboutSection').classList.add('active');
-        document.getElementById('aboutNavBtn').classList.add('active');
-        document.getElementById('shopNavBtn').classList.remove('active');
-        currentSection = 'about';
-    }
+    function switchToShop() { document.getElementById('shopSection').style.display = 'block'; document.getElementById('aboutSection').classList.remove('active'); document.getElementById('shopNavBtn').classList.add('active'); document.getElementById('aboutNavBtn').classList.remove('active'); }
+    function switchToAbout() { document.getElementById('shopSection').style.display = 'none'; document.getElementById('aboutSection').classList.add('active'); document.getElementById('aboutNavBtn').classList.add('active'); document.getElementById('shopNavBtn').classList.remove('active'); }
     
-   
+    document.getElementById('shopNavBtn').onclick = switchToShop;
+    document.getElementById('aboutNavBtn').onclick = switchToAbout;
+    
+    renderProducts(); loadCart(); setupCarousel(); setupCartModal();
+</script>
+</body>
+</html>
