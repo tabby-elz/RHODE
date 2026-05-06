@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Rhode | Skincare + Sportswear | Glazed Collection</title>
+    <title>Rhode | Skincare Routine + How To Use | Glazed Collection</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,9 +45,8 @@
         .logo-rectangle-photo img { width: 100%; border-radius: 0.8rem; aspect-ratio: 16/9; object-fit: cover; }
         .photo-separator { width: 60px; height: 3px; background: linear-gradient(90deg, #3a6ea5, #6b9ed0, #3a6ea5); border-radius: 3px; margin: 0.5rem auto 1rem auto; }
         
-        /* SECTIONS */
-        .shop-section, .sportswear-section { display: none; }
-        .shop-section.active, .sportswear-section.active { display: block; animation: fadeIn 0.4s ease; }
+        .shop-section, .routine-section { display: none; }
+        .shop-section.active, .routine-section.active { display: block; animation: fadeIn 0.4s ease; }
         .about-section { margin: 1.5rem 0; padding: 1.5rem; background: rgba(10, 20, 40, 0.7); border-radius: 1.5rem; border: 1px solid #3a6ea5; display: none; }
         .about-section.active { display: block; animation: fadeIn 0.4s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -66,20 +65,19 @@
         .value-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; color: #e8a07c; }
         .value-desc { font-size: 0.7rem; color: #a8c8f0; }
         
-        /* SPORTSWEAR STYLES */
-        .sportswear-header { text-align: center; margin-bottom: 2rem; }
-        .sportswear-header h2 { font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: #e8a07c; margin-bottom: 0.5rem; }
-        .sportswear-header p { color: #a8c8f0; font-size: 0.9rem; }
-        .sportswear-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
-        .sportswear-card { background: rgba(10, 20, 40, 0.7); border-radius: 1.2rem; padding: 1rem; border: 1px solid #2a4a7a; transition: all 0.2s; cursor: pointer; text-align: center; }
-        .sportswear-card:hover { transform: translateY(-5px); border-color: #e8a07c; background: rgba(20, 35, 55, 0.8); }
-        .sportswear-image { width: 100%; height: 220px; background: #0d1a35; border-radius: 1rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .sportswear-image img { width: 100%; height: 100%; object-fit: cover; }
-        .sportswear-card h3 { font-size: 1.2rem; font-weight: 700; margin: 0.5rem 0; color: #e8a07c; }
-        .sportswear-card p { font-size: 0.8rem; color: #a8c8f0; margin: 0.3rem 0; }
-        .sportswear-price { font-size: 1.2rem; font-weight: 800; background: linear-gradient(125deg, #c95a3f, #e67748); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0.5rem 0; }
-        .add-sportswear-btn { margin-top: 0.5rem; background: #1a2a4a; border: 1px solid #3a6ea5; border-radius: 60px; padding: 0.5rem; font-weight: 600; font-size: 0.75rem; color: #a8c8f0; cursor: pointer; width: 100%; transition: all 0.2s; }
-        .add-sportswear-btn:hover { background: #2a3e64; border-color: #5a8ec5; }
+        /* ROUTINE & HOW TO USE SECTION */
+        .routine-header { text-align: center; margin-bottom: 2rem; }
+        .routine-header h2 { font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: #e8a07c; margin-bottom: 0.5rem; }
+        .routine-header p { color: #a8c8f0; font-size: 0.9rem; }
+        .routine-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .routine-card { background: rgba(10, 20, 40, 0.7); border-radius: 1.5rem; padding: 1.2rem; border: 1px solid #2a4a7a; transition: all 0.2s; cursor: pointer; }
+        .routine-card:hover { transform: translateY(-5px); border-color: #e8a07c; background: rgba(20, 35, 55, 0.8); }
+        .step-number { display: inline-block; background: linear-gradient(125deg, #c95a3f, #e67748); border-radius: 60px; padding: 0.2rem 0.8rem; font-size: 0.7rem; font-weight: bold; margin-bottom: 0.8rem; }
+        .routine-card h3 { font-size: 1.3rem; font-weight: 700; margin: 0.5rem 0; color: #e8a07c; }
+        .routine-card p { font-size: 0.85rem; color: #a8c8f0; line-height: 1.5; margin: 0.5rem 0; }
+        .howto-list { margin-top: 0.8rem; padding-left: 1rem; }
+        .howto-list li { font-size: 0.75rem; color: #a8c8f0; margin: 0.3rem 0; }
+        .product-ref { display: inline-block; margin-top: 0.8rem; background: #1a2a4a; border-radius: 60px; padding: 0.2rem 0.8rem; font-size: 0.65rem; color: #e8a07c; }
         
         /* SHOP STYLES */
         .carousel-section { margin: 1.5rem 0; background: rgba(10, 20, 40, 0.6); border-radius: 1.5rem; padding: 1rem; }
@@ -150,7 +148,7 @@
         <div class="nav-links">
             <button class="nav-link active" id="shopNavBtn">SHOP</button>
             <button class="nav-link" id="aboutNavBtn">ABOUT</button>
-            <button class="nav-link" id="sportswearNavBtn">RHODE SPORTSWEAR</button>
+            <button class="nav-link" id="routineNavBtn">ROUTINE & HOW TO USE</button>
         </div>
         <button class="cart-icon-btn" id="viewCartBtn">🛍️ CART <span id="cartCountDisplay" class="cart-count">0</span></button>
     </div>
@@ -175,7 +173,7 @@
         <div class="tag-row" id="tagRow"></div>
     </div>
     
-    <!-- ABOUT SECTION - CLICKABLE -->
+    <!-- ABOUT SECTION -->
     <div id="aboutSection" class="about-section">
         <div class="about-title">✨ our story ✨</div>
         <div class="about-content">
@@ -213,40 +211,102 @@
         </div>
     </div>
     
-    <!-- SPORTSWEAR SECTION - CLICKABLE -->
-    <div id="sportswearSection" class="sportswear-section">
-        <div class="sportswear-header">
-            <h2>✨ rhode sportswear ✨</h2>
-            <p>glazed performance • peptide-infused fabrics • elevate your movement</p>
+    <!-- ROUTINE & HOW TO USE SECTION -->
+    <div id="routineSection" class="routine-section">
+        <div class="routine-header">
+            <h2>✨ glazed skincare routine ✨</h2>
+            <p>how to achieve that peptide-powered, dewy finish — step by step</p>
         </div>
-        <div class="sportswear-grid">
-            <div class="sportswear-card" onclick="addSportswearToCart('Glazed Hoodie', 78)">
-                <div class="sportswear-image"><img src="sportswear-hoodie.jpg" alt="Hoodie" onerror="this.src='https://placehold.co/300x220/0a1530/3a6ea5?text=🏃‍♀️+Hoodie'"></div>
-                <h3>Glazed Hoodie</h3>
-                <p>Oversized fit • peptide-infused fabric • soft-brushed interior</p>
-                <div class="sportswear-price">$78.00</div>
-                <button class="add-sportswear-btn" onclick="event.stopPropagation(); addSportswearToCart('Glazed Hoodie', 78)">add to bag →</button>
+        
+        <div class="routine-grid">
+            <!-- STEP 1 -->
+            <div class="routine-card" onclick="alert('STEP 1: CLEANSE\n\nStart with a gentle, hydrating cleanser to remove impurities without stripping your skin. Pat dry with a soft towel.\n\n✨ Pro tip: Use lukewarm water to keep your skin barrier happy!')">
+                <span class="step-number">STEP 01</span>
+                <h3>🧼 Cleanse</h3>
+                <p>Start with a clean canvas. Gently wash away dirt, oil, and makeup with a hydrating cleanser.</p>
+                <div class="howto-list">
+                    <li>💧 Use lukewarm water</li>
+                    <li>💧 Massage in circular motions for 60 sec</li>
+                    <li>💧 Pat dry - don't rub!</li>
+                </div>
+                <span class="product-ref">recommended: any gentle cleanser</span>
             </div>
-            <div class="sportswear-card" onclick="addSportswearToCart('Glazed Leggings', 68)">
-                <div class="sportswear-image"><img src="sportswear-leggings.jpg" alt="Leggings" onerror="this.src='https://placehold.co/300x220/0a1530/3a6ea5?text=🏃‍♀️+Leggings'"></div>
-                <h3>Glazed Leggings</h3>
-                <p>High-waisted • squat-proof • buttery-soft compression</p>
-                <div class="sportswear-price">$68.00</div>
-                <button class="add-sportswear-btn" onclick="event.stopPropagation(); addSportswearToCart('Glazed Leggings', 68)">add to bag →</button>
+            
+            <!-- STEP 2 -->
+            <div class="routine-card" onclick="alert('STEP 2: GLAZING MILK\n\nOur viral ceramide facial essence! Apply 2-3 drops to your fingertips and press gently into damp skin. Follow with your favorite moisturizer.\n\n✨ The result: plump, dewy, glass-like skin that glows from within.')">
+                <span class="step-number">STEP 02</span>
+                <h3>🥛 Glazing Milk</h3>
+                <p>Our viral ceramide facial essence. Apply to damp skin for instant hydration and that signature glazed finish.</p>
+                <div class="howto-list">
+                    <li>💧 Apply 2-3 drops to fingertips</li>
+                    <li>💧 Press gently into skin</li>
+                    <li>💧 Follow with moisturizer</li>
+                </div>
+                <span class="product-ref">✨ rhode Glazing Milk — $34.00</span>
             </div>
-            <div class="sportswear-card" onclick="addSportswearToCart('Glazed Sports Bra', 45)">
-                <div class="sportswear-image"><img src="sportswear-bra.jpg" alt="Sports Bra" onerror="this.src='https://placehold.co/300x220/0a1530/3a6ea5?text=🏃‍♀️+Sports+Bra'"></div>
-                <h3>Glazed Sports Bra</h3>
-                <p>Medium support • moisture-wicking • seamless design</p>
-                <div class="sportswear-price">$45.00</div>
-                <button class="add-sportswear-btn" onclick="event.stopPropagation(); addSportswearToCart('Glazed Sports Bra', 45)">add to bag →</button>
+            
+            <!-- STEP 3 -->
+            <div class="routine-card" onclick="alert('STEP 3: EYE PREP\n\nApply peptide eye patches under eyes for 10-15 minutes. Gently tap any remaining essence into skin. Use morning or night to depuff and brighten.\n\n✨ Perfect for tired eyes or pre-makeup prep!')">
+                <span class="step-number">STEP 03</span>
+                <h3>👁️ Peptide Eye Prep</h3>
+                <p>Depuff and brighten with cooling hydrogel eye patches infused with peptides.</p>
+                <div class="howto-list">
+                    <li>💧 Apply under eyes for 10-15 min</li>
+                    <li>💧 Gently tap remaining essence in</li>
+                    <li>💧 Use morning or night</li>
+                </div>
+                <span class="product-ref">✨ rhode Peptide Eye Prep — $32.00</span>
+            </div>
+            
+            <!-- STEP 4 -->
+            <div class="routine-card" onclick="alert('STEP 4: LIP TINT + LINER\n\nOutline lips with Rhode Lip Liner for definition. Apply Glazier Lip Tint for glass-like shine. Reapply throughout the day for lasting hydration and color.\n\n✨ The perfect pout starts here!')">
+                <span class="step-number">STEP 04</span>
+                <h3>💋 Lip Tint + Liner</h3>
+                <p>Define and shine. Outline with lip liner, then top with our peptide-infused lip tint.</p>
+                <div class="howto-list">
+                    <li>💧 Outline lips with lip liner</li>
+                    <li>💧 Apply Glazier Lip Tint</li>
+                    <li>💧 Reapply for lasting shine</li>
+                </div>
+                <span class="product-ref">✨ Glazier Lip Tint $20 + Lip Liner $18</span>
+            </div>
+            
+            <!-- STEP 5 -->
+            <div class="routine-card" onclick="alert('STEP 5: BLUSH + GLOW\n\nDab Packet Blush onto cheeks with fingertips or a brush. Blend outward for a natural flush. Layer for more intensity.\n\n✨ Pro tip: Apply to high points of cheekbones for a lifted look!')">
+                <span class="step-number">STEP 05</span>
+                <h3>🌸 Cream Blush</h3>
+                <p>Add a dewy flush with our hydrating cream blush. Buildable, blendable, and beautifully natural.</p>
+                <div class="howto-list">
+                    <li>💧 Dab onto cheeks with fingertips</li>
+                    <li>💧 Blend outward for a natural flush</li>
+                    <li>💧 Layer for more intensity</li>
+                </div>
+                <span class="product-ref">✨ rhode Packet Blush Bundle — $25.00</span>
+            </div>
+            
+            <!-- BONUS TIP -->
+            <div class="routine-card" onclick="alert('✨ PRO TIPS FOR THE PERFECT GLAZE ✨\n\n1. Always apply Glazing Milk to DAMP skin for maximum absorption.\n2. Store eye patches in the fridge for an extra cooling effect.\n3. Mix lip tint with a tiny bit of Glazing Milk for a custom sheer gloss.\n4. Apply blush with a damp sponge for the most natural finish.\n5. Drink water! Hydration starts from within. 💧')">
+                <span class="step-number">⭐ BONUS</span>
+                <h3>💡 Pro Tips</h3>
+                <p>Little secrets for the ultimate glazed look. Get the most out of your Rhode routine.</p>
+                <div class="howto-list">
+                    <li>💧 Apply products to damp skin</li>
+                    <li>💧 Store eye patches in the fridge</li>
+                    <li>💧 Mix tint + Glazing Milk for custom gloss</li>
+                    <li>💧 Drink water for internal glow</li>
+                </div>
+                <span class="product-ref">✨ #GlazedDonutSkin</span>
             </div>
         </div>
-        <div class="spotlight"><span>🏃‍♀️ glazed performance</span><span>💧 moisture-wicking • peptide-infused • sustainable</span></div>
-        <div class="footer-note">✨ Click any sportswear item or "add to bag" to purchase ✨</div>
+        
+        <div class="spotlight">
+            <span>🍯 glazed donut skin routine 🇬🇷</span>
+            <span>✨ peptide-powered • dewy finish • glass skin ✨</span>
+        </div>
+        <div class="footer-note">✨ Click any step for detailed instructions! Your glazed ritual starts here ✨</div>
     </div>
     
-    <div class="footer-note">✨ CLICK ANY PRODUCT to see details and add to cart ✨</div>
+    <div class="footer-note">✨ CLICK any product to see details and add to cart ✨</div>
 </div>
 
 <!-- CART MODAL -->
@@ -308,15 +368,6 @@
     
     function addToCart(product) { const existing = cart.find(i => i.id === product.id); if (existing) existing.quantity += 1; else cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1, image: product.image }); saveCart(); showToast(`✨ ${product.name} added to bag ✨`); }
     
-    function addSportswearToCart(name, price) {
-        const id = name.toLowerCase().replace(/ /g, '_');
-        const existing = cart.find(i => i.id === id);
-        if (existing) existing.quantity += 1;
-        else cart.push({ id: id, name: name, price: price, quantity: 1, image: '' });
-        saveCart();
-        showToast(`✨ ${name} added to bag ✨`);
-    }
-    
     function showToast(msg) { let toast = document.createElement('div'); toast.innerText = msg; toast.style.cssText = 'position:fixed; bottom:80px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#c95a3f,#e67748); color:white; padding:10px 20px; border-radius:60px; font-weight:bold; font-size:0.8rem; z-index:1100;'; document.body.appendChild(toast); setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 500); }, 2000); }
     
     function showProductDetails(product) {
@@ -349,13 +400,13 @@
         cart = []; saveCart(); closeCheckoutModal(); closeCartModal(); document.getElementById('customerContact').value = "";
     }
     
-    function switchToShop() { document.getElementById('shopSection').classList.add('active'); document.getElementById('aboutSection').classList.remove('active'); document.getElementById('sportswearSection').classList.remove('active'); document.getElementById('shopNavBtn').classList.add('active'); document.getElementById('aboutNavBtn').classList.remove('active'); document.getElementById('sportswearNavBtn').classList.remove('active'); }
-    function switchToAbout() { document.getElementById('shopSection').classList.remove('active'); document.getElementById('aboutSection').classList.add('active'); document.getElementById('sportswearSection').classList.remove('active'); document.getElementById('shopNavBtn').classList.remove('active'); document.getElementById('aboutNavBtn').classList.add('active'); document.getElementById('sportswearNavBtn').classList.remove('active'); }
-    function switchToSportswear() { document.getElementById('shopSection').classList.remove('active'); document.getElementById('aboutSection').classList.remove('active'); document.getElementById('sportswearSection').classList.add('active'); document.getElementById('shopNavBtn').classList.remove('active'); document.getElementById('aboutNavBtn').classList.remove('active'); document.getElementById('sportswearNavBtn').classList.add('active'); }
+    function switchToShop() { document.getElementById('shopSection').classList.add('active'); document.getElementById('aboutSection').classList.remove('active'); document.getElementById('routineSection').classList.remove('active'); document.getElementById('shopNavBtn').classList.add('active'); document.getElementById('aboutNavBtn').classList.remove('active'); document.getElementById('routineNavBtn').classList.remove('active'); }
+    function switchToAbout() { document.getElementById('shopSection').classList.remove('active'); document.getElementById('aboutSection').classList.add('active'); document.getElementById('routineSection').classList.remove('active'); document.getElementById('shopNavBtn').classList.remove('active'); document.getElementById('aboutNavBtn').classList.add('active'); document.getElementById('routineNavBtn').classList.remove('active'); }
+    function switchToRoutine() { document.getElementById('shopSection').classList.remove('active'); document.getElementById('aboutSection').classList.remove('active'); document.getElementById('routineSection').classList.add('active'); document.getElementById('shopNavBtn').classList.remove('active'); document.getElementById('aboutNavBtn').classList.remove('active'); document.getElementById('routineNavBtn').classList.add('active'); }
     
     document.getElementById('shopNavBtn').onclick = switchToShop;
     document.getElementById('aboutNavBtn').onclick = switchToAbout;
-    document.getElementById('sportswearNavBtn').onclick = switchToSportswear;
+    document.getElementById('routineNavBtn').onclick = switchToRoutine;
     document.getElementById('viewCartBtn').onclick = openCartModal;
     document.getElementById('closeCartBtn').onclick = closeCartModal;
     document.getElementById('proceedCheckoutBtn').onclick = openCheckoutModal;
