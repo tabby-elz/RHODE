@@ -91,6 +91,30 @@
         .carousel-nav button { background: #1a2a4a; border: 1px solid #3a6ea5; border-radius: 60px; padding: 0.3rem 1rem; cursor: pointer; font-size: 0.75rem; color: #a8c8f0; }
         .carousel-nav button:hover { background: #2a3e64; }
         
+        /* CONTACT EMAIL SECTION - BELOW ACCESSORIES */
+        .contact-email-section {
+            text-align: center;
+            margin: 1rem 0 1.5rem 0;
+            padding: 0.8rem;
+            background: rgba(10, 20, 40, 0.5);
+            border-radius: 1rem;
+            border: 1px solid #3a6ea5;
+        }
+        .contact-email-section p {
+            font-size: 0.85rem;
+            color: #a8c8f0;
+        }
+        .contact-email-section a {
+            color: #e8a07c;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .contact-email-section a:hover {
+            text-decoration: underline;
+            color: #c95a3f;
+        }
+        
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
         .product-card { background: #0a1530; border-radius: 1.2rem; padding: 0.8rem; transition: transform 0.2s; border: 1px solid #2a4a7a; cursor: pointer; }
         .product-card:hover { transform: translateY(-3px); border-color: #5a8ec5; }
@@ -155,7 +179,7 @@
         <div class="logo-photo-section"><div class="logo-rectangle-photo"><img src="rhode world at coachella 2026 _ rhode x the biebers.jpg" alt="Rhode" onerror="this.src='https://placehold.co/800x450'"></div></div>
         <div class="photo-separator"></div>
         
-        <!-- ACCESSORIES CAROUSEL - NOW WITH PRICES AND CLICKABLE -->
+        <!-- ACCESSORIES CAROUSEL - WITH PRICES AND CLICKABLE -->
         <div class="carousel-section">
             <div class="carousel-title">✨ accessories ✨</div>
             <div class="carousel-track-wrapper" id="carouselWrapper"><div class="carousel-track" id="carouselTrack">
@@ -196,6 +220,12 @@
                 </div>
             </div></div>
             <div class="carousel-nav"><button id="prevSlideBtn">◀</button><button id="nextSlideBtn">▶</button></div>
+        </div>
+        
+        <!-- CONTACT EMAIL SECTION - BELOW ACCESSORIES AS REQUESTED -->
+        <div class="contact-email-section">
+            <p>📧 For more information about our products or any inquiries:</p>
+            <a href="mailto:rhode@glazed.com">rhode@glazed.com</a>
         </div>
         
         <div class="product-grid" id="productGrid"></div>
@@ -249,15 +279,4 @@
         { id: "lip_tint", name: "Glazier Lip Tint", desc: "Lipstick · Glazier Colors", highlight: "✨ cherry kiss glass shine", price: 20.00, image: "cherry lips.jpg", tagIcon: "💋🍒", fullDesc: "A peptide-infused lip tint that delivers a glass-like shine with a sheer wash of cherry color." },
         { id: "blush_bundle", name: "Packet Blush Bundle", desc: "Cream Blush · 10 Colors", highlight: "🌟 creamy dewy flush", price: 25.00, image: "Blush Rhode.jpg", tagIcon: "🌸", fullDesc: "A hydrating cream blush bundle featuring 10 versatile shades." },
         { id: "glazing_milk", name: "Glazing Milk", desc: "Ceramide Facial Essence", highlight: "🔥 viral milky hydration", price: 34.00, image: "Rhode Glazing Milk.jpg", tagIcon: "🥛", fullDesc: "A viral ceramide facial essence that gives you that coveted 'glazed donut' skin." },
-        { id: "eye_prep", name: "Peptide Eye Prep", desc: "Depuffing Eye Patches", highlight: "⚡ cooling hydrogel", price: 32.00, image: "peptide eye prep.jpg", tagIcon: "👁️", fullDesc: "Cooling hydrogel eye patches infused with peptides to instantly depuff and refresh." },
-        { id: "lip_liner", name: "Rhode Lip Liner", desc: "Define Your Look", highlight: "✍️ creamy & long-wear", price: 18.00, image: "Rhode Lip Liner – Define Your Perfect Everyday Look🫶🏻.jpg", tagIcon: "✍️", fullDesc: "Define your perfect everyday look with this creamy, long-wear lip liner." }
-    ];
-
-    let cart = [];
-
-    function loadCart() { const saved = localStorage.getItem("rhode_cart"); if(saved) try{ cart = JSON.parse(saved); }catch(e){} updateCartUI(); updateCartModal(); }
-    function saveCart() { localStorage.setItem("rhode_cart", JSON.stringify(cart)); updateCartUI(); updateCartModal(); }
-    function updateCartUI() { document.getElementById("cartCountDisplay").innerText = cart.reduce((s,i)=> s+i.quantity, 0); }
-    function updateCartModal() {
-        const container = document.getElementById("cartItemsList");
-        const totalSpan
+        { id: "eye_prep", name: "Peptide Eye Prep", desc: "Depuffing Eye Patches", highlight: "⚡ cooling hydrogel", price: 32.00, image: "peptide eye prep.jpg", tagIcon: "
